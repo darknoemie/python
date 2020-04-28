@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="fr">
+<!-- Mirrored from www.audiens.fr/download/python/Générer des wrapper's avec SWIG — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:19 GMT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Générer des wrapper's avec SWIG — Audiens</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Générer_des_wrapper's_avec_SWIG","wgTitle":"Générer des wrapper's avec SWIG","wgCurRevisionId":14061,"wgRevisionId":14061,"wgArticleId":2717,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":"Phil","wgUserGroups":["sysop","bureaucrat","*","user","autoconfirmed"],"wgCategories":["Développements","Langages","Python"],"wgBreakFrames":false,"wgPageContentLanguage":"fr","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"wgMonthNamesShort":["","janv.","fév.","mars","avr.","mai","juin","juill.","août","sept.","oct.","nov.","déc."],"wgRelevantPageName":"Générer_des_wrapper's_avec_SWIG","wgRelevantArticleId":2717,"wgRequestId":"375880635cf22e0546725ecb","wgUserId":1,"wgUserEditCount":14011,"wgUserRegistration":1325332820000,"wgUserNewMsgRevisionId":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0tu0ujd",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"timecorrection":"Offset|0","watchlisttoken":""});
+});mw.loader.implement("user.tokens@1okgkd6",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"c247ebb5f897270a9eb3e567954ff1315ea29684+\\","patrolToken":"5e6c46431aaac3270a7c3a5e719122ae5ea29684+\\","watchToken":"90cc48e2e4559745985c428c0aba60fc5ea29684+\\","csrfToken":"c247ebb5f897270a9eb3e567954ff1315ea29684+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","mediawiki.page.watch.ajax","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="G%c3%a9n%c3%a9rer%20des%20wrapper%27s%20avec%20SWIG%20%e2%80%94%20Audiens_fichiers/load.css">
+<script async="" src="G%c3%a9n%c3%a9rer%20des%20wrapper%27s%20avec%20SWIG%20%e2%80%94%20Audiens_fichiers/load.html"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<meta name="generator" content="MediaWiki 1.31.1">
+<link rel="alternate" type="application/x-wiki" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit">
+<link rel="edit" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit">
+<link rel="shortcut icon" href="https://www.audiens.fr/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.audiens.fr/wiki2/opensearch_desc.php" title="Audiens (fr)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.audiens.fr/wiki2/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Audiens" href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<!--[if lt IE 9]><script src="/wiki2/load.php?debug=false&amp;lang=fr&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+<script src="G%c3%a9n%c3%a9rer%20des%20wrapper%27s%20avec%20SWIG%20%e2%80%94%20Audiens_fichiers/load_002.html"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Générer_des_wrapper_s_avec_SWIG rootpage-Générer_des_wrapper_s_avec_SWIG skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="fr">Générer des wrapper's avec SWIG</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Audiens</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Aller à :					<a href="#mw-head">navigation</a>, 					<a href="#p-search">rechercher</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr"><div class="mw-parser-output"><p>Navigation&nbsp;: <a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil">Accueil</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Python" title="Python">Python</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Utilisation_avancée" title="Utilisation avancée">Utilisation avancée</a> -&gt; <a class="mw-selflink selflink">Générer des wrapper's avec SWIG</a> 
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="fr"><h2>Sommaire</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">masquer</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#liens_utiles"><span class="tocnumber">1.1</span> <span class="toctext">liens utiles</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Installation_de_SWIG"><span class="tocnumber">2</span> <span class="toctext">Installation de SWIG</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Installation_sur_linux"><span class="tocnumber">2.1</span> <span class="toctext">Installation sur linux</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Installation_sur_windows"><span class="tocnumber">2.2</span> <span class="toctext">Installation sur windows</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Cr.C3.A9er_un_wrapper_pour_un_programme_C"><span class="tocnumber">3</span> <span class="toctext">Créer un wrapper pour un programme C</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Cr.C3.A9er_un_module_SWIG"><span class="tocnumber">3.1</span> <span class="toctext">Créer un module SWIG</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Le_fichier_du_module"><span class="tocnumber">3.1.1</span> <span class="toctext">Le fichier du module</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Les_fichiers_c"><span class="tocnumber">3.1.2</span> <span class="toctext">Les fichiers c</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Contruction_du_module"><span class="tocnumber">3.1.3</span> <span class="toctext">Contruction du module</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Utilisation_de_distutils"><span class="tocnumber">3.1.4</span> <span class="toctext">Utilisation de distutils</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Utilisation_du_module"><span class="tocnumber">3.2</span> <span class="toctext">Utilisation du module</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=1" title="Modifier la section : Introduction">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>SWIG</b> est un outil de développement logiciel qui connecte des 
+programmes écrits en C et C ++ avec une variété de langages de 
+programmation de haut niveau.
+</p>
+<ul><li><b>SWIG</b> est utilisé avec différents types de langages 
+cibles, y compris les langages de script courants tels que Javascript, 
+Perl, PHP, Python, Tcl et Ruby.</li>
+<li>La liste des langages pris en charge comprend également des langages
+ sans script tels que le langage C #, D, Go, Java, y compris Android, 
+Lua, OCaml, Octave, Scilab et R.</li>
+<li>Plusieurs implémentations interprétées et compilées (Guile, MzScheme / Racket) sont également prises en charge. .</li>
+<li><b>SWIG</b> est le plus souvent utilisé pour créer des 
+environnements de programmation interprétés ou compilés de haut niveau, 
+des interfaces utilisateur et comme outil de test et de prototypage de 
+logiciels C / C ++.</li>
+<li><b>SWIG</b> est généralement utilisé pour analyser les interfaces C /
+ C ++ et générer le «code de collage» requis pour les langues cibles 
+ci-dessus à appeler dans le code C / C ++.</li>
+<li><b>SWIG</b> peut également exporter son arbre d'analyse sous forme de XML.</li>
+<li><b>SWIG</b> est un logiciel libre et le code généré par <b>SWIG</b> est compatible avec les projets commerciaux et non commerciaux.</li></ul>
+<h3><span class="mw-headline" id="liens_utiles">liens utiles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=2" title="Modifier la section : liens utiles">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Le site de SWIG&nbsp;: <a rel="nofollow" class="external free" href="http://www.swig.org/">http://www.swig.org</a></li></ul>
+<h2><span class="mw-headline" id="Installation_de_SWIG">Installation de SWIG</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=3" title="Modifier la section : Installation de SWIG">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Installation_sur_linux">Installation sur linux</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=4" title="Modifier la section : Installation sur linux">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Téléchargez l'archive 
+</p>
+<pre><b>wget <a rel="nofollow" class="external free" href="https://freefr.dl.sourceforge.net/project/swig/swig/swig-4.0.1/swig-4.0.1.tar.gz">https://freefr.dl.sourceforge.net/project/swig/swig/swig-4.0.1/swig-4.0.1.tar.gz</a></b>
+
+</pre>
+<p>Décompressez l'archive
+</p>
+<pre><b>tar xfz swig-4.0.1.tar.gz</b>
+
+</pre>
+<p>Compilez SWIG
+</p>
+<pre>cd swig-4.0.1
+./Compile
+make
+make install
+</pre>
+<p>Testez le fonctionnement
+</p>
+<ul><li>lancez la commande sans argument pour voir il elle répond.</li></ul>
+<pre>swig
+</pre>
+<ul><li>Pour obtenir de l'aide sur la commande</li></ul>
+<pre>swig -help
+</pre>
+<ul><li>Pour obtenir de l'aide sur les options spécifiques d'un langage</li></ul>
+<pre>swig -python -help
+</pre>
+<h3><span class="mw-headline" id="Installation_sur_windows">Installation sur windows</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=5" title="Modifier la section : Installation sur windows">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Téléchargez l'archive pour windows
+</p>
+<pre>wget <a rel="nofollow" class="external free" href="https://freefr.dl.sourceforge.net/project/swig/swigwin/swigwin-4.0.1/swigwin-4.0.1.zip">https://freefr.dl.sourceforge.net/project/swig/swigwin/swigwin-4.0.1/swigwin-4.0.1.zip</a>
+</pre>
+<h2><span id="Créer_un_wrapper_pour_un_programme_C"></span><span class="mw-headline" id="Cr.C3.A9er_un_wrapper_pour_un_programme_C">Créer un wrapper pour un programme C</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=6" title="Modifier la section : Créer un wrapper pour un programme C">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Le but est d'accéder à un programme écrit en langage C depuis un script python.
+</p>
+<h3><span id="Créer_un_module_SWIG"></span><span class="mw-headline" id="Cr.C3.A9er_un_module_SWIG">Créer un module SWIG</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=7" title="Modifier la section : Créer un module SWIG">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Le_fichier_du_module">Le fichier du module</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=8" title="Modifier la section : Le fichier du module">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="o">/*</span> <span class="n">File</span><span class="p">:</span> <span class="n">example</span><span class="o">.</span><span class="n">i</span> <span class="o">*/</span>
+<span class="o">%</span><span class="n">module</span> <span class="n">example</span>
+<span class="o">%</span><span class="p">{</span>
+<span class="c1">#define SWIG_FILE_WITH_INIT</span>
+<span class="c1">#include "example.h"</span>
+<span class="o">%</span><span class="p">}</span>
+<span class="nb">int</span> <span class="n">fact</span><span class="p">(</span><span class="nb">int</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+<p>La ligne <b>#define SWIG_FILE_WITH_INIT</b> insère une macro qui 
+spécifie que le fichier C résultant doit être construit comme une 
+extension Python, en insérant le code d'initialisation du module. Ce 
+fichier .i encapsule le fichier C.
+</p>
+<h4><span class="mw-headline" id="Les_fichiers_c">Les fichiers c</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=9" title="Modifier la section : Les fichiers c">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Le fichier C contenant le code de la fonction fact.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/* File: example.c */</span>
+<span class="cp">#include</span> <span class="cpf">"example.h"</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">fact</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* This should probably return an error, but this is simpler */</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="cm">/* testing for overflow would be a good idea here */</span>
+  <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<p>Le fichier d'entête 
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/* File: example.h */</span>
+<span class="kt">int</span> <span class="nf">fact</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+</pre></div>
+<h4><span class="mw-headline" id="Contruction_du_module">Contruction du module</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=10" title="Modifier la section : Contruction du module">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Pour construire un module python, utilisez une des commandes suivantes  
+</p>
+<pre>swig -python example.i
+</pre>
+<p>ou 
+</p>
+<pre>swig -c++ -python example.i
+</pre>
+<p>Cela crée deux fichiers différents; un fichier source C / C ++ <b>example_wrap.c</b> ou <b>example_wrap.cxx</b> et un fichier source Python <b>example.py</b>. 
+</p>
+<ul><li>Le fichier source C généré contient le bas niveau, les wrappers 
+qui doivent être compilés et liés avec le reste de votre application C /
+ C ++ pour créer un module d'extension.</li>
+<li>Le fichier source Python contient du code de prise en charge de haut
+ niveau. C'est le dossier que vous importerez pour utiliser le module.</li>
+<li>Le nom du fichier wrapper est dérivé du nom du fichier d'entrée.</li>
+<li>Par exemple, si le fichier d'entrée est <b>example.i</b>, le nom du fichier wrapper est <b>example_wrap.c</b>.</li>
+<li>Pour changer cela, vous pouvez utilisez l'option -o.</li>
+<li>Le nom du fichier Python est dérivé du nom de module spécifié avec% module. Si le nom du module est <b>example</b>, un fichier <b>example.py</b> est créé.</li></ul>
+<h4><span class="mw-headline" id="Utilisation_de_distutils">Utilisation de distutils</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=11" title="Modifier la section : Utilisation de distutils">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li>L'approche préférée pour construire un module d'extension pour 
+Python est de le compiler avec distutils, qui est fourni avec toutes les
+ versions récentes de Python (Distutils Docs).</li></ul>
+<ul><li>Distutils prend soin de s'assurer que votre extension est 
+construite avec tous les indicateurs, en-têtes, etc. appropriés pour la 
+version de Python avec laquelle elle est exécutée.</li>
+<li>Distutils compilera votre extension dans un fichier objet partagé ou DLL (.so sous Linux, .pyd sous Windows, etc.).</li>
+<li>De plus, distutils peut gérer l'installation de votre package dans des packages de site, si vous le souhaitez.</li>
+<li>Un fichier de configuration (appelé conventionnellement <b>setup.py</b>) décrit l'extension (et les modules Python associés).</li>
+<li>Les <b>distutils</b> généreront alors toutes les bonnes directives de compilation pour le construire pour vous.</li></ul>
+<p>Voici un exemple de fichier <b>setup.py</b> pour notre exemple:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="sd">"""</span>
+<span class="sd">setup.py file for SWIG example</span>
+<span class="sd">"""</span>
+<span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">Extension</span>
+<span class="n">example_module</span> <span class="o">=</span> <span class="n">Extension</span><span class="p">(</span><span class="s1">'_example'</span><span class="p">,</span><span class="n">sources</span><span class="o">=</span><span class="p">[</span><span class="s1">'example_wrap.c'</span><span class="p">,</span> <span class="s1">'example.c'</span><span class="p">],)</span>
+<span class="n">setup</span> <span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'example'</span><span class="p">,</span><span class="n">version</span> <span class="o">=</span> <span class="s1">'0.1'</span><span class="p">,</span><span class="n">author</span> <span class="o">=</span> <span class="s2">"SWIG Docs"</span><span class="p">,</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">"""Simple swig example from docs"""</span><span class="p">,</span>
+<span class="n">ext_modules</span> <span class="o">=</span> <span class="p">[</span><span class="n">example_module</span><span class="p">],</span>
+<span class="n">py_modules</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"example"</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+<p>Dans ce fichier, la ligne: <b>example_module = Extension (....)</b> crée un objet module d'extension, définissant le nom comme <b>_example</b> et utilisant les fichiers de code source:
+<b>example_wrap.c</b>, généré par swig, et <b>example.c</b>, le fichier source c d'origine. 
+</p>
+<ul><li>La tradition swig (et autres modules d'extension Python) est que
+ l'extension compilée porte le nom de la partie Python, préfixée par un 
+trait de soulignement.</li>
+<li>Si le nom de votre module Python est <b>"example.py"</b>, alors le nom du fichier objet correspondant sera <b>"_example.so"</b></li>
+<li>L'appel d'installation configure ensuite <b>distutils</b> pour construire votre package, en définissant certaines métadonnées et en transmettant votre objet de module d'extension.</li>
+<li>Vous pouvez créer votre extension avec ces commandes:</li></ul>
+<pre>swig -python example.i (déjà lancée plus haut...!)
+python setup.py build_ext --inplace
+
+</pre>
+<p>Et un fichier .so, ou un fichier .pyd ou ... sera créé pour vous. 
+</p>
+<ul><li>Il créera une version qui correspond au Python avec lequel vous exécutez la commande.</li></ul>
+<p>Description de la ligne de commande:
+</p>
+<ul><li><b>python</b>&nbsp;: la version de Python pour laquelle vous voulez construire</li>
+<li><b>setup.py</b>&nbsp;: le nom de votre script de configuration (il peut être appelé n'importe quoi, mais setup.py est la tradition)</li>
+<li><b>build_ext</b>&nbsp;: dire à distutils de construire des extensions</li>
+<li><b>--inplace</b>&nbsp;: ceci indique à distutils de mettre 
+l'extension lib dans le répertoire courant. Sinon, il le placera dans 
+une hiérarchie de build, et vous devrez le déplacer pour l'utiliser.</li></ul>
+<h3><span class="mw-headline" id="Utilisation_du_module">Utilisation du module</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;section=12" title="Modifier la section : Utilisation du module">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Pour utiliser le module example, créez un fichier python (useModule.py) et exécutez le.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">import</span> <span class="nn">example</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">example</span><span class="o">.</span><span class="n">fact</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:728px;"><a href="../../wiki2/index.php/Fichier_Python-016.html" class="image"><img alt="" src="G%c3%a9n%c3%a9rer%20des%20wrapper%27s%20avec%20SWIG%20%e2%80%94%20Audiens_fichiers/Python-016.png" class="thumbimage" width="726" height="363"></a>  <div class="thumbcaption"><div class="magnify"><a href="../../wiki2/index.php/Fichier_Python-016.html" class="internal" title="Agrandir"></a></div>Utilisation du module example</div></div></div></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20200424064517
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.021 seconds
+Real time usage: 0.023 seconds
+Preprocessor visited node count: 86/1000000
+Preprocessor generated node count: 152/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 4856/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key wikidb2:pcache:idhash:2717-0!canonical and timestamp 20200424064517 and revision id 14061
+ -->
+</div>					<div class="printfooter">
+						Récupérée de «&nbsp;<a dir="ltr" href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;oldid=14061">https://www.audiens.fr/wiki2/index.php?title=Générer_des_wrapper%27s_avec_SWIG&amp;oldid=14061</a>&nbsp;»					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Catégories" title="Spécial:Catégories">Catégories</a>&nbsp;: <ul><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Développements" title="Catégorie:Développements">Développements</a></li><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Langages" title="Catégorie:Langages">Langages</a></li><li><a href="https://www.audiens.fr/wiki2/index.php?title=Cat%C3%A9gorie:Python&amp;action=edit&amp;redlink=1" class="new" title="Catégorie:Python (page inexistante)">Python</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navigation</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Outils personnels</h3>
+						<ul>
+							<li id="pt-userpage"><a href="https://www.audiens.fr/wiki2/index.php/Utilisateur:Phil" class="new" dir="auto" title="Votre page d’utilisateur (page inexistante) [Alt+Maj+.]" accesskey=".">Phil</a></li><li id="pt-mytalk"><a href="https://www.audiens.fr/wiki2/index.php/Discussion_utilisateur:Phil" class="new" title="Votre page de discussion (page inexistante) [Alt+Maj+n]" accesskey="n">Discussion</a></li><li id="pt-preferences"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Préférences" title="Vos préférences">Préférences</a></li><li id="pt-watchlist"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Liste_de_suivi" title="Une liste des pages dont vous suivez les modifications [Alt+Maj+l]" accesskey="l">Liste de suivi</a></li><li id="pt-mycontris"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Contributions/Phil" title="La liste de vos contributions [Alt+Maj+y]" accesskey="y">Contributions</a></li><li id="pt-logout"><a href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:D%C3%A9connexion&amp;returnto=G%C3%A9n%C3%A9rer+des+wrapper%27s+avec+SWIG" title="Se déconnecter">Se déconnecter</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espaces de noms</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Générer_des_wrapper%27s_avec_SWIG" title="Voir le contenu de la page [Alt+Maj+c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Discussion:G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion au sujet de cette page de contenu (page inexistante) [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Affichages</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Générer_des_wrapper%27s_avec_SWIG">Lire</a></span></li><li id="ca-edit" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=edit" title="Modifier le wikicode [Alt+Maj+e]" accesskey="e">Modifier</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=history" title="Historique des versions de cette page [Alt+Maj+h]" accesskey="h">Afficher l’historique</a></span></li><span class="placeholder" style="display: none;"></span><span class="placeholder" style="display: none;"></span>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Plus</span></h3>
+						<div class="menu">
+							<ul><li id="ca-pdfbook" class="collapsible" style="display: list-item;"><span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=pdfbook&amp;format=single">Imprimer au format PDF</a></span></li><li id="ca-unwatch" class="collapsible icon mw-watchlink" style="display: list-item;"><span><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=unwatch" data-mw="interface" title="Retirer cette page de votre liste de suivi [Alt+Maj+w]" accesskey="w">Ne plus suivre</a></span></li>
+								<li id="ca-delete"><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=delete" title="Supprimer cette page [Alt+Maj+d]" accesskey="d">Supprimer</a></li><li id="ca-move"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Renommer_une_page/Générer_des_wrapper%27s_avec_SWIG" title="Renommer cette page [Alt+Maj+m]" accesskey="m">Renommer</a></li><li id="ca-protect"><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=protect" title="Protéger cette page [Alt+Maj+=]" accesskey="=">Protéger</a></li>							</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Rechercher</label>
+						</h3>
+						<form action="http://www.audiens.fr/wiki2/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Rechercher dans Audiens" title="Rechercher dans Audiens [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Spécial:Recherche" name="title"><input type="submit" name="go" value="Continuer" title="Accédez à une page du même nom si elle existe" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Visiter la page d’accueil"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil général [Alt+Maj+z]" accesskey="z">Accueil</a></li><li id="n-recentchanges"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Modifications_récentes" title="Liste des modifications récentes sur le wiki [Alt+Maj+r]" accesskey="r">Modifications récentes</a></li><li id="n-randompage"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Page_au_hasard" title="Afficher une page au hasard [Alt+Maj+x]" accesskey="x">Page au hasard</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="Accès à l’aide">Aide</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Outils</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_liées/Générer_des_wrapper%27s_avec_SWIG" title="Liste des pages liées qui pointent sur celle-ci [Alt+Maj+j]" accesskey="j">Pages liées</a></li><li id="t-recentchangeslinked"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Suivi_des_liens/Générer_des_wrapper%27s_avec_SWIG" rel="nofollow" title="Liste des modifications récentes des pages appelées par celle-ci [Alt+Maj+k]" accesskey="k">Suivi des pages liées</a></li><li id="t-upload"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Téléverser" title="Téléverser des fichiers [Alt+Maj+u]" accesskey="u">Importer un fichier</a></li><li id="t-specialpages"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_spéciales" title="Liste de toutes les pages spéciales [Alt+Maj+q]" accesskey="q">Pages spéciales</a></li><li id="t-print"><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [Alt+Maj+p]" accesskey="p">Version imprimable</a></li><li id="t-permalink"><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;oldid=14061" title="Adresse permanente de cette version de la page">Lien permanent</a></li><li id="t-info"><a href="https://www.audiens.fr/wiki2/index.php?title=G%C3%A9n%C3%A9rer_des_wrapper%27s_avec_SWIG&amp;action=info" title="Plus d’information sur cette page">Information sur la page</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> La dernière modification de cette page a été faite le 24 avril 2020 à 06:45.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Politique_de_confidentialité" title="Audiens:Politique de confidentialité">Politique de confidentialité</a></li>
+								<li id="footer-places-about"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:À_propos_de" title="Audiens:À propos de">À propos de Audiens</a></li>
+								<li id="footer-places-disclaimer"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Avertissements_généraux" title="Audiens:Avertissements généraux">Avertissements</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="G%c3%a9n%c3%a9rer%20des%20wrapper%27s%20avec%20SWIG%20%e2%80%94%20Audiens_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki2/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki2/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.021","walltime":"0.023","ppvisitednodes":{"value":86,"limit":1000000},"ppgeneratednodes":{"value":152,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":4856,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20200424064517","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":74});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+<!-- Mirrored from www.audiens.fr/download/python/Générer des wrapper's avec SWIG — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:19 GMT -->
+</html>

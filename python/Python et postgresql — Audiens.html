@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="fr">
+<!-- Mirrored from www.audiens.fr/download/python/Python et postgresql — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:27 GMT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Python et postgresql — Audiens</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Python_et_postgresql","wgTitle":"Python et postgresql","wgCurRevisionId":13424,"wgRevisionId":13424,"wgArticleId":2573,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":"Phil","wgUserGroups":["sysop","bureaucrat","*","user","autoconfirmed"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"fr","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"wgMonthNamesShort":["","janv.","fév.","mars","avr.","mai","juin","juill.","août","sept.","oct.","nov.","déc."],"wgRelevantPageName":"Python_et_postgresql","wgRelevantArticleId":2573,"wgRequestId":"fcceb9023268c3dd5a20065b","wgUserId":1,"wgUserEditCount":13983,"wgUserRegistration":1325332820000,"wgUserNewMsgRevisionId":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0tu0ujd",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"timecorrection":"Offset|0","watchlisttoken":""});
+});mw.loader.implement("user.tokens@1okgkd6",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"2a2c8d26e65a40700214034b5a745f885ea15f3e+\\","patrolToken":"b1d052d155eaddbe8d27adfd889a3c7f5ea15f3e+\\","watchToken":"d8f4c9ab87d1d67f03b784280832cac45ea15f3e+\\","csrfToken":"2a2c8d26e65a40700214034b5a745f885ea15f3e+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","mediawiki.page.watch.ajax","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="Python%20et%20postgresql%20%e2%80%94%20Audiens_fichiers/load.css">
+<script async="" src="Python%20et%20postgresql%20%e2%80%94%20Audiens_fichiers/load.html"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<meta name="generator" content="MediaWiki 1.31.1">
+<link rel="alternate" type="application/x-wiki" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit">
+<link rel="edit" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit">
+<link rel="shortcut icon" href="https://www.audiens.fr/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.audiens.fr/wiki2/opensearch_desc.php" title="Audiens (fr)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.audiens.fr/wiki2/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Audiens" href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<!--[if lt IE 9]><script src="/wiki2/load.php?debug=false&amp;lang=fr&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+<script src="Python%20et%20postgresql%20%e2%80%94%20Audiens_fichiers/load_002.html"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Python_et_postgresql rootpage-Python_et_postgresql skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="fr">Python et postgresql</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Audiens</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Aller à :					<a href="#mw-head">navigation</a>, 					<a href="#p-search">rechercher</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr"><div class="mw-parser-output"><p>Navigation&nbsp;: <a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil">Accueil</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Python" title="Python">Python</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Python_et_les_bases_de_données" title="Python et les bases de données">Python et les bases de données</a> -&gt; <a class="mw-selflink selflink">Python et postgresql</a>
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="fr"><h2>Sommaire</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">masquer</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Liens_utiles"><span class="tocnumber">1</span> <span class="toctext">Liens utiles</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Installation"><span class="tocnumber">2</span> <span class="toctext">Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Sous_linux"><span class="tocnumber">2.1</span> <span class="toctext">Sous linux</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Sous_windows"><span class="tocnumber">2.2</span> <span class="toctext">Sous windows</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Les_op.C3.A9rations_CRUD"><span class="tocnumber">3</span> <span class="toctext">Les opérations CRUD</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Cr.C3.A9er_la_table_client"><span class="tocnumber">3.1</span> <span class="toctext">Créer la table client</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Ajouter_des_clients"><span class="tocnumber">3.2</span> <span class="toctext">Ajouter des clients</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Etablir_une_connexion_sur_la_base_de_donn.C3.A9es"><span class="tocnumber">3.3</span> <span class="toctext">Etablir une connexion sur la base de données</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Lire_le_contenu_d.27une_table"><span class="tocnumber">3.4</span> <span class="toctext">Lire le contenu d'une table</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Lire_plusieurs_lignes"><span class="tocnumber">3.5</span> <span class="toctext">Lire plusieurs lignes</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Lire_toutes_les_lignes"><span class="tocnumber">3.6</span> <span class="toctext">Lire toutes les lignes</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Ajouter_des_clients_2"><span class="tocnumber">3.7</span> <span class="toctext">Ajouter des clients</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Modifier_un_client"><span class="tocnumber">3.8</span> <span class="toctext">Modifier un client</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Supprimer_un_client"><span class="tocnumber">3.9</span> <span class="toctext">Supprimer un client</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#R.C3.A9alisation_d.27une_couche_DAO"><span class="tocnumber">4</span> <span class="toctext">Réalisation d'une couche DAO</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#La_classe_BaseDAO"><span class="tocnumber">4.1</span> <span class="toctext">La classe BaseDAO</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#La_classe_ClientDAO"><span class="tocnumber">4.2</span> <span class="toctext">La classe ClientDAO</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Le_programme_principal"><span class="tocnumber">4.3</span> <span class="toctext">Le programme principal</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#R.C3.A9cup.C3.A9rer_les_noms_de_colonne_d.27une_table"><span class="tocnumber">5</span> <span class="toctext">Récupérer les noms de colonne d'une table</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Liens_utiles">Liens utiles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=1" title="Modifier la section : Liens utiles">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Un bon tuto&nbsp;: <a rel="nofollow" class="external free" href="http://www.postgresqltutorial.com/postgresql-python/">http://www.postgresqltutorial.com/postgresql-python/</a>
+</p>
+<h2><span class="mw-headline" id="Installation">Installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=2" title="Modifier la section : Installation">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Sous_linux">Sous linux</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=3" title="Modifier la section : Sous linux">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Installer le module <b>python-psycopg2</b> (module de Python pour PostgreSQL )
+</p>
+<pre>apt-get update &amp;&amp; apt-get -y install python-psycopg2
+</pre>
+<p>Installer le module <b>psycopg2</b> pour python3 (module de Python pour PostgreSQL )
+</p>
+<pre>apt-get install python3-psycopg2
+</pre>
+<h3><span class="mw-headline" id="Sous_windows">Sous windows</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=4" title="Modifier la section : Sous windows">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre><b>pip install psycopg2</b>
+Collecting psycopg2
+ Downloading psycopg2-2.8.4-cp38-cp38-win32.whl (986 kB)
+    |████████████████████████████████| 986 kB 3.3 MB/s
+Installing collected packages: psycopg2
+Successfully installed psycopg2-2.8.4
+</pre>
+<h2><span id="Les_opérations_CRUD"></span><span class="mw-headline" id="Les_op.C3.A9rations_CRUD">Les opérations CRUD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=5" title="Modifier la section : Les opérations CRUD">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="Créer_la_table_client"></span><span class="mw-headline" id="Cr.C3.A9er_la_table_client">Créer la table client</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=6" title="Modifier la section : Créer la table client">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">create</span> <span class="n">sequence</span> <span class="n">seq_client</span>
+<span class="k">start</span> <span class="k">with</span> <span class="mi">1</span>
+<span class="k">increment</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="k">create</span> <span class="k">table</span> <span class="n">client</span> <span class="p">(</span>
+<span class="n">id</span> <span class="nb">int8</span> <span class="k">primary</span> <span class="k">key</span> <span class="k">default</span> <span class="n">nextval</span><span class="p">(</span><span class="s1">'seq_client'</span><span class="p">),</span>
+<span class="n">raison</span> <span class="nb">varchar</span> <span class="k">null</span><span class="p">,</span>
+<span class="n">mnemo</span> <span class="nb">varchar</span> <span class="k">null</span><span class="p">,</span>
+<span class="n">adresse1</span> <span class="nb">varchar</span> <span class="k">null</span><span class="p">,</span>
+<span class="n">adresse2</span> <span class="nb">varchar</span> <span class="k">null</span><span class="p">,</span>
+<span class="n">codeinsee</span> <span class="nb">int8</span><span class="p">,</span>
+<span class="n">email</span> <span class="nb">varchar</span>
+<span class="p">);</span>
+</pre></div>
+<h3><span class="mw-headline" id="Ajouter_des_clients">Ajouter des clients</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=7" title="Modifier la section : Ajouter des clients">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">insert</span> <span class="k">into</span> <span class="n">client</span> <span class="p">(</span><span class="n">raison</span><span class="p">,</span><span class="n">mnemo</span><span class="p">,</span><span class="n">adresse1</span><span class="p">,</span><span class="n">codeinsee</span><span class="p">,</span><span class="n">email</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="s1">'M2I'</span><span class="p">,</span><span class="s1">'m2i'</span><span class="p">,</span><span class="s1">'Allee James Watt'</span><span class="p">,</span><span class="mi">33700</span><span class="p">,</span><span class="s1">'bob@m2i.com'</span><span class="p">);</span>
+
+<span class="k">insert</span> <span class="k">into</span> <span class="n">client</span> <span class="p">(</span><span class="n">raison</span><span class="p">,</span><span class="n">mnemo</span><span class="p">,</span><span class="n">adresse1</span><span class="p">,</span><span class="n">codeinsee</span><span class="p">,</span><span class="n">email</span><span class="p">)</span> <span class="k">values</span> <span class="p">(</span><span class="s1">'Safran Industrie'</span><span class="p">,</span><span class="s1">'saf'</span><span class="p">,</span><span class="s1">'Boulevard du médoc'</span><span class="p">,</span><span class="mi">33000</span><span class="p">,</span><span class="s1">'bob@safran.com'</span><span class="p">);</span>
+</pre></div>
+<h3><span id="Etablir_une_connexion_sur_la_base_de_données"></span><span class="mw-headline" id="Etablir_une_connexion_sur_la_base_de_donn.C3.A9es">Etablir une connexion sur la base de données</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=8" title="Modifier la section : Etablir une connexion sur la base de données">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> self._cnx <span class="o">=</span> psycopg2.connect<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s2">"localhost"</span>,database<span class="o">=</span><span class="s2">"compta"</span>, <span class="nv">user</span><span class="o">=</span><span class="s2">"compta"</span>, <span class="nv">password</span><span class="o">=</span><span class="s2">"secret"</span><span class="o">)</span>
+</pre></div>
+<h3><span id="Lire_le_contenu_d'une_table"></span><span class="mw-headline" id="Lire_le_contenu_d.27une_table">Lire le contenu d'une table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=9" title="Modifier la section : Lire le contenu d'une table">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> <span class="nv">sql</span> <span class="o">=</span> <span class="s2">"select * from client where id=1"</span>
+ <span class="nv">cursor</span> <span class="o">=</span> self._cnx.cursor<span class="o">()</span>
+ cursor.execute<span class="o">(</span>sql<span class="o">)</span>
+ <span class="nv">row</span> <span class="o">=</span> cursor.fetchone<span class="o">()</span>
+ import psycopg2
+
+<span class="s2">""" On récupère dans cn        </span>
+<span class="s2">    def getById(self):x un objet connexion """</span>
+<span class="nv">cnx</span> <span class="o">=</span> psycopg2.connect<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s2">"localhost"</span>,database<span class="o">=</span><span class="s2">"compta"</span>, <span class="nv">user</span><span class="o">=</span><span class="s2">"compta"</span>, <span class="nv">password</span><span class="o">=</span><span class="s2">"secret"</span><span class="o">)</span>
+ 
+<span class="s2">""" Lire le contenu de la table client """</span>
+<span class="nv">sql</span> <span class="o">=</span> <span class="s2">"select * from client"</span> 
+<span class="nv">cursor</span> <span class="o">=</span> cnx.cursor<span class="o">()</span>
+cursor.execute<span class="o">(</span>sql<span class="o">)</span>
+<span class="s2">""" Lit la première ligne """</span>
+<span class="nv">row</span> <span class="o">=</span> cursor.fetchone<span class="o">()</span>
+print<span class="o">(</span>row<span class="o">)</span>
+
+<span class="s2">""" Lit la ligne suivante """</span>
+<span class="nv">row</span> <span class="o">=</span> cursor.fetchone<span class="o">()</span>
+print<span class="o">(</span>row<span class="o">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="Lire_plusieurs_lignes">Lire plusieurs lignes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=10" title="Modifier la section : Lire plusieurs lignes">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import psycopg2
+
+<span class="s2">""" On récupère dans cnx un objet connexion """</span>
+<span class="nv">cnx</span> <span class="o">=</span> psycopg2.connect<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s2">"localhost"</span>,database<span class="o">=</span><span class="s2">"compta"</span>, <span class="nv">user</span><span class="o">=</span><span class="s2">"compta"</span>, <span class="nv">password</span><span class="o">=</span><span class="s2">"secret"</span><span class="o">)</span>
+ 
+<span class="s2">""" Lire le contenu de la table client """</span>
+<span class="nv">sql</span> <span class="o">=</span> <span class="s2">"select * from client"</span> <span class="c1"># where id=1"</span>
+<span class="nv">cursor</span> <span class="o">=</span> cnx.cursor<span class="o">()</span>
+cursor.execute<span class="o">(</span>sql<span class="o">)</span>
+<span class="s2">""" Lit la première ligne """</span>
+<span class="nv">row</span> <span class="o">=</span> cursor.fetchone<span class="o">()</span>
+print<span class="o">(</span>row<span class="o">)</span>
+
+<span class="s2">""" Lit la ligne suivante """</span>
+<span class="nv">row</span> <span class="o">=</span> cursor.fetchone<span class="o">()</span>
+print<span class="o">(</span>row<span class="o">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="Lire_toutes_les_lignes">Lire toutes les lignes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=11" title="Modifier la section : Lire toutes les lignes">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="s2">""" Lire toutes les lignes """</span>
+<span class="nv">sql</span> <span class="o">=</span> <span class="s2">"select * from client"</span>
+<span class="nv">cursor</span> <span class="o">=</span> cnx.cursor<span class="o">()</span>
+cursor.execute<span class="o">(</span>sql<span class="o">)</span>
+<span class="nv">rows</span> <span class="o">=</span> cursor.fetchall<span class="o">()</span>
+
+print<span class="o">(</span>rows<span class="o">)</span>
+
+<span class="k">for</span> row in rows:
+    print <span class="o">(</span><span class="s2">"- {0}"</span>.format<span class="o">(</span>row<span class="o">))</span>
+</pre></div>
+<h3><span class="mw-headline" id="Ajouter_des_clients_2">Ajouter des clients</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=12" title="Modifier la section : Ajouter des clients">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">sql</span><span class="o">=</span><span class="s2">"insert into client (raison,mnemo,adresse1,codeinsee,email) values ('%s','%s','%s',%d,'%s')"</span>
+<span class="nv">cursor</span> <span class="o">=</span> cnx.cursor<span class="o">()</span>
+<span class="nv">listValues</span><span class="o">=[]</span>
+listValues.append<span class="o">(</span><span class="s1">'AT&amp;T'</span><span class="o">)</span>
+listValues.append<span class="o">(</span><span class="s1">'att'</span><span class="o">)</span>
+listValues.append<span class="o">(</span><span class="s1">'387 square garden LONDON'</span><span class="o">)</span>
+listValues.append<span class="o">(</span><span class="m">10215</span><span class="o">)</span>
+listValues.append<span class="o">(</span><span class="s1">'bob@att.com'</span><span class="o">)</span>
+cursor.execute<span class="o">(</span>sql,listValues<span class="o">)</span>
+cnx.commit<span class="o">()</span>
+cursor.close<span class="o">()</span>
+</pre></div>
+<h3><span class="mw-headline" id="Modifier_un_client">Modifier un client</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=13" title="Modifier la section : Modifier un client">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="s2">""" Modifier un client """</span>
+<span class="nv">sql</span><span class="o">=</span><span class="s2">"update client set adresse2 =%s where id=%s"</span>
+<span class="nv">cursor</span> <span class="o">=</span> cnx.cursor<span class="o">()</span>
+<span class="nv">listValues</span><span class="o">=[]</span>
+listValues.append<span class="o">(</span><span class="s1">'BP 256'</span><span class="o">)</span>
+listValues.append<span class="o">(</span><span class="m">4</span><span class="o">)</span>
+cursor.execute<span class="o">(</span>sql,listValues<span class="o">)</span>
+cnx.commit<span class="o">()</span>
+cursor.close<span class="o">()</span>
+</pre></div>
+<h3><span class="mw-headline" id="Supprimer_un_client">Supprimer un client</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=14" title="Modifier la section : Supprimer un client">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>""" Supprimer un client """
+sql="delete from client where id=%s"
+cursor = cnx.cursor()
+listValues=[]
+listValues.append(4)
+cursor.execute(sql,listValues)
+cnx.commit()
+cursor.close()
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+<p>-
+</p>
+<h2><span id="Réalisation_d'une_couche_DAO"></span><span class="mw-headline" id="R.C3.A9alisation_d.27une_couche_DAO">Réalisation d'une couche DAO</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=15" title="Modifier la section : Réalisation d'une couche DAO">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Cette couche DAO (Data Acces Layer) regroupe dans une classe Python 
+les opérations élémentaires (CRUD) sous la forme d'une classe de base 
+facilement extensible.
+</p>
+<h3><span class="mw-headline" id="La_classe_BaseDAO">La classe BaseDAO</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=16" title="Modifier la section : La classe BaseDAO">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import psycopg2
+from macpath import sep
+
+class BaseDAO:
+    
+     
+     <span class="c1"># Creation de la propriete CNX</span>
+    def _getCnx<span class="o">(</span>self<span class="o">)</span>:
+        <span class="k">return</span> self._cnx
+
+    def _setCnx<span class="o">(</span>self,value<span class="o">)</span>:
+        self._cnx <span class="o">=</span> value
+
+    <span class="nv">cnx</span><span class="o">=</span>property<span class="o">(</span>_getCnx, _setCnx<span class="o">)</span>
+   
+     <span class="c1"># Creation de la propriete fields</span>
+    def _getFields<span class="o">(</span>self<span class="o">)</span>:
+        <span class="k">return</span> self._fields
+
+    def _setFields<span class="o">(</span>self,value<span class="o">)</span>:
+        self._fields <span class="o">=</span> value
+
+    <span class="nv">fields</span><span class="o">=</span>property<span class="o">(</span>_getFields, _setFields<span class="o">)</span>
+   
+    <span class="c1"># Creation de la propriete tableName</span>
+    def _getTableName<span class="o">(</span>self<span class="o">)</span>:
+        <span class="k">return</span> self._tableName
+
+    def _setTableName<span class="o">(</span>self,value<span class="o">)</span>:
+        self._tableName <span class="o">=</span> value
+
+    <span class="nv">tablename</span><span class="o">=</span>property<span class="o">(</span>_getTableName, _setTableName<span class="o">)</span>
+    
+      <span class="c1"># Creation de la propriete id</span>
+    def _getId<span class="o">(</span>self<span class="o">)</span>:
+        <span class="k">return</span> self._id
+
+    def _setId<span class="o">(</span>self,value<span class="o">)</span>:
+        self._id <span class="o">=</span> value
+
+    <span class="nv">id</span><span class="o">=</span>property<span class="o">(</span>_getId, _setId<span class="o">)</span>
+    
+    def __init__<span class="o">(</span>self<span class="o">)</span>:
+        <span class="c1"># print('Constructeur de BaseDAO')</span>
+        self._cnx <span class="o">=</span> psycopg2.connect<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s2">"localhost"</span>,database<span class="o">=</span><span class="s2">"compta"</span>, <span class="nv">user</span><span class="o">=</span><span class="s2">"compta"</span>, <span class="nv">password</span><span class="o">=</span><span class="s2">"secret"</span><span class="o">)</span>
+        self._fields <span class="o">=[]</span>
+        self._tableName<span class="o">=</span><span class="s1">''</span>
+        self._id<span class="o">=</span><span class="s1">''</span>
+        
+        
+    def buildFieldsList<span class="o">(</span>self<span class="o">)</span>:
+        <span class="nv">str</span> <span class="o">=</span> <span class="s1">''</span>
+        <span class="nv">sep</span> <span class="o">=</span> <span class="s1">''</span> 
+        <span class="k">for</span> f in self._fields:
+            <span class="nv">str</span> <span class="o">+=</span>sep
+            <span class="nv">str</span> <span class="o">+=</span>f
+            <span class="nv">sep</span><span class="o">=</span><span class="s1">','</span>
+        <span class="k">return</span> str       
+        
+    def getById<span class="o">(</span>self,id<span class="o">)</span>:
+        <span class="nv">str</span> <span class="o">=</span> self.buildFieldsList<span class="o">()</span>
+        <span class="nv">sql</span> <span class="o">=</span> <span class="s2">"select "</span>+str +<span class="s2">" from "</span>+self._tableName+<span class="s2">" where "</span>+self._id+<span class="s2">"="</span>+repr<span class="o">(</span>id<span class="o">)</span>
+        <span class="nv">cursor</span> <span class="o">=</span> self._cnx.cursor<span class="o">()</span>
+        cursor.execute<span class="o">(</span>sql<span class="o">)</span>
+        <span class="nv">row</span> <span class="o">=</span> cursor.fetchone<span class="o">()</span>
+        <span class="nv">result</span><span class="o">={}</span>
+        <span class="nv">cpt</span><span class="o">=</span><span class="m">0</span>
+        <span class="k">for</span> f in self._fields:
+            result<span class="o">[</span>f<span class="o">]=</span>row<span class="o">[</span>cpt<span class="o">]</span>
+            <span class="nv">cpt</span><span class="o">+=</span><span class="m">1</span>
+        <span class="k">return</span> result
+    
+        
+    def getAll<span class="o">(</span>self<span class="o">)</span>:
+        <span class="nv">str</span> <span class="o">=</span> self.buildFieldsList<span class="o">()</span>
+        <span class="nv">sql</span> <span class="o">=</span> <span class="s2">"select "</span>+str +<span class="s2">" from "</span>+self._tableName
+        <span class="nv">cursor</span> <span class="o">=</span> self._cnx.cursor<span class="o">()</span>
+        cursor.execute<span class="o">(</span>sql<span class="o">)</span>
+        <span class="c1"># Retourne une liste de tuples</span>
+        <span class="nv">rows</span> <span class="o">=</span> cursor.fetchall<span class="o">()</span>
+        <span class="c1">#print(rows)</span>
+        <span class="nv">liste</span><span class="o">=[]</span>
+        <span class="nv">cptligne</span><span class="o">=</span><span class="m">0</span>
+        <span class="k">for</span> row in rows:
+            <span class="c1"># print(row)</span>
+            <span class="nv">result</span><span class="o">={}</span>
+            <span class="nv">cpt</span><span class="o">=</span><span class="m">0</span>
+            <span class="k">for</span> f in self._fields:
+               result<span class="o">[</span>f<span class="o">]=</span>row<span class="o">[</span>cpt<span class="o">]</span>
+               <span class="nv">cpt</span><span class="o">+=</span><span class="m">1</span>
+            liste.append<span class="o">(</span>result<span class="o">)</span>
+        <span class="k">return</span> liste
+        
+        
+    <span class="c1"># entity doit être un dictionnaire     </span>
+    def save<span class="o">(</span>self,entity<span class="o">)</span>:
+        <span class="nv">sql</span> <span class="o">=</span> <span class="s2">"insert into "</span>+self._tableName
+        <span class="c1"># +"listedeschamps" + "values(%s)"</span>
+        <span class="nv">values</span><span class="o">=</span><span class="s1">'('</span>
+        <span class="nv">listValues</span><span class="o">=[]</span>
+        <span class="nv">colnames</span><span class="o">=</span><span class="s1">'('</span>
+        <span class="nv">sep</span><span class="o">=</span><span class="s1">''</span>
+        <span class="k">for</span> k,v in entity.items<span class="o">()</span>:
+            <span class="nv">colnames</span><span class="o">+=</span>sep+k
+            listValues.append<span class="o">(</span>entity<span class="o">[</span>k<span class="o">])</span>
+            <span class="nv">values</span><span class="o">+=</span>sep+<span class="s1">'%s'</span>
+            <span class="nv">sep</span><span class="o">=</span><span class="s1">','</span>
+        <span class="nv">colnames</span><span class="o">+=</span><span class="s1">')'</span>
+        <span class="nv">values</span><span class="o">+=</span><span class="s1">')'</span>
+        <span class="nv">sql</span><span class="o">+=</span>colnames+<span class="s2">" values "</span>+values+<span class="s2">" RETURNING id;"</span>
+        <span class="nv">cursor</span> <span class="o">=</span> self._cnx.cursor<span class="o">()</span>
+        cursor.execute<span class="o">(</span>sql, listValues<span class="o">)</span>
+        <span class="c1"># Recupere l'identifiant genere</span>
+        <span class="nv">id</span> <span class="o">=</span> cursor.fetchone<span class="o">()[</span><span class="m">0</span><span class="o">]</span>
+        <span class="c1"># valide les changements dans la base de donnees</span>
+        self._cnx.commit<span class="o">()</span>
+        <span class="c1"># ferme la communication avec la base de donnees.</span>
+        cursor.close<span class="o">()</span>
+        <span class="k">return</span> id
+</pre></div>
+<h3><span class="mw-headline" id="La_classe_ClientDAO">La classe ClientDAO</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=17" title="Modifier la section : La classe ClientDAO">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>La classe ClientDAO étend la classe BaseDAO
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>from psycopg2.sql import NULL
+import BaseDAO
+
+
+class ClientDAO<span class="o">(</span>BaseDAO.BaseDAO<span class="o">)</span>:
+        
+ 
+    def __init__<span class="o">(</span>self<span class="o">)</span>:
+        super<span class="o">()</span>.__init__<span class="o">()</span>
+        <span class="c1"># print('Constructeur de ClientDAO')</span>
+        <span class="c1"># Liste des noms de champs</span>
+        self.fields <span class="o">=</span> <span class="o">[</span><span class="s1">'id'</span>,<span class="s1">'mnemo'</span>,<span class="s1">'raison'</span>,<span class="s1">'adresse1'</span>,<span class="s1">'adresse2'</span>,<span class="s1">'codeinsee'</span><span class="o">]</span>   
+        self.tablename <span class="o">=</span> <span class="s1">'client'</span>
+        self.id <span class="o">=</span> <span class="s1">'id'</span>
+        
+    def getById<span class="o">(</span>self,id<span class="o">)</span>:
+<span class="c1">#       cursor = self.cnx.cursor()</span>
+<span class="c1">#       cursor.execute("SELECT id,raison FROM client where id="+repr(id))</span>
+<span class="c1">#       print("The number of parts: ", cursor.rowcount)</span>
+<span class="c1">#       row = cursor.fetchone()</span>
+<span class="c1">#       return row</span>
+        <span class="k">return</span> super<span class="o">()</span>.getById<span class="o">(</span>id<span class="o">)</span>
+        
+    def getAll<span class="o">(</span>self<span class="o">)</span>:
+        <span class="k">return</span> super<span class="o">()</span>.getAll<span class="o">()</span>
+    
+    def save<span class="o">(</span>self,entity<span class="o">)</span>:
+        <span class="k">return</span> super<span class="o">()</span>.save<span class="o">(</span>entity<span class="o">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="Le_programme_principal">Le programme principal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=18" title="Modifier la section : Le programme principal">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/usr/bin/python3</span>
+<span class="c1">#import psycopg2</span>
+import ClientDAO
+
+
+<span class="nv">dao</span><span class="o">=</span>ClientDAO.ClientDAO<span class="o">()</span>
+
+<span class="nv">obj</span><span class="o">=</span>dao.getById<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+
+print<span class="o">(</span><span class="s2">"getById retourne"</span><span class="o">)</span>
+<span class="k">for</span> k,v in obj.items<span class="o">()</span>:
+    print<span class="o">(</span><span class="s1">'  ['</span>+k+<span class="s1">']='</span>+repr<span class="o">(</span>obj<span class="o">[</span>k<span class="o">]))</span>
+    
+print<span class="o">(</span><span class="s2">"getAll retourne"</span><span class="o">)</span>
+<span class="nv">obj</span><span class="o">=</span>dao.getAll<span class="o">()</span>
+
+print<span class="o">(</span>obj<span class="o">)</span>
+
+<span class="c1"># On creer un dictionnaire vide</span>
+<span class="c1"># ['id','mnemo','raison','adresse1','adresse2','codeinsee']</span>
+<span class="nv">entity</span><span class="o">={}</span>
+entity<span class="o">[</span><span class="s1">'mnemo'</span><span class="o">]=</span><span class="s1">'SFP'</span>
+entity<span class="o">[</span><span class="s1">'raison'</span><span class="o">]=</span><span class="s1">'Societe Francaise Petroleum'</span>
+entity<span class="o">[</span><span class="s1">'adresse1'</span><span class="o">]=</span><span class="s1">'8 rue du quai'</span>
+entity<span class="o">[</span><span class="s1">'adresse2'</span><span class="o">]=</span><span class="s1">''</span>
+entity<span class="o">[</span><span class="s1">'codeinsee'</span><span class="o">]=</span><span class="s1">'72115'</span>
+<span class="nv">lastid</span><span class="o">=</span>dao.save<span class="o">(</span>entity<span class="o">)</span>
+print<span class="o">(</span><span class="s2">"save retourne lastid="</span>+repr<span class="o">(</span>lastid<span class="o">))</span>
+</pre></div>
+<p><br>
+</p>
+<h2><span id="Récupérer_les_noms_de_colonne_d'une_table"></span><span class="mw-headline" id="R.C3.A9cup.C3.A9rer_les_noms_de_colonne_d.27une_table">Récupérer les noms de colonne d'une table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit&amp;section=19" title="Modifier la section : Récupérer les noms de colonne d'une table">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import psycopg2
+
+<span class="nv">cnx</span> <span class="o">=</span> psycopg2.connect<span class="o">(</span><span class="nv">host</span><span class="o">=</span><span class="s2">"localhost"</span>,database<span class="o">=</span><span class="s2">"compta"</span>, <span class="nv">user</span><span class="o">=</span><span class="s2">"compta"</span>, <span class="nv">password</span><span class="o">=</span><span class="s2">"secret"</span><span class="o">)</span>
+<span class="nv">cursor</span> <span class="o">=</span> cnx.cursor<span class="o">()</span>
+cursor.execute<span class="o">(</span><span class="s2">"select column_name from information_schema.columns where table_schema = 'public' and table_name='client'"</span><span class="o">)</span>
+<span class="nv">column_names</span> <span class="o">=</span> <span class="o">[</span>row<span class="o">[</span><span class="m">0</span><span class="o">]</span> <span class="k">for</span> row in cursor<span class="o">]</span>
+ 
+print<span class="o">(</span><span class="s2">"Column names: {}\n"</span>.format<span class="o">(</span>column_names<span class="o">))</span>
+</pre></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20200423092622
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.061 seconds
+Real time usage: 1.573 seconds
+Preprocessor visited node count: 186/1000000
+Preprocessor generated node count: 340/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 24411/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key wikidb2:pcache:idhash:2573-0!canonical and timestamp 20200423092620 and revision id 13424
+ -->
+</div>					<div class="printfooter">
+						Récupérée de «&nbsp;<a dir="ltr" href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;oldid=13424">https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;oldid=13424</a>&nbsp;»					</div>
+				<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navigation</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Outils personnels</h3>
+						<ul>
+							<li id="pt-userpage"><a href="https://www.audiens.fr/wiki2/index.php/Utilisateur:Phil" class="new" dir="auto" title="Votre page d’utilisateur (page inexistante) [Alt+Maj+.]" accesskey=".">Phil</a></li><li id="pt-mytalk"><a href="https://www.audiens.fr/wiki2/index.php/Discussion_utilisateur:Phil" class="new" title="Votre page de discussion (page inexistante) [Alt+Maj+n]" accesskey="n">Discussion</a></li><li id="pt-preferences"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Préférences" title="Vos préférences">Préférences</a></li><li id="pt-watchlist"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Liste_de_suivi" title="Une liste des pages dont vous suivez les modifications [Alt+Maj+l]" accesskey="l">Liste de suivi</a></li><li id="pt-mycontris"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Contributions/Phil" title="La liste de vos contributions [Alt+Maj+y]" accesskey="y">Contributions</a></li><li id="pt-logout"><a href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:D%C3%A9connexion&amp;returnto=Python+et+postgresql" title="Se déconnecter">Se déconnecter</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espaces de noms</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Python_et_postgresql" title="Voir le contenu de la page [Alt+Maj+c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Discussion:Python_et_postgresql&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion au sujet de cette page de contenu (page inexistante) [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Affichages</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Python_et_postgresql">Lire</a></span></li><li id="ca-edit" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=edit" title="Modifier le wikicode [Alt+Maj+e]" accesskey="e">Modifier</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=history" title="Historique des versions de cette page [Alt+Maj+h]" accesskey="h">Afficher l’historique</a></span></li><span class="placeholder" style="display: none;"></span><span class="placeholder" style="display: none;"></span>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Plus</span></h3>
+						<div class="menu">
+							<ul><li id="ca-pdfbook" class="collapsible" style="display: list-item;"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=pdfbook&amp;format=single">Imprimer au format PDF</a></span></li><li id="ca-unwatch" class="collapsible icon mw-watchlink" style="display: list-item;"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=unwatch" data-mw="interface" title="Retirer cette page de votre liste de suivi [Alt+Maj+w]" accesskey="w">Ne plus suivre</a></span></li>
+								<li id="ca-delete"><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=delete" title="Supprimer cette page [Alt+Maj+d]" accesskey="d">Supprimer</a></li><li id="ca-move"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Renommer_une_page/Python_et_postgresql" title="Renommer cette page [Alt+Maj+m]" accesskey="m">Renommer</a></li><li id="ca-protect"><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=protect" title="Protéger cette page [Alt+Maj+=]" accesskey="=">Protéger</a></li>							</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Rechercher</label>
+						</h3>
+						<form action="http://www.audiens.fr/wiki2/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Rechercher dans Audiens" title="Rechercher dans Audiens [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Spécial:Recherche" name="title"><input type="submit" name="go" value="Continuer" title="Accédez à une page du même nom si elle existe" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Visiter la page d’accueil"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil général [Alt+Maj+z]" accesskey="z">Accueil</a></li><li id="n-recentchanges"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Modifications_récentes" title="Liste des modifications récentes sur le wiki [Alt+Maj+r]" accesskey="r">Modifications récentes</a></li><li id="n-randompage"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Page_au_hasard" title="Afficher une page au hasard [Alt+Maj+x]" accesskey="x">Page au hasard</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="Accès à l’aide">Aide</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Outils</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_liées/Python_et_postgresql" title="Liste des pages liées qui pointent sur celle-ci [Alt+Maj+j]" accesskey="j">Pages liées</a></li><li id="t-recentchangeslinked"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Suivi_des_liens/Python_et_postgresql" rel="nofollow" title="Liste des modifications récentes des pages appelées par celle-ci [Alt+Maj+k]" accesskey="k">Suivi des pages liées</a></li><li id="t-upload"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Téléverser" title="Téléverser des fichiers [Alt+Maj+u]" accesskey="u">Importer un fichier</a></li><li id="t-specialpages"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_spéciales" title="Liste de toutes les pages spéciales [Alt+Maj+q]" accesskey="q">Pages spéciales</a></li><li id="t-print"><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [Alt+Maj+p]" accesskey="p">Version imprimable</a></li><li id="t-permalink"><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;oldid=13424" title="Adresse permanente de cette version de la page">Lien permanent</a></li><li id="t-info"><a href="https://www.audiens.fr/wiki2/index.php?title=Python_et_postgresql&amp;action=info" title="Plus d’information sur cette page">Information sur la page</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> La dernière modification de cette page a été faite le 5 février 2020 à 09:00.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Politique_de_confidentialité" title="Audiens:Politique de confidentialité">Politique de confidentialité</a></li>
+								<li id="footer-places-about"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:À_propos_de" title="Audiens:À propos de">À propos de Audiens</a></li>
+								<li id="footer-places-disclaimer"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Avertissements_généraux" title="Audiens:Avertissements généraux">Avertissements</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="Python%20et%20postgresql%20%e2%80%94%20Audiens_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki2/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki2/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.061","walltime":"1.573","ppvisitednodes":{"value":186,"limit":1000000},"ppgeneratednodes":{"value":340,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":24411,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20200423092622","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1652});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+<!-- Mirrored from www.audiens.fr/download/python/Python et postgresql — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:27 GMT -->
+</html>

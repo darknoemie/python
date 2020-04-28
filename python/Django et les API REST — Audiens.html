@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="fr">
+<!-- Mirrored from www.audiens.fr/download/python/Django et les API REST — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:17 GMT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Django et les API REST — Audiens</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Django_et_les_API_REST","wgTitle":"Django et les API REST","wgCurRevisionId":14064,"wgRevisionId":14064,"wgArticleId":2575,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":"Phil","wgUserGroups":["sysop","bureaucrat","*","user","autoconfirmed"],"wgCategories":["Développements","Langages","Python","Atelier"],"wgBreakFrames":false,"wgPageContentLanguage":"fr","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"wgMonthNamesShort":["","janv.","fév.","mars","avr.","mai","juin","juill.","août","sept.","oct.","nov.","déc."],"wgRelevantPageName":"Django_et_les_API_REST","wgRelevantArticleId":2575,"wgRequestId":"5d0baabe20eafaa6bc63b7d2","wgUserId":1,"wgUserEditCount":14014,"wgUserRegistration":1325332820000,"wgUserNewMsgRevisionId":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[],"wgPostEdit":"saved"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0tu0ujd",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"timecorrection":"Offset|0","watchlisttoken":""});
+});mw.loader.implement("user.tokens@1okgkd6",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"6285f28964e16572020cce3afe8e1a635ea2af7d+\\","patrolToken":"313c2bf7f1c3dbb1ae67384a682b7e305ea2af7d+\\","watchToken":"5b08c81f7527e7ae36fc07a743e903b75ea2af7d+\\","csrfToken":"6285f28964e16572020cce3afe8e1a635ea2af7d+\\"});
+});mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","mediawiki.page.watch.ajax","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="Django%20et%20les%20API%20REST%20%e2%80%94%20Audiens_fichiers/load.css">
+<script async="" src="Django%20et%20les%20API%20REST%20%e2%80%94%20Audiens_fichiers/load.html"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}
+.mw-notification-area{position:absolute}.mw-notification-area-floating{position:fixed}.mw-notification-area{top:0;right:0; padding:1em;width:20em;line-height:1.35;z-index:10000; overflow:hidden}.mw-notification{padding:0.75em 1.5em;margin-bottom:0.5em;border:solid 1px #ddd;background-color:#fff; cursor:pointer;opacity:0;-webkit-transform:translateX(35px);transform:translateX(35px);-webkit-transition:opacity 0.35s ease-in-out,-webkit-transform 0.35s ease-in-out;transition:opacity 0.35s ease-in-out,transform 0.35s ease-in-out}.mw-notification-visible{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)}.mw-notification-replaced{opacity:0;-webkit-transform:translateY(-35px);transform:translateY(-35px);pointer-events:none}.mw-notification-title{font-weight:bold}.mw-notification.mw-notification-type-warn{border-color:#f5be00; background-color:#ffffe8}.mw-notification.mw-notification-type-error{border-color:#eb3941; background-color:#fff8f8}    .mw-notification-area{font-size:0.8em}.mw-notification-area-layout{top:7em}.mw-notification{border:1px solid #a2a9b1;border-radius:2px;box-shadow:0 2px 2px 0 rgba(0,0,0,0.25)}
+@media print {
+	.mw-notification-area{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:14px;cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;line-height:1.35;opacity:1;-webkit-transition:opacity 250ms;-moz-transition:opacity 250ms;transition:opacity 250ms}.postedit:after{content:'';background:no-repeat center center;background-image:url(../../wiki2/resources/src/mediawiki.action/images/close1a47.html?108ce);background-image:linear-gradient(transparent,transparent),url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Cpath d=%22M3.636 2.222l14.142 14.142-1.414 1.414L2.222 3.636z%22/%3E %3Cpath d=%22M17.778 3.636L3.636 17.778l-1.414-1.414L16.364 2.222z%22/%3E %3C/svg%3E");background-size:12px 12px;position:absolute;right:0.4em;top:0;bottom:0;min-width:32px;min-height:32px;opacity:0.87}.postedit:after:hover{opacity:1}.postedit.mw-notification{padding-right:3em}.postedit-faded{opacity:0}.postedit-icon{padding-left:25px; line-height:25px;background-repeat:no-repeat}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB9ElEQVR4AZWRA3AYURQArxrVHtW2bdu2bdu2zdi2bdu2bWxs7zeehZaw4f70kbs+zI3e/nWK+RWx3aOFlrL56Sy5SxrruG69hlv6OyK+mz+8KDSXdXembj0ispT7tjs4ZTIbpYBvxGSGKzZTeFrb7W/meN002swFs0U8ttpHTkF2BvCqWQrW35929bTsKm5Zb+SEwWwcY8wAngB9m7Z+d+rIPZ/npdy12M5p47n8dXsCYAf0qPy06eGMdktuDu9Qf+JmKl3SWM91qzVcN9tAbEYkwMaq0tyb1m/To5kP170el/BK8/qa6sJr70ydf+T/Uu5ab+Oo/lS0AkUBpIFWlZ9WPhxpse/PHO7YbOOczjL0vZV2lNxPPtG73dYXM+xvm2znrOl83tidoqCwMBgYXsPFB0on5S6pr+eK5TKuW67lgvaKvF8mL1dtfTL32FHxRdyx3cQpg7m4x9sCXKkTIzA4LDH44zWdzaUf71hv5rTG4uyzcusybxSX7aThbMQ8XgCYAp3rzTTQOiIh9PNlzY3FSuZxrzjme1Y7uGS6kjsWO4jPjM4FVjRZsvD4kO9XtTZzQn82NyzWc0B7AmZh6gA/hOYSGhfw9YbOVnarj+S7800AL2BIsxUAbWNToj7bhBuQmZcOsFdoKUC74rGheCwXmqAIQTc9jQcrADIAAAAASUVORK5CYII=);background-image:url(../../wiki2/resources/src/mediawiki.action/images/green-checkmark0ce4.html?d94f1)!ie; background-position:left}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<meta name="generator" content="MediaWiki 1.31.1">
+<link rel="alternate" type="application/x-wiki" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=edit">
+<link rel="edit" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=edit">
+<link rel="shortcut icon" href="https://www.audiens.fr/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.audiens.fr/wiki2/opensearch_desc.php" title="Audiens (fr)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.audiens.fr/wiki2/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Audiens" href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<!--[if lt IE 9]><script src="/wiki2/load.php?debug=false&amp;lang=fr&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+<script src="Django%20et%20les%20API%20REST%20%e2%80%94%20Audiens_fichiers/load_002.html"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Django_et_les_API_REST rootpage-Django_et_les_API_REST skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main"><div id="mw-notification-area" class="mw-notification-area mw-notification-area-layout" style="display: none;"></div>
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="fr">Django et les API REST</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Audiens</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Aller à :					<a href="#mw-head">navigation</a>, 					<a href="#p-search">rechercher</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr"><div class="mw-parser-output"><p>Navigation&nbsp;: <a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil">Accueil</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Python" title="Python">Python</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Utilisation_avancée" title="Utilisation avancée">Utilisation avancée</a> -&gt; <a class="mw-selflink selflink">Django et les API REST</a>
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="fr"><h2>Sommaire</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">masquer</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Cr.C3.A9er_un_web_service_REST_avec_DJANGO"><span class="tocnumber">1</span> <span class="toctext">Créer un web service REST avec DJANGO</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Cr.C3.A9er_le_module_serializer"><span class="tocnumber">1.1</span> <span class="toctext">Créer le module serializer</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Cr.C3.A9er_le_module_view"><span class="tocnumber">1.2</span> <span class="toctext">Créer le module view</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#modifiez_le_module_urls"><span class="tocnumber">1.3</span> <span class="toctext">modifiez le module urls</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Ajoutez_le_package_rest_framework"><span class="tocnumber">1.4</span> <span class="toctext">Ajoutez le package rest_framework</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Lancez_le_serveur"><span class="tocnumber">1.5</span> <span class="toctext">Lancez le serveur</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Testez_l.27api_du_serveur"><span class="tocnumber">1.6</span> <span class="toctext">Testez l'api du serveur</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Connectez_vous_.C3.A0_l.27interface_web"><span class="tocnumber">1.7</span> <span class="toctext">Connectez vous à l'interface web</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span id="Créer_un_web_service_REST_avec_DJANGO"></span><span class="mw-headline" id="Cr.C3.A9er_un_web_service_REST_avec_DJANGO">Créer un web service REST avec DJANGO</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=edit&amp;section=1" title="Modifier la section : Créer un web service REST avec DJANGO">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>mkdir ~/workspace/rest
+<span class="nb">cd</span>  ~/workspace/rest
+
+<span class="c1"># créer un environnement pour isoler notre package et ses dépendances. </span>
+pip3 install virtualenv
+python3 -m venv rest
+<span class="nb">source</span> rest/bin/activate
+<span class="c1"># Installer django et django REST framework dans l'environement virtuel.</span>
+pip3 install django
+pip3 install djangorestframework
+
+<span class="c1"># Configurer un nouveau projet avec une simple application</span>
+django-admin startproject tutorial .  <span class="c1"># Attention au caractère '.' en fin de ligne</span>
+<span class="nb">cd</span> tutorial
+django-admin startapp quickstart
+<span class="nb">cd</span> ..
+
+<span class="c1"># lister les fichiers</span>
+<span class="o">(</span>env<span class="o">)</span> phil@debian10-python:~/workspace/rest/tutorial$ find .
+.
+./manage.py
+./quickstart
+./quickstart/views.py
+./quickstart/models.py
+./quickstart/tests.py
+./quickstart/admin.py
+./quickstart/__init__.py
+./quickstart/migrations
+./quickstart/migrations/__init__.py
+./quickstart/apps.py
+./tutorial
+./tutorial/wsgi.py
+./tutorial/urls.py
+./tutorial/__init__.py
+./tutorial/settings.py
+
+<span class="c1"># Synchroniser la base de données</span>
+ python3 manage.py migrate
+ 
+<span class="c1"># créer un compte superutilisateur</span>
+ python3 manage.py createsuperuser --email admin@audiens.com --username admin
+</pre></div>
+<h3><span id="Créer_le_module_serializer"></span><span class="mw-headline" id="Cr.C3.A9er_le_module_serializer">Créer le module serializer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=edit&amp;section=2" title="Modifier la section : Créer le module serializer">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>vi tutorial/quickstart/serializers.py
+</pre>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>from django.contrib.auth.models import User, Group
+from rest_framework import serializers
+
+
+class UserSerializer<span class="o">(</span>serializers.HyperlinkedModelSerializer<span class="o">)</span>:
+    class Meta:
+        <span class="nv">model</span> <span class="o">=</span> User
+        <span class="nv">fields</span> <span class="o">=</span> <span class="o">[</span><span class="s1">'url'</span>, <span class="s1">'username'</span>, <span class="s1">'email'</span>, <span class="s1">'groups'</span><span class="o">]</span>
+
+
+class GroupSerializer<span class="o">(</span>serializers.HyperlinkedModelSerializer<span class="o">)</span>:
+    class Meta:
+        <span class="nv">model</span> <span class="o">=</span> Group
+        <span class="nv">fields</span> <span class="o">=</span> <span class="o">[</span><span class="s1">'url'</span>, <span class="s1">'name'</span><span class="o">]</span>
+</pre></div>
+<p><br>
+</p>
+<h3><span id="Créer_le_module_view"></span><span class="mw-headline" id="Cr.C3.A9er_le_module_view">Créer le module view</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=edit&amp;section=3" title="Modifier la section : Créer le module view">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>vi tutorial/quickstart/views.py
+</pre>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>from django.contrib.auth.models import User, Group
+from rest_framework import viewsets
+from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
+
+
+class UserViewSet<span class="o">(</span>viewsets.ModelViewSet<span class="o">)</span>:
+    <span class="s2">"""</span>
+<span class="s2">    API endpoint that allows users to be viewed or edited.</span>
+<span class="s2">    """</span>
+    <span class="nv">queryset</span> <span class="o">=</span> User.objects.all<span class="o">()</span>.order_by<span class="o">(</span><span class="s1">'-date_joined'</span><span class="o">)</span>
+    <span class="nv">serializer_class</span> <span class="o">=</span> UserSerializer
+
+
+class GroupViewSet<span class="o">(</span>viewsets.ModelViewSet<span class="o">)</span>:
+    <span class="s2">"""</span>
+<span class="s2">    API endpoint that allows groups to be viewed or edited.</span>
+<span class="s2">    """</span>
+    <span class="nv">queryset</span> <span class="o">=</span> Group.objects.all<span class="o">()</span>
+    <span class="nv">serializer_class</span> <span class="o">=</span> GroupSerializer
+</pre></div>
+<h3><span class="mw-headline" id="modifiez_le_module_urls">modifiez le module urls</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=edit&amp;section=4" title="Modifier la section : modifiez le module urls">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>vi tutorial/urls.py
+</pre>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>from django.contrib import admin
+from django.urls import include, path
+from rest_framework import routers
+from tutorial.quickstart import views
+
+<span class="nv">router</span> <span class="o">=</span> routers.DefaultRouter<span class="o">()</span>
+router.register<span class="o">(</span>r<span class="s1">'users'</span>, views.UserViewSet<span class="o">)</span>
+router.register<span class="o">(</span>r<span class="s1">'groups'</span>, views.GroupViewSet<span class="o">)</span>
+
+
+<span class="nv">urlpatterns</span> <span class="o">=</span> <span class="o">[</span>
+    path<span class="o">(</span><span class="s1">'admin/'</span>, admin.site.urls<span class="o">)</span>,
+    path<span class="o">(</span><span class="s1">''</span>, include<span class="o">(</span>router.urls<span class="o">))</span>,
+    path<span class="o">(</span><span class="s1">'api-auth/'</span>, include<span class="o">(</span><span class="s1">'rest_framework.urls'</span>, <span class="nv">namespace</span><span class="o">=</span><span class="s1">'rest_framework'</span><span class="o">))</span>
+<span class="o">]</span>
+</pre></div>
+<h3><span class="mw-headline" id="Ajoutez_le_package_rest_framework">Ajoutez le package rest_framework</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=edit&amp;section=5" title="Modifier la section : Ajoutez le package rest framework">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>vi tutorial/settings.py
+</pre>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">INSTALLED_APPS</span> <span class="o">=</span> <span class="o">[</span>
+    ....
+    ....
+    <span class="s1">'rest_framework'</span>,
+<span class="o">]</span>
+</pre></div>
+<h3><span class="mw-headline" id="Lancez_le_serveur">Lancez le serveur</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=edit&amp;section=6" title="Modifier la section : Lancez le serveur">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>python manage.py runserver
+</pre>
+<pre>(rest) phil@debian10-python:~/workspace/rest$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 20, 2019 - 19:40:10
+Django version 2.2.7, using settings 'tutorial.settings'
+Starting development server at <a rel="nofollow" class="external free" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>
+Quit the server with CONTROL-C.
+</pre>
+<h3><span id="Testez_l'api_du_serveur"></span><span class="mw-headline" id="Testez_l.27api_du_serveur">Testez l'api du serveur</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=edit&amp;section=7" title="Modifier la section : Testez l'api du serveur">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>bash: curl -H 'Accept: application/json; indent=4' -u admin:secret44 <a rel="nofollow" class="external free" href="http://127.0.0.1:8000/users/">http://127.0.0.1:8000/users/</a>
+
+</pre>
+<h3><span id="Connectez_vous_à_l'interface_web"></span><span class="mw-headline" id="Connectez_vous_.C3.A0_l.27interface_web">Connectez vous à l'interface web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=edit&amp;section=8" title="Modifier la section : Connectez vous à l'interface web">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre><a rel="nofollow" class="external free" href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a>
+
+</pre>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:652px;"><a href="../../wiki2/index.php/Fichier_Python-007.html" class="image"><img alt="" src="Django%20et%20les%20API%20REST%20%e2%80%94%20Audiens_fichiers/650px-Python-007.png" class="thumbimage" srcset="/wiki2/images/2/24/Python-007.png 1.5x" width="650" height="437"></a>  <div class="thumbcaption"><div class="magnify"><a href="../../wiki2/index.php/Fichier_Python-007.html" class="internal" title="Agrandir"></a></div>L'interface web</div></div></div></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:652px;"><a href="../../wiki2/index.php/Fichier_Python-008.html" class="image"><img alt="" src="Django%20et%20les%20API%20REST%20%e2%80%94%20Audiens_fichiers/650px-Python-008.png" class="thumbimage" srcset="/wiki2/images/1/1f/Python-008.png 1.5x" width="650" height="365"></a>  <div class="thumbcaption"><div class="magnify"><a href="../../wiki2/index.php/Fichier_Python-008.html" class="internal" title="Agrandir"></a></div>L'interface web</div></div></div></div>
+<p>Ajouter un groupe
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:652px;"><a href="../../wiki2/index.php/Fichier_Python-009.html" class="image"><img alt="" src="Django%20et%20les%20API%20REST%20%e2%80%94%20Audiens_fichiers/650px-Python-009.png" class="thumbimage" srcset="/wiki2/images/a/a4/Python-009.png 1.5x" width="650" height="365"></a>  <div class="thumbcaption"><div class="magnify"><a href="../../wiki2/index.php/Fichier_Python-009.html" class="internal" title="Agrandir"></a></div>L'interface web</div></div></div></div>
+<p><br>
+Ajoutez un utilisateur et interrogez le service
+</p>
+<pre>phil@debian10-python:~$ curl -H 'Accept: application/json; indent=4' -u admin:secret44 <a rel="nofollow" class="external free" href="http://127.0.0.1:8000/users/">http://127.0.0.1:8000/users/</a>
+</pre>
+<p>La réponse est 
+</p>
+<pre>[
+   {
+       "url": "<a rel="nofollow" class="external free" href="http://127.0.0.1:8000/users/2/">http://127.0.0.1:8000/users/2/</a>",
+       "username": "phil",
+       "email": "philippe.moriceau@audiens.fr",
+       "groups": [
+           "<a rel="nofollow" class="external free" href="http://127.0.0.1:8000/groups/1/">http://127.0.0.1:8000/groups/1/</a>"
+       ]
+   },
+   {
+       "url": "<a rel="nofollow" class="external free" href="http://127.0.0.1:8000/users/1/">http://127.0.0.1:8000/users/1/</a>",
+       "username": "admin",
+       "email": "admin@audiens.com",
+       "groups": []
+   }
+]
+phil@debian10-python:~$
+</pre>
+<!-- 
+NewPP limit report
+Cached time: 20200424092100
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.030 seconds
+Real time usage: 0.033 seconds
+Preprocessor visited node count: 76/1000000
+Preprocessor generated node count: 136/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5527/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key wikidb2:pcache:idhash:2575-0!canonical and timestamp 20200424092100 and revision id 14064
+ -->
+</div>					<div class="printfooter">
+						Récupérée de «&nbsp;<a dir="ltr" href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;oldid=14064">https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;oldid=14064</a>&nbsp;»					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Catégories" title="Spécial:Catégories">Catégories</a>&nbsp;: <ul><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Développements" title="Catégorie:Développements">Développements</a></li><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Langages" title="Catégorie:Langages">Langages</a></li><li><a href="https://www.audiens.fr/wiki2/index.php?title=Cat%C3%A9gorie:Python&amp;action=edit&amp;redlink=1" class="new" title="Catégorie:Python (page inexistante)">Python</a></li><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Atelier" title="Catégorie:Atelier">Atelier</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navigation</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Outils personnels</h3>
+						<ul>
+							<li id="pt-userpage"><a href="https://www.audiens.fr/wiki2/index.php/Utilisateur:Phil" class="new" dir="auto" title="Votre page d’utilisateur (page inexistante) [Alt+Maj+.]" accesskey=".">Phil</a></li><li id="pt-mytalk"><a href="https://www.audiens.fr/wiki2/index.php/Discussion_utilisateur:Phil" class="new" title="Votre page de discussion (page inexistante) [Alt+Maj+n]" accesskey="n">Discussion</a></li><li id="pt-preferences"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Préférences" title="Vos préférences">Préférences</a></li><li id="pt-watchlist"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Liste_de_suivi" title="Une liste des pages dont vous suivez les modifications [Alt+Maj+l]" accesskey="l">Liste de suivi</a></li><li id="pt-mycontris"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Contributions/Phil" title="La liste de vos contributions [Alt+Maj+y]" accesskey="y">Contributions</a></li><li id="pt-logout"><a href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:D%C3%A9connexion&amp;returnto=Django+et+les+API+REST" title="Se déconnecter">Se déconnecter</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espaces de noms</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Django_et_les_API_REST" title="Voir le contenu de la page [Alt+Maj+c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Discussion:Django_et_les_API_REST&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion au sujet de cette page de contenu (page inexistante) [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Affichages</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Django_et_les_API_REST">Lire</a></span></li><li id="ca-edit" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=edit" title="Modifier le wikicode [Alt+Maj+e]" accesskey="e">Modifier</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=history" title="Historique des versions de cette page [Alt+Maj+h]" accesskey="h">Afficher l’historique</a></span></li><span class="placeholder" style="display: none;"></span><span class="placeholder" style="display: none;"></span>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Plus</span></h3>
+						<div class="menu">
+							<ul><li id="ca-pdfbook" class="collapsible" style="display: list-item;"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=pdfbook&amp;format=single">Imprimer au format PDF</a></span></li><li id="ca-unwatch" class="collapsible icon mw-watchlink" style="display: list-item;"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=unwatch" data-mw="interface" title="Retirer cette page de votre liste de suivi [Alt+Maj+w]" accesskey="w">Ne plus suivre</a></span></li>
+								<li id="ca-delete"><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=delete" title="Supprimer cette page [Alt+Maj+d]" accesskey="d">Supprimer</a></li><li id="ca-move"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Renommer_une_page/Django_et_les_API_REST" title="Renommer cette page [Alt+Maj+m]" accesskey="m">Renommer</a></li><li id="ca-protect"><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=protect" title="Protéger cette page [Alt+Maj+=]" accesskey="=">Protéger</a></li>							</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Rechercher</label>
+						</h3>
+						<form action="http://www.audiens.fr/wiki2/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Rechercher dans Audiens" title="Rechercher dans Audiens [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Spécial:Recherche" name="title"><input type="submit" name="go" value="Continuer" title="Accédez à une page du même nom si elle existe" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Visiter la page d’accueil"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil général [Alt+Maj+z]" accesskey="z">Accueil</a></li><li id="n-recentchanges"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Modifications_récentes" title="Liste des modifications récentes sur le wiki [Alt+Maj+r]" accesskey="r">Modifications récentes</a></li><li id="n-randompage"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Page_au_hasard" title="Afficher une page au hasard [Alt+Maj+x]" accesskey="x">Page au hasard</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="Accès à l’aide">Aide</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Outils</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_liées/Django_et_les_API_REST" title="Liste des pages liées qui pointent sur celle-ci [Alt+Maj+j]" accesskey="j">Pages liées</a></li><li id="t-recentchangeslinked"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Suivi_des_liens/Django_et_les_API_REST" rel="nofollow" title="Liste des modifications récentes des pages appelées par celle-ci [Alt+Maj+k]" accesskey="k">Suivi des pages liées</a></li><li id="t-upload"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Téléverser" title="Téléverser des fichiers [Alt+Maj+u]" accesskey="u">Importer un fichier</a></li><li id="t-specialpages"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_spéciales" title="Liste de toutes les pages spéciales [Alt+Maj+q]" accesskey="q">Pages spéciales</a></li><li id="t-print"><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [Alt+Maj+p]" accesskey="p">Version imprimable</a></li><li id="t-permalink"><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;oldid=14064" title="Adresse permanente de cette version de la page">Lien permanent</a></li><li id="t-info"><a href="https://www.audiens.fr/wiki2/index.php?title=Django_et_les_API_REST&amp;action=info" title="Plus d’information sur cette page">Information sur la page</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> La dernière modification de cette page a été faite le 24 avril 2020 à 09:21.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Politique_de_confidentialité" title="Audiens:Politique de confidentialité">Politique de confidentialité</a></li>
+								<li id="footer-places-about"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:À_propos_de" title="Audiens:À propos de">À propos de Audiens</a></li>
+								<li id="footer-places-disclaimer"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Avertissements_généraux" title="Audiens:Avertissements généraux">Avertissements</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="Django%20et%20les%20API%20REST%20%e2%80%94%20Audiens_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki2/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki2/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.030","walltime":"0.033","ppvisitednodes":{"value":76,"limit":1000000},"ppgeneratednodes":{"value":136,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5527,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20200424092100","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":69});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+<!-- Mirrored from www.audiens.fr/download/python/Django et les API REST — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:18 GMT -->
+</html>

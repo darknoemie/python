@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="fr">
+<!-- Mirrored from www.audiens.fr/download/python/Tkinter — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:29 GMT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Tkinter — Audiens</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Tkinter","wgTitle":"Tkinter","wgCurRevisionId":13955,"wgRevisionId":13955,"wgArticleId":2566,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":"Phil","wgUserGroups":["sysop","bureaucrat","*","user","autoconfirmed"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"fr","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"wgMonthNamesShort":["","janv.","fév.","mars","avr.","mai","juin","juill.","août","sept.","oct.","nov.","déc."],"wgRelevantPageName":"Tkinter","wgRelevantArticleId":2566,"wgRequestId":"cf0bc817d31af3dc2b72c692","wgUserId":1,"wgUserEditCount":13990,"wgUserRegistration":1325332820000,"wgUserNewMsgRevisionId":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0tu0ujd",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"timecorrection":"Offset|0","watchlisttoken":""});
+});mw.loader.implement("user.tokens@1okgkd6",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"9a0e05835ab1a235535f663b0e7330565ea19abe+\\","patrolToken":"2828c051586a28a25e797a57cd7236fd5ea19abe+\\","watchToken":"b5c66c4474951946f7495701f087d5c55ea19abe+\\","csrfToken":"9a0e05835ab1a235535f663b0e7330565ea19abe+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","mediawiki.page.watch.ajax","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="Tkinter%20%e2%80%94%20Audiens_fichiers/load.css">
+<script async="" src="Tkinter%20%e2%80%94%20Audiens_fichiers/load.html"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<meta name="generator" content="MediaWiki 1.31.1">
+<link rel="alternate" type="application/x-wiki" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit">
+<link rel="edit" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit">
+<link rel="shortcut icon" href="https://www.audiens.fr/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.audiens.fr/wiki2/opensearch_desc.php" title="Audiens (fr)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.audiens.fr/wiki2/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Audiens" href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<!--[if lt IE 9]><script src="/wiki2/load.php?debug=false&amp;lang=fr&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+<script src="Tkinter%20%e2%80%94%20Audiens_fichiers/load_002.html"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tkinter rootpage-Tkinter skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="fr">Tkinter</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Audiens</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Aller à :					<a href="#mw-head">navigation</a>, 					<a href="#p-search">rechercher</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr"><div class="mw-parser-output"><p>Navigation&nbsp;: <a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil">Accueil</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Python" title="Python">Python</a> -&gt; <a class="mw-selflink selflink">Tkinter</a>
+</p><p><a href="../../wiki2/index.php/Fichier_Logo-python.html" class="image"><img alt="Logo-python.png" src="Tkinter%20%e2%80%94%20Audiens_fichiers/65px-Logo-python.png" srcset="/wiki2/images/thumb/0/0d/Logo-python.png/98px-Logo-python.png 1.5x, /wiki2/images/thumb/0/0d/Logo-python.png/130px-Logo-python.png 2x" width="65" height="68"></a>
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="fr"><h2>Sommaire</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">masquer</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Liens_utiles"><span class="tocnumber">1</span> <span class="toctext">Liens utiles</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Introduction"><span class="tocnumber">2</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Ouvrir_une_fen.C3.AAtre_de_d.C3.A9mo"><span class="tocnumber">2.1</span> <span class="toctext">Ouvrir une fenêtre de démo</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Premiere_fen.C3.AAtre_simple"><span class="tocnumber">2.2</span> <span class="toctext">Premiere fenêtre simple</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Cr.C3.A9er_des_objets_graphiques"><span class="tocnumber">3</span> <span class="toctext">Créer des objets graphiques</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Liste_des_widgets"><span class="tocnumber">3.1</span> <span class="toctext">Liste des widgets</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Les_boutons_.28tk02.py.29"><span class="tocnumber">3.2</span> <span class="toctext">Les boutons (tk02.py)</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Le_canvas_.28tk03.py.29"><span class="tocnumber">3.3</span> <span class="toctext">Le canvas (tk03.py)</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Le_checkbox_.28tk04.py.29"><span class="tocnumber">3.4</span> <span class="toctext">Le checkbox (tk04.py)</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Le_widget_Entry_.28tk05.py.29"><span class="tocnumber">3.5</span> <span class="toctext">Le widget Entry (tk05.py)</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Le_radiobutton_.28tk06.py.29"><span class="tocnumber">3.6</span> <span class="toctext">Le radiobutton (tk06.py)</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#La_listbox_.28tk07.py.29"><span class="tocnumber">3.7</span> <span class="toctext">La listbox (tk07.py)</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Liens_utiles">Liens utiles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=1" title="Modifier la section : Liens utiles">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a rel="nofollow" class="external free" href="https://docs.python.org/fr/3/library/tkinter.html">https://docs.python.org/fr/3/library/tkinter.html</a>
+</p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=2" title="Modifier la section : Introduction">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Le package tkinter (Interface TK) est un module qui encapsule la boîte à outils Tk.
+</p>
+<ul><li>Tk, ne fait pas partie de python, il est maintenu par la société <b>Active State</b></li>
+<li>Tk est une bibliothèque d'interfaces graphiques multiplate-forme. Conçue par John Ousterhout. (source wikipédia)</li></ul>
+<h3><span id="Ouvrir_une_fenêtre_de_démo"></span><span class="mw-headline" id="Ouvrir_une_fen.C3.AAtre_de_d.C3.A9mo">Ouvrir une fenêtre de démo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=3" title="Modifier la section : Ouvrir une fenêtre de démo">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>La commande suivante , à lancer dans une invite de commande , permet de tester l'installation du package tkinter.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>python -m tkinter
+</pre></div>
+<p><br>
+Si le module est absent, installez le avec la commande&nbsp;:
+</p>
+<pre>apt-get -y install python3-tk
+</pre>
+<h3><span id="Premiere_fenêtre_simple"></span><span class="mw-headline" id="Premiere_fen.C3.AAtre_simple">Premiere fenêtre simple</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=4" title="Modifier la section : Premiere fenêtre simple">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import tkinter as tk
+
+class Application<span class="o">(</span>tk.Frame<span class="o">)</span>:
+    def __init__<span class="o">(</span>self, <span class="nv">master</span><span class="o">=</span>None<span class="o">)</span>:
+        super<span class="o">()</span>.__init__<span class="o">(</span>master<span class="o">)</span>
+        self.master <span class="o">=</span> master
+        self.pack<span class="o">()</span>
+        self.create_widgets<span class="o">()</span>
+
+    def create_widgets<span class="o">(</span>self<span class="o">)</span>:
+        self.clickMe <span class="o">=</span> tk.Button<span class="o">(</span>self<span class="o">)</span>
+        self.clickMe<span class="o">[</span><span class="s2">"text"</span><span class="o">]</span> <span class="o">=</span> <span class="s2">"Hello Wonderfull World\n(click me)"</span>
+        self.clickMe<span class="o">[</span><span class="s2">"command"</span><span class="o">]</span> <span class="o">=</span> self.dit_bonjour
+        self.clickMe.pack<span class="o">(</span><span class="nv">side</span><span class="o">=</span><span class="s2">"top"</span><span class="o">)</span>
+
+        self.quit <span class="o">=</span> tk.Button<span class="o">(</span>self, <span class="nv">text</span><span class="o">=</span><span class="s2">"QUIT"</span>, <span class="nv">fg</span><span class="o">=</span><span class="s2">"red"</span>,
+                              <span class="nv">command</span><span class="o">=</span>self.master.destroy<span class="o">)</span>
+        self.quit.pack<span class="o">(</span><span class="nv">side</span><span class="o">=</span><span class="s2">"bottom"</span><span class="o">)</span>
+
+    def dit_bonjour<span class="o">(</span>self<span class="o">)</span>:
+        print<span class="o">(</span><span class="s2">"Bonjour, everybody!"</span><span class="o">)</span>
+
+<span class="nv">root</span> <span class="o">=</span> tk.Tk<span class="o">()</span>
+<span class="nv">app</span> <span class="o">=</span> Application<span class="o">(</span><span class="nv">master</span><span class="o">=</span>root<span class="o">)</span>
+app.mainloop<span class="o">()</span>
+</pre></div>
+<ul><li>La classe Application hérite de la classe tk.Frame</li>
+<li>La fonction <b>create_widgets()</b> est appelée dans le constructeur pour créer les composants graphiques.</li>
+<li>self.clickMe = tk.Button(self)&nbsp;: création du bouton.</li>
+<li>On renseigne les propriétés des composants visuels&nbsp;:
+<ul><li>self.clickMe["text"] = "Hell....</li>
+<li>self.clickMe["command"] = self.dit_bonjour</li></ul></li>
+<li>La méthode <b>dit_bonjour</b> (fonction callback) est appelée lorsque l'utilisateur clique sur le bouton.</li></ul>
+<p><br>
+</p>
+<h2><span id="Créer_des_objets_graphiques"></span><span class="mw-headline" id="Cr.C3.A9er_des_objets_graphiques">Créer des objets graphiques</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=5" title="Modifier la section : Créer des objets graphiques">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Liste_des_widgets">Liste des widgets</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=6" title="Modifier la section : Liste des widgets">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="table table-bordered">
+<tbody><tr>
+<th style="text-align:center;">No.</th>
+<th style="text-align:center;">Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td>
+<p>Le widget <b>Bouton</b> permet d’afficher des boutons dans votre application.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td>
+<p>Le widget <b>Canvas</b> permet de dessiner des formes, telles que des lignes, des ovales, des polygones et des rectangles, dans votre application.</p></td>
+</tr>
+<tr>
+<td>3</td>
+<td>
+<p>Le widget <b>Checkbutton</b> permet d’afficher un certain nombre 
+d’options sous forme de cases à cocher. L'utilisateur peut sélectionner 
+plusieurs options à la fois.</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td>
+<p>Le widget <b>Entry</b> est utilisé pour afficher un champ de texte d'une seule ligne permettant d'accepter les valeurs d'un utilisateur.</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td>
+<p>Le widget <b>Frame</b> est utilisé en tant que widget conteneur pour organiser d'autres widgets.</p></td>
+</tr>
+<tr>
+<td>6</td>
+<td>
+<p>Le widget <b>Label</b> est utilisé pour fournir une légende à une ligne pour les autres widgets. Il peut aussi contenir des images.</p></td>
+</tr>
+<tr>
+<td>7</td>
+<td>
+<p>Le widget <b>Listbox</b> est utilisé pour fournir une liste d'options à un utilisateur.</p></td>
+</tr>
+<tr>
+<td>8</td>
+<td>
+<p>Le widget <b>Menubutton</b> est utilisé pour afficher les menus dans votre application..</p></td>
+</tr>
+<tr>
+<td>9</td>
+<td>
+<p>Le widget <b>Menu</b> est utilisé pour fournir diverses commandes à un utilisateur. Ces commandes sont contenues dans Menubutton.</p></td>
+</tr>
+<tr>
+<td>10</td>
+<td>
+<p>Le widget <b>Message</b> est utilisé pour afficher des champs de texte multilignes permettant d'accepter les valeurs d'un utilisateur..</p></td>
+</tr>
+<tr>
+<td>11</td>
+<td>
+<p>Le widget <b>Radiobutton</b> est utilisé pour afficher un certain 
+nombre d'options sous forme de boutons radio. L'utilisateur ne peut 
+sélectionner qu'une option à la fois.</p></td>
+</tr>
+<tr>
+<td>12</td>
+<td>
+<p>Le widget <b>Scale</b> est utilisé pour fournir un widget curseur.</p></td>
+</tr>
+<tr>
+<td>13</td>
+<td>
+<p>Le widget <b>Scrollbar</b> est utilisé pour ajouter une fonctionnalité de défilement à divers widgets, tels que les zones de liste..</p></td>
+</tr>
+<tr>
+<td>14</td>
+<td>
+<p>Le widget <b>Text</b> est utilisé pour afficher du texte sur plusieurs lignes..</p></td>
+</tr>
+<tr>
+<td>15</td>
+<td>
+<p>Le widget <b>Toplevel</b> est utilisé pour fournir un conteneur de fenêtre séparé..</p></td>
+</tr>
+<tr>
+<td>16</td>
+<td>
+<p>Le widget <b>Spinbox</b> est une variante du widget standard Tkinter Entry, qui peut être utilisé pour sélectionner un nombre fixe de valeurs.</p></td>
+</tr>
+<tr>
+<td>17</td>
+<td>
+<p><b>PanedWindow</b> est un widget conteneur pouvant contenir un nombre quelconque de volets, disposés horizontalement ou verticalement..</p></td>
+</tr>
+<tr>
+<td>18</td>
+<td>
+<p>Un <b>LabelFrame</b> est un simple widget conteneur. Son objectif 
+principal est de servir d’espaceur ou de conteneur pour les dispositions
+ complexes de fenêtres..</p></td>
+</tr>
+<tr>
+<td>19</td>
+<td>
+<p><b>tkMessageBox</b> est utilisé pour afficher des boîtes de message dans vos applications..</p></td>
+</tr>
+</tbody></table>
+<h3><span id="Les_boutons_(tk02.py)"></span><span class="mw-headline" id="Les_boutons_.28tk02.py.29">Les boutons (tk02.py)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=7" title="Modifier la section : Les boutons (tk02.py)">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import tkinter as tk
+from tkinter import messagebox
+
+<span class="nv">mainFrame</span><span class="o">=</span> tk.Tk<span class="o">()</span>
+
+<span class="s2">""" Fonction callback """</span>
+def helloCallBack<span class="o">()</span>:
+    messagebox.showinfo<span class="o">(</span> <span class="s2">"Titre Message"</span>, <span class="s2">"Texte du message"</span><span class="o">)</span>
+
+<span class="nv">button</span> <span class="o">=</span> tk.Button<span class="o">(</span>mainFrame, <span class="nv">text</span> <span class="o">=</span><span class="s2">"Btn clic"</span>, <span class="nb">command</span> <span class="o">=</span> helloCallBack<span class="o">)</span>
+
+button.pack<span class="o">()</span>
+mainFrame.mainloop<span class="o">()</span>
+</pre></div>
+<h3><span id="Le_canvas_(tk03.py)"></span><span class="mw-headline" id="Le_canvas_.28tk03.py.29">Le canvas (tk03.py)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=8" title="Modifier la section : Le canvas (tk03.py)">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Permet de dessiner&nbsp;:
+</p>
+<ul><li>des lignes,</li>
+<li>des polygones,</li>
+<li>des rectangles</li>
+<li>des ovales</li>
+<li>...</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import tkinter as tk
+
+<span class="nv">mainFrame</span> <span class="o">=</span> tk.Tk<span class="o">()</span>
+
+<span class="nv">canvas</span> <span class="o">=</span> tk.Canvas<span class="o">(</span>mainFrame, <span class="nv">bg</span><span class="o">=</span><span class="s2">"blue"</span>, <span class="nv">height</span><span class="o">=</span><span class="m">250</span>, <span class="nv">width</span><span class="o">=</span><span class="m">300</span><span class="o">)</span>
+
+<span class="nv">coord</span> <span class="o">=</span> <span class="m">10</span>, <span class="m">50</span>, <span class="m">240</span>, <span class="m">210</span>
+<span class="nv">angle</span><span class="o">=</span><span class="m">150</span>
+<span class="nv">arc</span> <span class="o">=</span> canvas.create_arc<span class="o">(</span>coord, <span class="nv">start</span><span class="o">=</span><span class="m">0</span>, <span class="nv">extent</span><span class="o">=</span>angle, <span class="nv">fill</span><span class="o">=</span><span class="s2">"lightblue"</span><span class="o">)</span>
+
+canvas.pack<span class="o">()</span>
+mainFrame.mainloop<span class="o">()</span>
+</pre></div>
+<h3><span id="Le_checkbox_(tk04.py)"></span><span class="mw-headline" id="Le_checkbox_.28tk04.py.29">Le checkbox (tk04.py)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=9" title="Modifier la section : Le checkbox (tk04.py)">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import tkinter as tk
+from tkinter import messagebox
+from tkinter import Checkbutton
+
+
+<span class="nv">mainFrame</span> <span class="o">=</span> tk.Tk<span class="o">()</span>
+<span class="s2">""" Callback """</span>
+def checkboxCallBack<span class="o">()</span>:
+    <span class="nv">str</span><span class="o">=</span><span class="s2">"Securisation:{0}\nAccélération:{1},\nTerminée:{2}"</span>.format<span class="o">(</span>checkVar1.get<span class="o">()</span>,checkVar2.get<span class="o">()</span>,checkVar3.get<span class="o">())</span>
+    messagebox.showinfo<span class="o">(</span><span class="s2">"Résultat"</span>, str<span class="o">)</span>
+<span class="s2">""" IntVar() est un wrapper pour des valeurs entières """</span>
+<span class="nv">checkVar1</span> <span class="o">=</span> tk.IntVar<span class="o">()</span>
+<span class="nv">checkVar2</span> <span class="o">=</span> tk.IntVar<span class="o">()</span>
+<span class="nv">checkVar3</span> <span class="o">=</span> tk.IntVar<span class="o">()</span>
+<span class="nv">chkbtn1</span> <span class="o">=</span> Checkbutton<span class="o">(</span>mainFrame, <span class="nv">text</span> <span class="o">=</span> <span class="s2">"Sécurisation"</span>, <span class="nv">variable</span> <span class="o">=</span> checkVar1, <span class="se">\</span>
+                 <span class="nv">onvalue</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">offvalue</span> <span class="o">=</span> <span class="m">0</span>, <span class="nv">height</span><span class="o">=</span><span class="m">2</span>, <span class="se">\</span>
+                 <span class="nv">width</span> <span class="o">=</span> <span class="m">20</span>, <span class="nb">command</span> <span class="o">=</span> checkboxCallBack<span class="o">)</span>
+<span class="nv">chkbtn2</span> <span class="o">=</span> Checkbutton<span class="o">(</span>mainFrame, <span class="nv">text</span> <span class="o">=</span> <span class="s2">"Accélération"</span>, <span class="nv">variable</span> <span class="o">=</span> checkVar2, <span class="se">\</span>
+                 <span class="nv">onvalue</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">offvalue</span> <span class="o">=</span> <span class="m">0</span>, <span class="nv">height</span><span class="o">=</span><span class="m">2</span>, <span class="se">\</span>
+                 <span class="nv">width</span> <span class="o">=</span> <span class="m">20</span>, <span class="nb">command</span> <span class="o">=</span> checkboxCallBack<span class="o">)</span>
+<span class="nv">chkbtn3</span> <span class="o">=</span> Checkbutton<span class="o">(</span>mainFrame, <span class="nv">text</span> <span class="o">=</span> <span class="s2">"Terminée"</span>, <span class="nv">variable</span> <span class="o">=</span> checkVar3, <span class="se">\</span>
+                 <span class="nv">onvalue</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">offvalue</span> <span class="o">=</span> <span class="m">0</span>, <span class="nv">height</span><span class="o">=</span><span class="m">2</span>, <span class="se">\</span>
+                 <span class="nv">width</span> <span class="o">=</span> <span class="m">20</span>, <span class="nb">command</span> <span class="o">=</span> checkboxCallBack<span class="o">)</span>
+chkbtn1.pack<span class="o">()</span>
+chkbtn2.pack<span class="o">()</span>
+chkbtn3.pack<span class="o">()</span>
+mainFrame.mainloop<span class="o">()</span>
+</pre></div>
+<p><br>
+</p>
+<h3><span id="Le_widget_Entry_(tk05.py)"></span><span class="mw-headline" id="Le_widget_Entry_.28tk05.py.29">Le widget Entry (tk05.py)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=10" title="Modifier la section : Le widget Entry (tk05.py)">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import tkinter as tk
+from tkinter import messagebox
+from tkinter import Label
+from tkinter import Entry
+
+
+<span class="nv">mainFrame</span> <span class="o">=</span> tk.Tk<span class="o">()</span>
+<span class="nv">label1</span> <span class="o">=</span> Label<span class="o">(</span>mainFrame, <span class="nv">text</span><span class="o">=</span><span class="s2">"Nom"</span><span class="o">)</span>
+label1.grid<span class="o">(</span><span class="nv">row</span><span class="o">=</span><span class="m">0</span>, <span class="nv">column</span><span class="o">=</span><span class="m">0</span><span class="o">)</span>
+
+<span class="nv">entry1</span> <span class="o">=</span> Entry<span class="o">(</span>mainFrame, <span class="nv">bd</span> <span class="o">=</span><span class="m">5</span><span class="o">)</span>
+entry1.grid<span class="o">(</span><span class="nv">row</span><span class="o">=</span><span class="m">0</span>, <span class="nv">column</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>
+
+
+<span class="nv">label2</span> <span class="o">=</span> Label<span class="o">(</span>mainFrame, <span class="nv">text</span><span class="o">=</span><span class="s2">"Prenom"</span><span class="o">)</span>
+label2.grid<span class="o">(</span><span class="nv">row</span><span class="o">=</span><span class="m">1</span>, <span class="nv">column</span><span class="o">=</span><span class="m">0</span><span class="o">)</span>
+
+<span class="nv">entry2</span> <span class="o">=</span> Entry<span class="o">(</span>mainFrame, <span class="nv">bd</span> <span class="o">=</span><span class="m">5</span><span class="o">)</span>
+entry2.grid<span class="o">(</span><span class="nv">row</span><span class="o">=</span><span class="m">1</span>, <span class="nv">column</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>
+
+def btnCallBack<span class="o">()</span>:
+    <span class="nv">str</span> <span class="o">=</span> <span class="s2">"Les valeurs sont\n - nom:{0},\n - prenom:{1}"</span>.format<span class="o">(</span>entry1.get<span class="o">()</span>,entry2.get<span class="o">())</span>
+    messagebox.showinfo<span class="o">(</span> <span class="s2">"Les valeurs "</span>, str<span class="o">)</span>
+
+<span class="nv">button</span> <span class="o">=</span> tk.Button<span class="o">(</span>mainFrame, <span class="nv">text</span> <span class="o">=</span><span class="s2">"Voir"</span>, <span class="nb">command</span> <span class="o">=</span> btnCallBack<span class="o">)</span>
+
+button.grid<span class="o">(</span><span class="nv">row</span><span class="o">=</span><span class="m">2</span>, <span class="nv">column</span><span class="o">=</span><span class="m">0</span>, <span class="nv">columnspan</span><span class="o">=</span><span class="m">2</span><span class="o">)</span>
+
+mainFrame.mainloop<span class="o">()</span>
+</pre></div>
+<h3><span id="Le_radiobutton_(tk06.py)"></span><span class="mw-headline" id="Le_radiobutton_.28tk06.py.29">Le radiobutton (tk06.py)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=11" title="Modifier la section : Le radiobutton (tk06.py)">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import tkinter as tk
+from tkinter import messagebox
+from tkinter import Radiobutton
+from tkinter import Label
+
+def sel<span class="o">()</span>:
+   <span class="nv">selection</span> <span class="o">=</span> <span class="s2">"Vous avez sélectionné l'option "</span> + str<span class="o">(</span>var.get<span class="o">())</span>
+   label.config<span class="o">(</span><span class="nv">text</span> <span class="o">=</span> selection<span class="o">)</span>
+
+<span class="nv">mainFrame</span> <span class="o">=</span> tk.Tk<span class="o">()</span>
+<span class="nv">var</span> <span class="o">=</span> tk.IntVar<span class="o">()</span>
+<span class="nv">R1</span> <span class="o">=</span> Radiobutton<span class="o">(</span>mainFrame, <span class="nv">text</span><span class="o">=</span><span class="s2">"Option 1"</span>, <span class="nv">variable</span><span class="o">=</span>var, <span class="nv">value</span><span class="o">=</span><span class="m">1</span>,
+                  <span class="nv">command</span><span class="o">=</span>sel<span class="o">)</span>
+R1.pack<span class="o">(</span> <span class="nv">anchor</span> <span class="o">=</span> tk.W <span class="o">)</span>
+
+<span class="nv">R2</span> <span class="o">=</span> Radiobutton<span class="o">(</span>mainFrame, <span class="nv">text</span><span class="o">=</span><span class="s2">"Option 2"</span>, <span class="nv">variable</span><span class="o">=</span>var, <span class="nv">value</span><span class="o">=</span><span class="m">2</span>,
+                  <span class="nv">command</span><span class="o">=</span>sel<span class="o">)</span>
+R2.pack<span class="o">(</span> <span class="nv">anchor</span> <span class="o">=</span> tk.W <span class="o">)</span>
+
+<span class="nv">R3</span> <span class="o">=</span> Radiobutton<span class="o">(</span>mainFrame, <span class="nv">text</span><span class="o">=</span><span class="s2">"Option 3"</span>, <span class="nv">variable</span><span class="o">=</span>var, <span class="nv">value</span><span class="o">=</span><span class="m">3</span>,
+                  <span class="nv">command</span><span class="o">=</span>sel<span class="o">)</span>
+R3.pack<span class="o">(</span> <span class="nv">anchor</span> <span class="o">=</span> tk.W<span class="o">)</span>
+
+<span class="nv">label</span> <span class="o">=</span> Label<span class="o">(</span>mainFrame<span class="o">)</span>
+label.pack<span class="o">()</span>
+mainFrame.mainloop<span class="o">()</span>
+</pre></div>
+<h3><span id="La_listbox_(tk07.py)"></span><span class="mw-headline" id="La_listbox_.28tk07.py.29">La listbox (tk07.py)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit&amp;section=12" title="Modifier la section : La listbox (tk07.py)">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Exemple illustrant une listbox avec scrollbar
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import sys
+import tkinter as tk
+from tkinter import messagebox
+from tkinter import Listbox
+from tkinter import Scrollbar
+from tkinter import Label
+
+<span class="nv">mainFrame</span><span class="o">=</span> tk.Tk<span class="o">()</span>
+
+<span class="nv">compteur</span> <span class="o">=</span> <span class="m">0</span>
+
+<span class="c1"># def listboxCallback():</span>
+<span class="c1">#     sys.stdout.write("Ajout d'un item")</span>
+
+<span class="nv">scrollbar</span> <span class="o">=</span> Scrollbar<span class="o">(</span>mainFrame<span class="o">)</span>
+scrollbar.pack<span class="o">(</span> <span class="nv">side</span> <span class="o">=</span> tk.RIGHT, <span class="nv">fill</span> <span class="o">=</span> tk.Y <span class="o">)</span>
+
+<span class="nv">listbox</span> <span class="o">=</span> Listbox<span class="o">(</span>mainFrame, <span class="nv">yscrollcommand</span> <span class="o">=</span> scrollbar.set<span class="o">)</span>
+scrollbar.config<span class="o">(</span> <span class="nb">command</span> <span class="o">=</span> listbox.yview <span class="o">)</span>
+
+<span class="s2">""" Fonction callback """</span>
+def addCallBack<span class="o">()</span>:
+    global compteur
+    <span class="nv">compteur</span> <span class="o">+=</span> <span class="m">1</span>
+    listbox.insert<span class="o">(</span>tk.END,<span class="s2">"item n{0}"</span>.format<span class="o">(</span>compteur<span class="o">))</span>
+    <span class="c1">#messagebox.showinfo( "Titre Message", "Texte du message")</span>
+listbox.pack<span class="o">()</span>
+
+<span class="nv">button</span> <span class="o">=</span> tk.Button<span class="o">(</span>mainFrame, <span class="nv">text</span> <span class="o">=</span><span class="s2">"ajoute un item"</span>, <span class="nb">command</span> <span class="o">=</span> addCallBack<span class="o">)</span>
+
+button.pack<span class="o">()</span>
+mainFrame.mainloop<span class="o">()</span>
+</pre></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20200423134014
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.049 seconds
+Real time usage: 1.031 seconds
+Preprocessor visited node count: 116/1000000
+Preprocessor generated node count: 218/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 16371/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key wikidb2:pcache:idhash:2566-0!canonical and timestamp 20200423134013 and revision id 13955
+ -->
+</div>					<div class="printfooter">
+						Récupérée de «&nbsp;<a dir="ltr" href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;oldid=13955">https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;oldid=13955</a>&nbsp;»					</div>
+				<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navigation</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Outils personnels</h3>
+						<ul>
+							<li id="pt-userpage"><a href="https://www.audiens.fr/wiki2/index.php/Utilisateur:Phil" class="new" dir="auto" title="Votre page d’utilisateur (page inexistante) [Alt+Maj+.]" accesskey=".">Phil</a></li><li id="pt-mytalk"><a href="https://www.audiens.fr/wiki2/index.php/Discussion_utilisateur:Phil" class="new" title="Votre page de discussion (page inexistante) [Alt+Maj+n]" accesskey="n">Discussion</a></li><li id="pt-preferences"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Préférences" title="Vos préférences">Préférences</a></li><li id="pt-watchlist"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Liste_de_suivi" title="Une liste des pages dont vous suivez les modifications [Alt+Maj+l]" accesskey="l">Liste de suivi</a></li><li id="pt-mycontris"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Contributions/Phil" title="La liste de vos contributions [Alt+Maj+y]" accesskey="y">Contributions</a></li><li id="pt-logout"><a href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:D%C3%A9connexion&amp;returnto=Tkinter" title="Se déconnecter">Se déconnecter</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espaces de noms</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Tkinter" title="Voir le contenu de la page [Alt+Maj+c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Discussion:Tkinter&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion au sujet de cette page de contenu (page inexistante) [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Affichages</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Tkinter">Lire</a></span></li><li id="ca-edit" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=edit" title="Modifier le wikicode [Alt+Maj+e]" accesskey="e">Modifier</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=history" title="Historique des versions de cette page [Alt+Maj+h]" accesskey="h">Afficher l’historique</a></span></li><li id="ca-pdfbook" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=pdfbook&amp;format=single">Imprimer au format PDF</a></span></li><li id="ca-unwatch" class="collapsible icon mw-watchlink"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=unwatch" data-mw="interface" title="Retirer cette page de votre liste de suivi [Alt+Maj+w]" accesskey="w">Ne plus suivre</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Plus</span></h3>
+						<div class="menu">
+							<ul>
+								<li id="ca-delete"><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=delete" title="Supprimer cette page [Alt+Maj+d]" accesskey="d">Supprimer</a></li><li id="ca-move"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Renommer_une_page/Tkinter" title="Renommer cette page [Alt+Maj+m]" accesskey="m">Renommer</a></li><li id="ca-protect"><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=protect" title="Protéger cette page [Alt+Maj+=]" accesskey="=">Protéger</a></li>							</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Rechercher</label>
+						</h3>
+						<form action="http://www.audiens.fr/wiki2/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Rechercher dans Audiens" title="Rechercher dans Audiens [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Spécial:Recherche" name="title"><input type="submit" name="go" value="Continuer" title="Accédez à une page du même nom si elle existe" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Visiter la page d’accueil"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil général [Alt+Maj+z]" accesskey="z">Accueil</a></li><li id="n-recentchanges"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Modifications_récentes" title="Liste des modifications récentes sur le wiki [Alt+Maj+r]" accesskey="r">Modifications récentes</a></li><li id="n-randompage"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Page_au_hasard" title="Afficher une page au hasard [Alt+Maj+x]" accesskey="x">Page au hasard</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="Accès à l’aide">Aide</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Outils</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_liées/Tkinter" title="Liste des pages liées qui pointent sur celle-ci [Alt+Maj+j]" accesskey="j">Pages liées</a></li><li id="t-recentchangeslinked"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Suivi_des_liens/Tkinter" rel="nofollow" title="Liste des modifications récentes des pages appelées par celle-ci [Alt+Maj+k]" accesskey="k">Suivi des pages liées</a></li><li id="t-upload"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Téléverser" title="Téléverser des fichiers [Alt+Maj+u]" accesskey="u">Importer un fichier</a></li><li id="t-specialpages"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_spéciales" title="Liste de toutes les pages spéciales [Alt+Maj+q]" accesskey="q">Pages spéciales</a></li><li id="t-print"><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [Alt+Maj+p]" accesskey="p">Version imprimable</a></li><li id="t-permalink"><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;oldid=13955" title="Adresse permanente de cette version de la page">Lien permanent</a></li><li id="t-info"><a href="https://www.audiens.fr/wiki2/index.php?title=Tkinter&amp;action=info" title="Plus d’information sur cette page">Information sur la page</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> La dernière modification de cette page a été faite le 17 avril 2020 à 07:57.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Politique_de_confidentialité" title="Audiens:Politique de confidentialité">Politique de confidentialité</a></li>
+								<li id="footer-places-about"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:À_propos_de" title="Audiens:À propos de">À propos de Audiens</a></li>
+								<li id="footer-places-disclaimer"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Avertissements_généraux" title="Audiens:Avertissements généraux">Avertissements</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="Tkinter%20%e2%80%94%20Audiens_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki2/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki2/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.049","walltime":"1.031","ppvisitednodes":{"value":116,"limit":1000000},"ppgeneratednodes":{"value":218,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":16371,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20200423134014","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1104});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+<!-- Mirrored from www.audiens.fr/download/python/Tkinter — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:29 GMT -->
+</html>

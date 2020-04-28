@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="fr">
+<!-- Mirrored from www.audiens.fr/download/python/XML et Python — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:30 GMT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>XML et Python — Audiens</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"XML_et_Python","wgTitle":"XML et Python","wgCurRevisionId":14027,"wgRevisionId":14027,"wgArticleId":2715,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":"Phil","wgUserGroups":["sysop","bureaucrat","*","user","autoconfirmed"],"wgCategories":["Développements","Langages","Python"],"wgBreakFrames":false,"wgPageContentLanguage":"fr","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"wgMonthNamesShort":["","janv.","fév.","mars","avr.","mai","juin","juill.","août","sept.","oct.","nov.","déc."],"wgRelevantPageName":"XML_et_Python","wgRelevantArticleId":2715,"wgRequestId":"d39f2521a3187f12debff8a2","wgUserId":1,"wgUserEditCount":13977,"wgUserRegistration":1325332820000,"wgUserNewMsgRevisionId":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[],"wgPostEdit":"saved"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0tu0ujd",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"timecorrection":"Offset|0","watchlisttoken":""});
+});mw.loader.implement("user.tokens@1okgkd6",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"0c370e58da04743e0b99340e3e63625a5ea1437f+\\","patrolToken":"f6d518c3f5c5a6eca9cc1e45a70c6f065ea1437f+\\","watchToken":"8952d20a5a307e8d23c527b57953ce805ea1437f+\\","csrfToken":"0c370e58da04743e0b99340e3e63625a5ea1437f+\\"});
+});mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","mediawiki.page.watch.ajax","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="XML%20et%20Python%20%e2%80%94%20Audiens_fichiers/load.css">
+<script async="" src="XML%20et%20Python%20%e2%80%94%20Audiens_fichiers/load.html"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}
+.mw-notification-area{position:absolute}.mw-notification-area-floating{position:fixed}.mw-notification-area{top:0;right:0; padding:1em;width:20em;line-height:1.35;z-index:10000; overflow:hidden}.mw-notification{padding:0.75em 1.5em;margin-bottom:0.5em;border:solid 1px #ddd;background-color:#fff; cursor:pointer;opacity:0;-webkit-transform:translateX(35px);transform:translateX(35px);-webkit-transition:opacity 0.35s ease-in-out,-webkit-transform 0.35s ease-in-out;transition:opacity 0.35s ease-in-out,transform 0.35s ease-in-out}.mw-notification-visible{opacity:1;-webkit-transform:translateX(0);transform:translateX(0)}.mw-notification-replaced{opacity:0;-webkit-transform:translateY(-35px);transform:translateY(-35px);pointer-events:none}.mw-notification-title{font-weight:bold}.mw-notification.mw-notification-type-warn{border-color:#f5be00; background-color:#ffffe8}.mw-notification.mw-notification-type-error{border-color:#eb3941; background-color:#fff8f8}    .mw-notification-area{font-size:0.8em}.mw-notification-area-layout{top:7em}.mw-notification{border:1px solid #a2a9b1;border-radius:2px;box-shadow:0 2px 2px 0 rgba(0,0,0,0.25)}
+@media print {
+	.mw-notification-area{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:14px;cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;line-height:1.35;opacity:1;-webkit-transition:opacity 250ms;-moz-transition:opacity 250ms;transition:opacity 250ms}.postedit:after{content:'';background:no-repeat center center;background-image:url(../../wiki2/resources/src/mediawiki.action/images/close1a47.html?108ce);background-image:linear-gradient(transparent,transparent),url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Cpath d=%22M3.636 2.222l14.142 14.142-1.414 1.414L2.222 3.636z%22/%3E %3Cpath d=%22M17.778 3.636L3.636 17.778l-1.414-1.414L16.364 2.222z%22/%3E %3C/svg%3E");background-size:12px 12px;position:absolute;right:0.4em;top:0;bottom:0;min-width:32px;min-height:32px;opacity:0.87}.postedit:after:hover{opacity:1}.postedit.mw-notification{padding-right:3em}.postedit-faded{opacity:0}.postedit-icon{padding-left:25px; line-height:25px;background-repeat:no-repeat}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB9ElEQVR4AZWRA3AYURQArxrVHtW2bdu2bdu2zdi2bdu2bWxs7zeehZaw4f70kbs+zI3e/nWK+RWx3aOFlrL56Sy5SxrruG69hlv6OyK+mz+8KDSXdXembj0ispT7tjs4ZTIbpYBvxGSGKzZTeFrb7W/meN002swFs0U8ttpHTkF2BvCqWQrW35929bTsKm5Zb+SEwWwcY8wAngB9m7Z+d+rIPZ/npdy12M5p47n8dXsCYAf0qPy06eGMdktuDu9Qf+JmKl3SWM91qzVcN9tAbEYkwMaq0tyb1m/To5kP170el/BK8/qa6sJr70ydf+T/Uu5ab+Oo/lS0AkUBpIFWlZ9WPhxpse/PHO7YbOOczjL0vZV2lNxPPtG73dYXM+xvm2znrOl83tidoqCwMBgYXsPFB0on5S6pr+eK5TKuW67lgvaKvF8mL1dtfTL32FHxRdyx3cQpg7m4x9sCXKkTIzA4LDH44zWdzaUf71hv5rTG4uyzcusybxSX7aThbMQ8XgCYAp3rzTTQOiIh9PNlzY3FSuZxrzjme1Y7uGS6kjsWO4jPjM4FVjRZsvD4kO9XtTZzQn82NyzWc0B7AmZh6gA/hOYSGhfw9YbOVnarj+S7800AL2BIsxUAbWNToj7bhBuQmZcOsFdoKUC74rGheCwXmqAIQTc9jQcrADIAAAAASUVORK5CYII=);background-image:url(../../wiki2/resources/src/mediawiki.action/images/green-checkmark0ce4.html?d94f1)!ie; background-position:left}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<meta name="generator" content="MediaWiki 1.31.1">
+<link rel="alternate" type="application/x-wiki" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit">
+<link rel="edit" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit">
+<link rel="shortcut icon" href="https://www.audiens.fr/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.audiens.fr/wiki2/opensearch_desc.php" title="Audiens (fr)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.audiens.fr/wiki2/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Audiens" href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<!--[if lt IE 9]><script src="/wiki2/load.php?debug=false&amp;lang=fr&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+<script src="XML%20et%20Python%20%e2%80%94%20Audiens_fichiers/load_002.html"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-XML_et_Python rootpage-XML_et_Python skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main"><div id="mw-notification-area" class="mw-notification-area mw-notification-area-layout" style="display: none;"></div>
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="fr">XML et Python</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Audiens</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Aller à :					<a href="#mw-head">navigation</a>, 					<a href="#p-search">rechercher</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr"><div class="mw-parser-output"><p>Navigation&nbsp;: <a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil">Accueil</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Python" title="Python">Python</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Utilisation_avancée" title="Utilisation avancée">Utilisation avancée</a> -&gt; <a class="mw-selflink selflink">XML et Python</a> 
+</p><p><br>
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="fr"><h2>Sommaire</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">masquer</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Vuln.C3.A9rabilit.C3.A9s_XML"><span class="tocnumber">1.1</span> <span class="toctext">Vulnérabilités XML</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#L.27api_DOM"><span class="tocnumber">2</span> <span class="toctext">L'api DOM</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Les_Objets_du_DOM"><span class="tocnumber">2.1</span> <span class="toctext">Les Objets du DOM</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Un_exemple"><span class="tocnumber">2.2</span> <span class="toctext">Un exemple</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#L.27api_SAX"><span class="tocnumber">3</span> <span class="toctext">L'api SAX</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Concepts_de_base"><span class="tocnumber">3.1</span> <span class="toctext">Concepts de base</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Analyser_XML_avec_les_API_SAX"><span class="tocnumber">3.2</span> <span class="toctext">Analyser XML avec les API SAX</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Exemple"><span class="tocnumber">3.3</span> <span class="toctext">Exemple</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Requ.C3.AAtes_Xpath"><span class="tocnumber">4</span> <span class="toctext">Requêtes Xpath</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Requ.C3.AAtes_Xpath_avec_libxml2"><span class="tocnumber">4.1</span> <span class="toctext">Requêtes Xpath avec libxml2</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Requ.C3.AAtes_Xpath_avec_ElementTree"><span class="tocnumber">4.2</span> <span class="toctext">Requêtes Xpath avec ElementTree</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Transformations_avec_XSL"><span class="tocnumber">5</span> <span class="toctext">Transformations avec XSL</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Le_fichier_XML_.28extrait.29"><span class="tocnumber">5.1</span> <span class="toctext">Le fichier XML (extrait)</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Le_fichier_XSL"><span class="tocnumber">5.2</span> <span class="toctext">Le fichier XSL</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Le_programme_xslCatalog.py"><span class="tocnumber">5.3</span> <span class="toctext">Le programme xslCatalog.py</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=1" title="Modifier la section : Introduction">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Les interfaces Python de traitement de XML sont regroupées dans le paquet <b>xml</b>.
+</p><p>Les sous-modules de traitement XML sont&nbsp;:
+</p>
+<ul><li>xml.etree.ElementTree: l'API ElementTree, un processeur simple et léger.</li>
+<li>xml.dom: la définition de l'API DOM.</li>
+<li>xml.sax: classes de bases SAX2 base et fonctions utilitaires.</li></ul>
+<h3><span id="Vulnérabilités_XML"></span><span class="mw-headline" id="Vuln.C3.A9rabilit.C3.A9s_XML">Vulnérabilités XML</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=2" title="Modifier la section : Vulnérabilités XML">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Les modules de traitement XML ne sont pas sécurisés contre les attaques XML.
+</p><p>Le site officiel de python donne une liste des attaques&nbsp;: (<a rel="nofollow" class="external free" href="https://docs.python.org/fr/3/library/xml.html#xml-vulnerabilities">https://docs.python.org/fr/3/library/xml.html#xml-vulnerabilities</a>)
+</p>
+<h2><span id="L'api_DOM"></span><span class="mw-headline" id="L.27api_DOM">L'api DOM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=3" title="Modifier la section : L'api DOM">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>DOM = Document Object Model
+</p>
+<ul><li>DOM présente le document XML comme un arbre.</li>
+<li>DOM autorise le code client à construire une structure de document depuis zéro.</li>
+<li>Il permet alors d'accéder à la structure à l'aide d'un ensemble d'objet qui fournissent des interfaces connues.</li></ul>
+<ul><li>Le DOM (Document Object Model) est défini par le W3C en étapes ou "levels" (niveaux) selon leur terminologie.</li>
+<li>Le couplage de l'API de Python est essentiellement basée sur la recommandation DOM Level 2</li>
+<li>Une fois que vous avez un objet document DOM, vous pouvez accéder 
+aux parties de votre document XML à travers ses méthodes et propriétés.</li></ul>
+<h3><span class="mw-headline" id="Les_Objets_du_DOM">Les Objets du DOM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=4" title="Modifier la section : Les Objets du DOM">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table style="border-collapse:collapse;-moz-border-radius: 3px;" border="1">
+ <tbody><tr>
+   <th style="background-color: gray;">Interface</th> 
+   <th style="background-color: gray;">Section</th> 
+   <th style="background-color: gray;">Objectif</th> 
+ </tr>
+<tr><td>DOMImplementation</td>
+<td>Objets DOMImplementation</td>
+<td>Interface de l'implémentation sous-jacente.</td>
+</tr>
+<tr><td>Node</td>
+<td>Objets nœuds</td>
+<td>Interface de base pour la majorité des objets dans un document.</td>
+</tr>
+<tr><td>NodeList</td>
+<td>Objet NodeList</td>
+<td>Interface pour une séquence de nœuds.</td>
+</tr>
+<tr><td>DocumentType</td>
+<td>Objets DocumnentType</td>
+<td>Informations sur les déclarations nécessaires au traitement d'un document.</td>
+</tr>
+<tr><td>Document</td>
+<td>Objets Document</td>
+<td>Objet représentant un document entier.</td>
+</tr>
+<tr><td>Element</td>
+<td>Objets Elements</td>
+<td>Nœuds éléments dans la hiérarchie d'un document.</td>
+</tr>
+<tr><td>Attr</td>
+<td>Objets Attr</td>
+<td>Valeur des nœuds attributs sur dans des nœuds éléments.</td>
+</tr>
+<tr><td>Comment</td>
+<td>Objets Comment</td>
+<td>Représentation des commentaires dans le fichier source du document.</td>
+</tr>
+<tr><td>Text</td>
+<td>Objets Text et CDATASection</td>
+<td>Noeud contenant un contenu texte du document.</td>
+</tr>
+<tr><td>ProcessingInstruction</td>
+<td>Objets ProcessingInstruction</td>
+<td>Représentation des <em>Processing Instructions</em>.</td>
+</tr>
+</tbody></table>
+<h3><span class="mw-headline" id="Un_exemple">Un exemple</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=5" title="Modifier la section : Un exemple">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="sd">'''</span>
+
+<span class="sd">@author: phil</span>
+
+<span class="sd">&lt;carnet&gt;</span>
+<span class="sd">  &lt;personne numÃ©ro-d-employÃ©="A0000" nom-de-famille="Gates" prÃ©nom="Bob"&gt;</span>
+<span class="sd">    &lt;contact-info&gt;</span>
+<span class="sd">      &lt;!--Confidential--&gt;</span>
+<span class="sd">    &lt;/contact-info&gt;</span>
+<span class="sd">    &lt;adresse ville="Los Angeles" rue="Pine Rd." numÃ©ro="1239" pays="CA"/&gt;</span>
+<span class="sd">    &lt;job-info is-cadre="no" job-description="cadre" type-d-emploi="temps-plein"/&gt;</span>
+<span class="sd">    &lt;cadre numÃ©ro-d-employÃ©="A0000"/&gt;</span>
+<span class="sd">  &lt;/personne&gt;</span>
+<span class="sd">  &lt;personne numÃ©ro-d-employÃ©="A7000" nom-de-famille="Brown" prÃ©nom="Robert" initiales="L."&gt;</span>
+<span class="sd">    &lt;contact-info&gt;</span>
+<span class="sd">      &lt;email adresse="robb@iro.ibm.com"/&gt;</span>
+<span class="sd">      &lt;tÃ©lÃ©phone-domicile numÃ©ro="03-3987873"/&gt;</span>
+<span class="sd">    &lt;/contact-info&gt;</span>
+<span class="sd">    &lt;adresse ville="New York" rue="118 St." numÃ©ro="344" pays="NY"/&gt;</span>
+<span class="sd">    &lt;job-info is-cadre="yes" job-description="Group Leader" type-d-emploi="temps-plein"/&gt;</span>
+<span class="sd">    &lt;cadre numÃ©ro-d-employÃ©="A0000"/&gt;</span>
+<span class="sd">  &lt;/personne&gt;</span>
+<span class="sd">....</span>
+<span class="sd">....</span>
+<span class="sd">&lt;/carnet&gt;</span>
+
+<span class="sd">'''</span>
+
+<span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="kn">as</span> <span class="nn">ET</span>
+
+<span class="n">racine</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s2">"carnet"</span><span class="p">)</span>
+
+<span class="c1"># Clapton</span>
+<span class="n">personne</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="s2">"personne"</span><span class="p">,</span> <span class="n">nom</span><span class="o">=</span><span class="s2">"Clapton"</span><span class="p">,</span> <span class="n">numero</span><span class="o">=</span><span class="s2">"A0000"</span><span class="p">)</span>
+
+<span class="n">contact</span><span class="o">=</span><span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">personne</span><span class="p">,</span> <span class="s2">"contact-info"</span><span class="p">)</span>
+<span class="n">comment</span><span class="o">=</span><span class="n">ET</span><span class="o">.</span><span class="n">Comment</span><span class="p">(</span><span class="s2">"Confidential"</span><span class="p">)</span>
+<span class="n">contact</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">comment</span><span class="p">)</span>
+
+<span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">personne</span><span class="p">,</span> <span class="s2">"adresse"</span><span class="p">,</span><span class="n">ville</span><span class="o">=</span><span class="s2">"Los Angeles"</span><span class="p">,</span> <span class="n">rue</span><span class="o">=</span><span class="s2">"Pine Rd."</span><span class="p">,</span> <span class="n">numero</span><span class="o">=</span><span class="s2">"1239"</span><span class="p">,</span> <span class="n">pays</span><span class="o">=</span><span class="s2">"CA"</span><span class="p">)</span>
+<span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">personne</span><span class="p">,</span> <span class="s2">"job-info"</span><span class="p">,</span><span class="n">iscadre</span><span class="o">=</span><span class="s2">"no"</span><span class="p">,</span> <span class="n">jobdescription</span><span class="o">=</span><span class="s2">"cadre"</span><span class="p">,</span> <span class="n">typedemploi</span><span class="o">=</span><span class="s2">"temps-plein"</span><span class="p">)</span>
+
+<span class="c1"># Hendrix</span>
+<span class="n">personne</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">racine</span><span class="p">,</span> <span class="s2">"personne"</span><span class="p">,</span> <span class="n">nom</span><span class="o">=</span><span class="s2">"Hendrix"</span><span class="p">,</span><span class="n">prenom</span><span class="o">=</span><span class="s2">"jimi"</span><span class="p">,</span> <span class="n">numero</span><span class="o">=</span><span class="s2">"A7000"</span><span class="p">)</span>
+<span class="n">contact</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">personne</span><span class="p">,</span> <span class="s2">"contact-info"</span><span class="p">)</span>
+<span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">contact</span><span class="p">,</span> <span class="s2">"email"</span><span class="p">,</span> <span class="n">adresse</span><span class="o">=</span><span class="s2">"jimi.hendrix@audiens.fr"</span><span class="p">)</span>
+<span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">contact</span><span class="p">,</span> <span class="s2">"telephonedomicile"</span><span class="p">,</span> <span class="n">numero</span><span class="o">=</span><span class="s2">"0202020202"</span><span class="p">)</span>
+<span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">personne</span><span class="p">,</span> <span class="s2">"adresse"</span><span class="p">,</span><span class="n">ville</span><span class="o">=</span><span class="s2">"New York"</span><span class="p">,</span> <span class="n">rue</span><span class="o">=</span><span class="s2">"118 St."</span><span class="p">,</span> <span class="n">numero</span><span class="o">=</span><span class="s2">"344"</span><span class="p">,</span> <span class="n">pays</span><span class="o">=</span><span class="s2">"NY"</span><span class="p">)</span>
+<span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">personne</span><span class="p">,</span> <span class="s2">"job-info"</span><span class="p">,</span><span class="n">iscadre</span><span class="o">=</span><span class="s2">"no"</span><span class="p">,</span> <span class="n">jobdescription</span><span class="o">=</span><span class="s2">"Group Leader"</span><span class="p">,</span> <span class="n">typedemploi</span><span class="o">=</span><span class="s2">"temps-plein"</span><span class="p">)</span>
+
+<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">ElementTree</span><span class="p">(</span><span class="n">racine</span><span class="p">)</span>
+<span class="n">tree</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"carnet.xml"</span><span class="p">)</span>
+</pre></div>
+<h2><span id="L'api_SAX"></span><span class="mw-headline" id="L.27api_SAX">L'api SAX</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=6" title="Modifier la section : L'api SAX">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Concepts_de_base">Concepts de base</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=7" title="Modifier la section : Concepts de base">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>SAX = Simple API for Xml
+</p>
+<ul><li>L'analyse d'un document XML par l'API SAX utilise un analyseur XML (parser).</li></ul>
+<ul><li>Le parser lit le flux XML et réagit à des événements (début d'un
+ élément, fin d'un élément, début du document, fin du document, ...)</li></ul>
+<ul><li>Un programme SAX est donc une suite de fonctions qui sont déclenchées par l'arrivée d'un événement.</li></ul>
+<ul><li>L'analyseur SAX ne conserve aucune donnée en mémoire et peut donc être utilisé pour traiter de très gros fichiers.</li></ul>
+<p>SAX est un parseur événementiel. les événements sont&nbsp;:
+</p>
+<ul><li>startDocument()&nbsp;: survient lorsque le programme démarre la lecture du flux XML.</li>
+<li>endDocument()  &nbsp;: survient lorsque le programme termine la lecture du flux XML.</li>
+<li>startElement() &nbsp;: survient au début d'une balise.</li>
+<li>endElement()   &nbsp;: survient à la fin d'une balise.</li>
+<li>characters()   &nbsp;: détection de caractères dans le flux XML.</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Analyser_XML_avec_les_API_SAX">Analyser XML avec les API SAX</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=8" title="Modifier la section : Analyser XML avec les API SAX">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>SAX est une interface standard pour l'analyse XML pilotée par les événements.
+</p>
+<ul><li>Pour analyser XML avec SAX, vous devez généralement créer votre propre ContentHandler en sous-classant xml.sax.ContentHandler.</li>
+<li>Votre ContentHandler gère les balises et les attributs particuliers de vos saveurs XML.</li>
+<li>Un objet ContentHandler fournit des méthodes pour gérer divers événements d'analyse.</li>
+<li>Son analyseur propriétaire appelle les méthodes ContentHandler lors de l'analyse du fichier XML.</li></ul>
+<ul><li>Les méthodes startDocument et endDocument sont appelées au début et à la fin du fichier XML.</li>
+<li>Les caractères de la méthode (texte) reçoivent les données de caractères du fichier XML via le texte du paramètre.</li></ul>
+<ul><li>Le ContentHandler est appelé au début et à la fin de chaque élément.</li>
+<li>Si l'analyseur n'est pas en mode espace de noms, les méthodes 
+startElement (balise, attributs) et endElement (balise) sont appelées; 
+sinon, les méthodes correspondantes startElementNS et endElementNS sont 
+appelées.</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Exemple">Exemple</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=9" title="Modifier la section : Exemple">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/usr/bin/python3</span>
+
+<span class="kn">import</span> <span class="nn">xml.sax</span>
+
+<span class="k">class</span> <span class="nc">PersonneHandler</span><span class="p">(</span> <span class="n">xml</span><span class="o">.</span><span class="n">sax</span><span class="o">.</span><span class="n">ContentHandler</span> <span class="p">):</span>
+   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">CurrentTag</span> <span class="o">=</span> <span class="s2">""</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">charBuffer</span> <span class="o">=</span> <span class="p">[]</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span> <span class="o">=</span> <span class="mi">0</span>
+
+   <span class="c1"># Call when an element starts</span>
+   <span class="k">def</span> <span class="nf">startElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">attributes</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">CurrentTag</span> <span class="o">=</span> <span class="n">tag</span>
+      <span class="k">if</span> <span class="n">tag</span> <span class="o">==</span> <span class="s2">"personne"</span><span class="p">:</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s2">"*****Personne*****"</span><span class="p">)</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="o">=</span><span class="mi">3</span>
+         <span class="n">nom</span> <span class="o">=</span> <span class="n">attributes</span><span class="p">[</span><span class="s2">"nom"</span><span class="p">]</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s2">"{0}{1}{2}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"."</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="p">,</span><span class="s2">"Nom:"</span><span class="p">,</span> <span class="n">nom</span><span class="p">))</span>
+         <span class="n">numero</span> <span class="o">=</span> <span class="n">attributes</span><span class="p">[</span><span class="s2">"numero"</span><span class="p">]</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s2">"{0}{1}{2}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"."</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="p">,</span><span class="s2">"Numero:"</span><span class="p">,</span> <span class="n">numero</span><span class="p">))</span>
+      <span class="k">if</span> <span class="n">tag</span> <span class="o">==</span> <span class="s2">"contact-info"</span><span class="p">:</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="o">=</span><span class="mi">3</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s2">"{0}{1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"."</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="p">,</span><span class="s2">"contact-info"</span><span class="p">))</span>
+          
+      <span class="k">if</span> <span class="n">tag</span> <span class="o">==</span> <span class="s2">"adresse"</span><span class="p">:</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="o">=</span><span class="mi">3</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s2">"{0}{1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"."</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="p">,</span><span class="s2">"adresse"</span><span class="p">))</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="o">=</span><span class="mi">6</span>
+         <span class="n">pays</span> <span class="o">=</span> <span class="n">attributes</span><span class="p">[</span><span class="s2">"pays"</span><span class="p">]</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s2">"{0}{1}{2}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"."</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="p">,</span><span class="s2">"Pays:"</span><span class="p">,</span> <span class="n">pays</span><span class="p">))</span>
+         <span class="n">numero</span> <span class="o">=</span> <span class="n">attributes</span><span class="p">[</span><span class="s2">"numero"</span><span class="p">]</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s2">"{0}{1}{2}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"."</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="p">,</span><span class="s2">"Numero:"</span><span class="p">,</span> <span class="n">numero</span><span class="p">))</span>
+         <span class="n">ville</span> <span class="o">=</span> <span class="n">attributes</span><span class="p">[</span><span class="s2">"ville"</span><span class="p">]</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s2">"{0}{1}{2}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"."</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="p">,</span><span class="s2">"Ville:"</span><span class="p">,</span> <span class="n">ville</span><span class="p">))</span>
+          
+
+   <span class="c1"># Call when an elements ends</span>
+   <span class="k">def</span> <span class="nf">endElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">tag</span> <span class="o">==</span> <span class="s2">"contact-info"</span><span class="p">:</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">paddingCounter</span><span class="o">-=</span><span class="mi">3</span>
+         <span class="n">s</span> <span class="o">=</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">charBuffer</span><span class="p">)</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">charBuffer</span> <span class="o">=</span> <span class="p">[]</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s2">"-&gt;"</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="s2">"&lt;-"</span><span class="p">)</span>
+
+   <span class="c1"># Call when a character is read</span>
+   <span class="k">def</span> <span class="nf">characters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">charBuffer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">content</span><span class="p">)</span> 
+
+  
+<span class="k">if</span> <span class="p">(</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">):</span>
+   
+   <span class="c1"># create an XMLReader</span>
+   <span class="n">parser</span> <span class="o">=</span> <span class="n">xml</span><span class="o">.</span><span class="n">sax</span><span class="o">.</span><span class="n">make_parser</span><span class="p">()</span>
+   <span class="c1"># turn off namepsaces</span>
+   <span class="n">parser</span><span class="o">.</span><span class="n">setFeature</span><span class="p">(</span><span class="n">xml</span><span class="o">.</span><span class="n">sax</span><span class="o">.</span><span class="n">handler</span><span class="o">.</span><span class="n">feature_namespaces</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+   <span class="c1"># override the default ContextHandler</span>
+   <span class="n">Handler</span> <span class="o">=</span> <span class="n">PersonneHandler</span><span class="p">()</span>
+   <span class="n">parser</span><span class="o">.</span><span class="n">setContentHandler</span><span class="p">(</span> <span class="n">Handler</span> <span class="p">)</span>
+   
+   <span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"carnet.xml"</span><span class="p">)</span>
+</pre></div>
+<p><br>
+</p>
+<h2><span id="Requêtes_Xpath"></span><span class="mw-headline" id="Requ.C3.AAtes_Xpath">Requêtes Xpath</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=10" title="Modifier la section : Requêtes Xpath">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="Requêtes_Xpath_avec_libxml2"></span><span class="mw-headline" id="Requ.C3.AAtes_Xpath_avec_libxml2">Requêtes Xpath avec libxml2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=11" title="Modifier la section : Requêtes Xpath avec libxml2">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Un exemple (xpathLibxml2.py)
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">import</span> <span class="nn">libxml2</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">doc</span> <span class="o">=</span> <span class="n">libxml2</span><span class="o">.</span><span class="n">parseFile</span><span class="p">(</span><span class="s2">"carnet.xml"</span><span class="p">)</span>
+<span class="n">ctxt</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">xpathNewContext</span><span class="p">()</span>
+<span class="n">racine</span> <span class="o">=</span> <span class="n">ctxt</span><span class="o">.</span><span class="n">xpathEval</span><span class="p">(</span><span class="s2">"//*"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
+   <span class="k">print</span> <span class="p">(</span><span class="s2">"racine[{0}]={1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">racine</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+
+<span class="c1"># Toutes les personnes</span>
+<span class="n">personnes</span><span class="o">=</span><span class="n">ctxt</span><span class="o">.</span><span class="n">xpathEval</span><span class="p">(</span><span class="s2">"//personne"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+   <span class="k">try</span><span class="p">:</span>
+       <span class="k">print</span> <span class="p">(</span><span class="s2">"personnes[{0}]={1}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">personnes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+   <span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+       <span class="k">print</span> <span class="p">(</span><span class="s2">"Erreur l'index {0} n'existe pas."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+       <span class="k">break</span> 
+
+<span class="c1"># Tous les numero</span>
+<span class="n">itemctxt</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">xpathNewContext</span><span class="p">()</span>
+<span class="n">listitems</span><span class="o">=</span><span class="n">ctxt</span><span class="o">.</span><span class="n">xpathEval</span><span class="p">(</span><span class="s2">"//personne/contact-info/telephonedomicile"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">listitems</span><span class="p">:</span>
+<span class="c1">#    itemctxt.setContextNode(item)</span>
+    <span class="n">numero</span><span class="o">=</span><span class="n">item</span><span class="o">.</span><span class="n">xpathEval</span><span class="p">(</span><span class="s1">'.//ItemAttributes/numero'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"numero={0}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">prop</span><span class="p">(</span><span class="s1">'numero'</span><span class="p">)))</span>
+
+
+<span class="n">doc</span><span class="o">.</span><span class="n">freeDoc</span><span class="p">()</span>
+<span class="n">ctxt</span><span class="o">.</span><span class="n">xpathFreeContext</span><span class="p">()</span>
+</pre></div>
+<p>Le fichier XML de l'exemple
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nt">&lt;carnet&gt;</span>
+  <span class="nt">&lt;personne</span> <span class="na">nom=</span><span class="s">"Clapton"</span> <span class="na">numero=</span><span class="s">"A0000"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;contact-info&gt;</span><span class="c">&lt;!-- Confidential --&gt;</span><span class="nt">&lt;/contact-info&gt;</span>
+  <span class="nt">&lt;adresse</span> <span class="na">numero=</span><span class="s">"1239"</span> <span class="na">pays=</span><span class="s">"CA"</span> <span class="na">rue=</span><span class="s">"Pine Rd."</span> <span class="na">ville=</span><span class="s">"Los Angeles"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;job-info</span> <span class="na">iscadre=</span><span class="s">"no"</span> <span class="na">jobdescription=</span><span class="s">"cadre"</span> <span class="na">typedemploi=</span><span class="s">"temps-plein"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/personne&gt;</span>
+<span class="nt">&lt;personne</span> <span class="na">nom=</span><span class="s">"Hendrix"</span> <span class="na">numero=</span><span class="s">"A7000"</span> <span class="na">prenom=</span><span class="s">"jimi"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;contact-info&gt;</span>
+    <span class="nt">&lt;email</span> <span class="na">adresse=</span><span class="s">"jimi.hendrix@audiens.fr"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;telephonedomicile</span> <span class="na">numero=</span><span class="s">"0202020202"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/contact-info&gt;&lt;adresse</span> <span class="na">numero=</span><span class="s">"344"</span> <span class="na">pays=</span><span class="s">"NY"</span> <span class="na">rue=</span><span class="s">"118 St."</span> <span class="na">ville=</span><span class="s">"New York"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;job-info</span> <span class="na">iscadre=</span><span class="s">"no"</span> <span class="na">jobdescription=</span><span class="s">"Group Leader"</span> <span class="na">typedemploi=</span><span class="s">"temps-plein"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/personne&gt;</span>
+<span class="nt">&lt;personne</span> <span class="na">nom=</span><span class="s">"Di Meola"</span> <span class="na">numero=</span><span class="s">"A8000"</span> <span class="na">prenom=</span><span class="s">"Al"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;contact-info&gt;</span>
+    <span class="nt">&lt;email</span> <span class="na">adresse=</span><span class="s">"al.dimeola@audiens.fr"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;telephonedomicile</span> <span class="na">numero=</span><span class="s">"0303030303"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/contact-info&gt;&lt;adresse</span> <span class="na">numero=</span><span class="s">"672"</span> <span class="na">pays=</span><span class="s">"CA"</span> <span class="na">rue=</span><span class="s">"15 Square Trumy."</span> <span class="na">ville=</span><span class="s">"L.A."</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;job-info</span> <span class="na">iscadre=</span><span class="s">"no"</span> <span class="na">jobdescription=</span><span class="s">"Guitarist"</span> <span class="na">typedemploi=</span><span class="s">"temps-plein"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/personne&gt;</span>
+<span class="nt">&lt;/carnet&gt;</span>
+</pre></div>
+<h3><span id="Requêtes_Xpath_avec_ElementTree"></span><span class="mw-headline" id="Requ.C3.AAtes_Xpath_avec_ElementTree">Requêtes Xpath avec ElementTree</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=12" title="Modifier la section : Requêtes Xpath avec ElementTree">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Un petit exemple de parsing avec xpath et ElementTree
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">from</span> <span class="nn">xml.etree.ElementTree</span> <span class="kn">import</span> <span class="n">ElementTree</span>
+
+<span class="n">doc</span> <span class="o">=</span> <span class="n">ElementTree</span><span class="p">(</span><span class="nb">file</span><span class="o">=</span><span class="s1">'carnet.xml'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">'./personne'</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s2">"{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'nom'</span><span class="p">)))</span>
+</pre></div>
+<h2><span class="mw-headline" id="Transformations_avec_XSL">Transformations avec XSL</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=13" title="Modifier la section : Transformations avec XSL">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>XSLT permet de transformer un flux XML en un flux de sortie de type différent&nbsp;:
+</p>
+<ul><li>HTML</li>
+<li>PDF</li>
+<li>....</li></ul>
+<p>Voici un exemple     
+</p>
+<h3><span id="Le_fichier_XML_(extrait)"></span><span class="mw-headline" id="Le_fichier_XML_.28extrait.29">Le fichier XML (extrait)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=14" title="Modifier la section : Le fichier XML (extrait)">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;catalog&gt;</span>
+  <span class="nt">&lt;cd&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Empire Burlesque<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;artist&gt;</span>Bob Dylan<span class="nt">&lt;/artist&gt;</span>
+    <span class="nt">&lt;country&gt;</span>USA<span class="nt">&lt;/country&gt;</span>
+    <span class="nt">&lt;company&gt;</span>Columbia<span class="nt">&lt;/company&gt;</span>
+    <span class="nt">&lt;price&gt;</span>10.90<span class="nt">&lt;/price&gt;</span>
+    <span class="nt">&lt;year&gt;</span>1985<span class="nt">&lt;/year&gt;</span>
+  <span class="nt">&lt;/cd&gt;</span>
+  <span class="nt">&lt;cd&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hide your heart<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;artist&gt;</span>Bonnie Tyler<span class="nt">&lt;/artist&gt;</span>
+    <span class="nt">&lt;country&gt;</span>UK<span class="nt">&lt;/country&gt;</span>
+    <span class="nt">&lt;company&gt;</span>CBS Records<span class="nt">&lt;/company&gt;</span>
+    <span class="nt">&lt;price&gt;</span>9.90<span class="nt">&lt;/price&gt;</span>
+    <span class="nt">&lt;year&gt;</span>1988<span class="nt">&lt;/year&gt;</span>
+  <span class="nt">&lt;/cd&gt;</span>
+  <span class="nt">&lt;cd&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Greatest Hits<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;artist&gt;</span>Dolly Parton<span class="nt">&lt;/artist&gt;</span>
+    <span class="nt">&lt;country&gt;</span>USA<span class="nt">&lt;/country&gt;</span>
+    <span class="nt">&lt;company&gt;</span>RCA<span class="nt">&lt;/company&gt;</span>
+    <span class="nt">&lt;price&gt;</span>9.90<span class="nt">&lt;/price&gt;</span>
+    <span class="nt">&lt;year&gt;</span>1982<span class="nt">&lt;/year&gt;</span>
+  <span class="nt">&lt;/cd&gt;</span>
+  ....
+  ....
+</pre></div>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Le_fichier_XSL">Le fichier XSL</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=15" title="Modifier la section : Le fichier XSL">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;xsl:stylesheet</span> <span class="na">version=</span><span class="s">"1.0"</span> <span class="na">xmlns:xsl=</span><span class="s">"http://www.w3.org/1999/XSL/Transform"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"/"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>My CD Collection<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;xsl:apply-templates/&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+  <span class="nt">&lt;/html&gt;</span>
+<span class="nt">&lt;/xsl:template&gt;</span>
+
+<span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"cd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;xsl:apply-templates</span> <span class="na">select=</span><span class="s">"title"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;xsl:apply-templates</span> <span class="na">select=</span><span class="s">"artist"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/xsl:template&gt;</span>
+
+<span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"title"</span><span class="nt">&gt;</span>
+  Title: <span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">"color:#ff0000"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">"."</span><span class="nt">/&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/xsl:template&gt;</span>
+
+<span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"artist"</span><span class="nt">&gt;</span>
+  Artist: <span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">"color:#00ff00"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">"."</span><span class="nt">/&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/xsl:template&gt;</span>
+
+<span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Le_programme_xslCatalog.py">Le programme xslCatalog.py</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit&amp;section=16" title="Modifier la section : Le programme xslCatalog.py">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">import</span> <span class="nn">lxml.etree</span> <span class="kn">as</span> <span class="nn">ET</span>
+
+<span class="n">dom</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">'catalog.xml'</span><span class="p">)</span>
+<span class="n">xslt</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">'template.xsl'</span><span class="p">)</span>
+<span class="n">transform</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">XSLT</span><span class="p">(</span><span class="n">xslt</span><span class="p">)</span>
+<span class="n">newdom</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">dom</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ET</span><span class="o">.</span><span class="n">tostring</span><span class="p">(</span><span class="n">newdom</span><span class="p">,</span> <span class="n">pretty_print</span><span class="o">=</span><span class="bp">True</span><span class="p">))</span>
+
+<span class="n">outfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"catalog.html"</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">)</span>
+<span class="n">outfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ET</span><span class="o">.</span><span class="n">tostring</span><span class="p">(</span><span class="n">newdom</span><span class="p">,</span> <span class="n">pretty_print</span><span class="o">=</span><span class="bp">True</span><span class="p">)))</span>
+</pre></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20200423072759
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.044 seconds
+Real time usage: 0.190 seconds
+Preprocessor visited node count: 133/1000000
+Preprocessor generated node count: 236/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 34652/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key wikidb2:pcache:idhash:2715-0!canonical and timestamp 20200423072759 and revision id 14027
+ -->
+</div>					<div class="printfooter">
+						Récupérée de «&nbsp;<a dir="ltr" href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;oldid=14027">https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;oldid=14027</a>&nbsp;»					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Catégories" title="Spécial:Catégories">Catégories</a>&nbsp;: <ul><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Développements" title="Catégorie:Développements">Développements</a></li><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Langages" title="Catégorie:Langages">Langages</a></li><li><a href="https://www.audiens.fr/wiki2/index.php?title=Cat%C3%A9gorie:Python&amp;action=edit&amp;redlink=1" class="new" title="Catégorie:Python (page inexistante)">Python</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navigation</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Outils personnels</h3>
+						<ul>
+							<li id="pt-userpage"><a href="https://www.audiens.fr/wiki2/index.php/Utilisateur:Phil" class="new" dir="auto" title="Votre page d’utilisateur (page inexistante) [Alt+Maj+.]" accesskey=".">Phil</a></li><li id="pt-mytalk"><a href="https://www.audiens.fr/wiki2/index.php/Discussion_utilisateur:Phil" class="new" title="Votre page de discussion (page inexistante) [Alt+Maj+n]" accesskey="n">Discussion</a></li><li id="pt-preferences"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Préférences" title="Vos préférences">Préférences</a></li><li id="pt-watchlist"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Liste_de_suivi" title="Une liste des pages dont vous suivez les modifications [Alt+Maj+l]" accesskey="l">Liste de suivi</a></li><li id="pt-mycontris"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Contributions/Phil" title="La liste de vos contributions [Alt+Maj+y]" accesskey="y">Contributions</a></li><li id="pt-logout"><a href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:D%C3%A9connexion&amp;returnto=XML+et+Python" title="Se déconnecter">Se déconnecter</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espaces de noms</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://www.audiens.fr/wiki2/index.php/XML_et_Python" title="Voir le contenu de la page [Alt+Maj+c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Discussion:XML_et_Python&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion au sujet de cette page de contenu (page inexistante) [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Affichages</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://www.audiens.fr/wiki2/index.php/XML_et_Python">Lire</a></span></li><li id="ca-edit" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=edit" title="Modifier le wikicode [Alt+Maj+e]" accesskey="e">Modifier</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=history" title="Historique des versions de cette page [Alt+Maj+h]" accesskey="h">Afficher l’historique</a></span></li><li id="ca-pdfbook" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=pdfbook&amp;format=single">Imprimer au format PDF</a></span></li><li id="ca-unwatch" class="collapsible icon mw-watchlink"><span><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=unwatch" data-mw="interface" title="Retirer cette page de votre liste de suivi [Alt+Maj+w]" accesskey="w">Ne plus suivre</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Plus</span></h3>
+						<div class="menu">
+							<ul>
+								<li id="ca-delete"><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=delete" title="Supprimer cette page [Alt+Maj+d]" accesskey="d">Supprimer</a></li><li id="ca-move"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Renommer_une_page/XML_et_Python" title="Renommer cette page [Alt+Maj+m]" accesskey="m">Renommer</a></li><li id="ca-protect"><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=protect" title="Protéger cette page [Alt+Maj+=]" accesskey="=">Protéger</a></li>							</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Rechercher</label>
+						</h3>
+						<form action="http://www.audiens.fr/wiki2/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Rechercher dans Audiens" title="Rechercher dans Audiens [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Spécial:Recherche" name="title"><input type="submit" name="go" value="Continuer" title="Accédez à une page du même nom si elle existe" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Visiter la page d’accueil"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil général [Alt+Maj+z]" accesskey="z">Accueil</a></li><li id="n-recentchanges"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Modifications_récentes" title="Liste des modifications récentes sur le wiki [Alt+Maj+r]" accesskey="r">Modifications récentes</a></li><li id="n-randompage"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Page_au_hasard" title="Afficher une page au hasard [Alt+Maj+x]" accesskey="x">Page au hasard</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="Accès à l’aide">Aide</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Outils</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_liées/XML_et_Python" title="Liste des pages liées qui pointent sur celle-ci [Alt+Maj+j]" accesskey="j">Pages liées</a></li><li id="t-recentchangeslinked"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Suivi_des_liens/XML_et_Python" rel="nofollow" title="Liste des modifications récentes des pages appelées par celle-ci [Alt+Maj+k]" accesskey="k">Suivi des pages liées</a></li><li id="t-upload"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Téléverser" title="Téléverser des fichiers [Alt+Maj+u]" accesskey="u">Importer un fichier</a></li><li id="t-specialpages"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_spéciales" title="Liste de toutes les pages spéciales [Alt+Maj+q]" accesskey="q">Pages spéciales</a></li><li id="t-print"><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [Alt+Maj+p]" accesskey="p">Version imprimable</a></li><li id="t-permalink"><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;oldid=14027" title="Adresse permanente de cette version de la page">Lien permanent</a></li><li id="t-info"><a href="https://www.audiens.fr/wiki2/index.php?title=XML_et_Python&amp;action=info" title="Plus d’information sur cette page">Information sur la page</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> La dernière modification de cette page a été faite le 23 avril 2020 à 07:27.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Politique_de_confidentialité" title="Audiens:Politique de confidentialité">Politique de confidentialité</a></li>
+								<li id="footer-places-about"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:À_propos_de" title="Audiens:À propos de">À propos de Audiens</a></li>
+								<li id="footer-places-disclaimer"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Avertissements_généraux" title="Audiens:Avertissements généraux">Avertissements</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="XML%20et%20Python%20%e2%80%94%20Audiens_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki2/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki2/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.044","walltime":"0.190","ppvisitednodes":{"value":133,"limit":1000000},"ppgeneratednodes":{"value":236,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":34652,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20200423072759","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":73});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+<!-- Mirrored from www.audiens.fr/download/python/XML et Python — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:30 GMT -->
+</html>

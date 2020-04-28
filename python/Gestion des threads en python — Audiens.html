@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="fr">
+<!-- Mirrored from www.audiens.fr/download/python/Gestion des threads en python — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:19 GMT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Gestion des threads en python — Audiens</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Gestion_des_threads_en_python","wgTitle":"Gestion des threads en python","wgCurRevisionId":13967,"wgRevisionId":13967,"wgArticleId":2710,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Développements","Langages","Python"],"wgBreakFrames":false,"wgPageContentLanguage":"fr","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"wgMonthNamesShort":["","janv.","fév.","mars","avr.","mai","juin","juill.","août","sept.","oct.","nov.","déc."],"wgRelevantPageName":"Gestion_des_threads_en_python","wgRelevantArticleId":2710,"wgRequestId":"2d01502e4f1e79490f5909f5","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@1dpodri",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"variant":"fr"});
+});mw.loader.implement("user.tokens@1okgkd6",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="Gestion%20des%20threads%20en%20python%20%e2%80%94%20Audiens_fichiers/load.css">
+<script async="" src="Gestion%20des%20threads%20en%20python%20%e2%80%94%20Audiens_fichiers/load.html"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<meta name="generator" content="MediaWiki 1.31.1">
+<link rel="shortcut icon" href="https://www.audiens.fr/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.audiens.fr/wiki2/opensearch_desc.php" title="Audiens (fr)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.audiens.fr/wiki2/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Audiens" href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<!--[if lt IE 9]><script src="/wiki2/load.php?debug=false&amp;lang=fr&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+<script src="Gestion%20des%20threads%20en%20python%20%e2%80%94%20Audiens_fichiers/load_002.html"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Gestion_des_threads_en_python rootpage-Gestion_des_threads_en_python skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="fr">Gestion des threads en python</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Audiens</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Aller à :					<a href="#mw-head">navigation</a>, 					<a href="#p-search">rechercher</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr"><div class="mw-parser-output"><p>Navigation&nbsp;: <a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil">Accueil</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Python" title="Python">Python</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Utilisation_avancée" title="Utilisation avancée">Utilisation avancée</a> -&gt; <a class="mw-selflink selflink">Gestion des threads en python</a>
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="fr"><h2>Sommaire</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">masquer</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#G.C3.A9n.C3.A9ralit.C3.A9s"><span class="tocnumber">1</span> <span class="toctext">Généralités</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Les_sources_des_exemples"><span class="tocnumber">1.1</span> <span class="toctext">Les sources des exemples</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Les_principes"><span class="tocnumber">1.2</span> <span class="toctext">Les principes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Lancer_un_thread"><span class="tocnumber">2</span> <span class="toctext">Lancer un thread</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Le_module_Threading"><span class="tocnumber">3</span> <span class="toctext">Le module Threading</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Synchronisation_des_threads"><span class="tocnumber">4</span> <span class="toctext">Synchronisation des threads</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#File_d.27attente_prioritaire_multithread"><span class="tocnumber">5</span> <span class="toctext">File d'attente prioritaire multithread</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Généralités"></span><span class="mw-headline" id="G.C3.A9n.C3.A9ralit.C3.A9s">Généralités</span></h2>
+<h3><span class="mw-headline" id="Les_sources_des_exemples">Les sources des exemples</span></h3>
+<p>Les sources des exemples se trouvent dans le <a rel="nofollow" class="external text" href="https://gitlab.audiens.fr/python/cours-perf">gitlab audiens</a>
+</p>
+<h3><span class="mw-headline" id="Les_principes">Les principes</span></h3>
+<ul><li>Les threads au sein d'un processus partagent le même espace de données avec le thread principal.</li>
+<li>Ils peuvent donc partager des informations ou communiquer entre eux.</li>
+<li>Les threads sont parfois appelés processus légers et ne nécessitent 
+pas beaucoup de mémoire; ils coutent moins chers que les processus.</li></ul>
+<ul><li>Un thread a un début, une séquence d'exécution et une conclusion.</li>
+<li>Il dispose d'un pointeur d'instructions qui garde la trace de l'endroit dans son contexte où il est en cours d'exécution.</li>
+<li>Un thread Il peut être préempté (interrompu)</li>
+<li>Un thread peut être temporairement mis en attente.</li></ul>
+<h2><span class="mw-headline" id="Lancer_un_thread">Lancer un thread</span></h2>
+<p>La méthode ci-dessous permet de mancer un thread.
+</p>
+<pre>thread.start_new_thread (fonction, args [, kwargs])
+</pre>
+<p>Cet appel de méthode permet un moyen rapide et efficace de créer de nouveaux threads sous Linux et Windows.
+</p>
+<ul><li>L'appel de cette méthode retourne immédiatement.</li>
+<li>Le thread enfant démarre et appelle la fonction avec la liste des arguments passée.</li>
+<li>Lorsque la fonction se termine, le thread se termine aussi.</li></ul>
+<p>Exemple (thread01.py)&nbsp;:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/usr/bin/python</span>
+
+import _thread as thread
+import <span class="nb">time</span>
+
+<span class="c1"># Definir une fonction pour le thread</span>
+def print_time<span class="o">(</span> threadName, delai<span class="o">)</span>:
+   <span class="nv">count</span> <span class="o">=</span> <span class="m">0</span>
+   <span class="k">while</span> count &lt; <span class="m">5</span>:
+      time.sleep<span class="o">(</span>delai<span class="o">)</span>
+      <span class="nv">count</span> <span class="o">+=</span> <span class="m">1</span>
+      print <span class="o">(</span>threadName,<span class="s2">": "</span>, time.ctime<span class="o">(</span>time.time<span class="o">())</span> <span class="o">)</span><span class="p">;</span>
+
+<span class="c1"># Créer deux threads</span>
+try:
+   thread.start_new_thread<span class="o">(</span> print_time, <span class="o">(</span><span class="s2">"Thread-1"</span>, <span class="m">2</span>, <span class="o">)</span> <span class="o">)</span>
+   thread.start_new_thread<span class="o">(</span> print_time, <span class="o">(</span><span class="s2">"Thread-2"</span>, <span class="m">4</span>, <span class="o">)</span> <span class="o">)</span>
+except:
+   print <span class="o">(</span><span class="s2">"Erreur: impossible de demarrer le thread"</span><span class="o">)</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="m">1</span>:
+   pass
+</pre></div>   
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Le_module_Threading">Le module Threading</span></h2>
+<ul><li>Le module <b>Threading</b> est plus récent que le module <b>thread</b> (apparu avec Python 2.4)</li>
+<li>Ce module fournit une prise en charge de niveau supérieur beaucoup plus puissante.</li></ul>
+<p>Le module <b>Threading</b> expose toutes les méthodes du module <b>thread</b> et fournit quelques méthodes supplémentaires -
+</p>
+<ul><li><b>threading.activeCount()</b> - Retourne le nombre d'objets threads actifs.</li>
+<li><b>threading.currentThread()</b> - Retourne le nombre d'objets de thread dans le contrôle de thread de l'appelant.</li>
+<li><b>threading.enumerate()</b> - Retourne une liste de tous les objets threads actuellement actifs.</li></ul>
+<p>En plus des méthodes, le module <b>Threading</b> définit la classe <b>Thread</b> qui implémente le thread. 
+</p><p>Les méthodes fournies par la classe Thread sont les suivantes&nbsp;:
+</p>
+<ul><li>run ()&nbsp;: est le point d'entrée d'un thread.</li>
+<li>start ()&nbsp;: démarre un thread en appelant la méthode run.</li>
+<li>join ([time])&nbsp;: attend la fin des threads.</li>
+<li>isAlive ()&nbsp;: vérifie si un thread est toujours en cours d'exécution.</li>
+<li>getName ()&nbsp;: renvoie le nom d'un thread.</li>
+<li>setName ()&nbsp;: définit le nom d'un thread.</li></ul>
+<p>Exemple (thread02.py)&nbsp;:   
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/usr/bin/python</span>
+<span class="c1"># thread02.py</span>
+
+import threading
+import <span class="nb">time</span>
+
+<span class="nv">exitFlag</span> <span class="o">=</span> <span class="m">0</span>
+
+class myThread <span class="o">(</span>threading.Thread<span class="o">)</span>:
+   def __init__<span class="o">(</span>self, threadID, name, counter<span class="o">)</span>:
+      threading.Thread.__init__<span class="o">(</span>self<span class="o">)</span>
+      self.threadID <span class="o">=</span> threadID
+      self.name <span class="o">=</span> name
+      self.counter <span class="o">=</span> counter
+   def run<span class="o">(</span>self<span class="o">)</span>:
+      print <span class="o">(</span><span class="s2">"Starting "</span> + self.name<span class="o">)</span>
+      print_time<span class="o">(</span>self.name, <span class="m">5</span>, self.counter<span class="o">)</span>
+      print <span class="o">(</span><span class="s2">"Exiting "</span> + self.name<span class="o">)</span>
+
+def print_time<span class="o">(</span>threadName, counter, delay<span class="o">)</span>:
+   <span class="k">while</span> counter:
+      <span class="k">if</span> exitFlag:
+         threadName.exit<span class="o">()</span>
+      time.sleep<span class="o">(</span>delay<span class="o">)</span>
+      print <span class="o">(</span>threadName,<span class="s2">": "</span>, time.ctime<span class="o">(</span>time.time<span class="o">()))</span>
+      counter -<span class="o">=</span> <span class="m">1</span>
+
+<span class="c1"># Create new threads</span>
+<span class="nv">thread1</span> <span class="o">=</span> myThread<span class="o">(</span><span class="m">1</span>, <span class="s2">"Thread-1"</span>, <span class="m">1</span><span class="o">)</span>
+<span class="nv">thread2</span> <span class="o">=</span> myThread<span class="o">(</span><span class="m">2</span>, <span class="s2">"Thread-2"</span>, <span class="m">2</span><span class="o">)</span>
+
+<span class="c1"># Start new Threads</span>
+thread1.start<span class="o">()</span>
+thread2.start<span class="o">()</span>
+
+print <span class="o">(</span><span class="s2">"Exiting Main Thread"</span><span class="o">)</span>
+</pre></div>   
+<h2><span class="mw-headline" id="Synchronisation_des_threads">Synchronisation des threads</span></h2>
+<p>Le module <b>Threading</b> fourni avec Python comprend un mécanisme de verrouillage qui permet de synchroniser les threads. 
+</p>
+<ul><li>la méthode <b>Lock()</b> créer un nouveau verrou.</li>
+<li>Un nouveau verrou est créé en appelant la méthode Lock(), qui renvoie le nouveau verrou.</li></ul>
+<ul><li>La méthode <b>acquire(optionDeBlocage)</b> du nouveau verrou est utilisée pour bloquer l'exécution du thread.</li>
+<li>L'optionDeBlocage permet de contrôler si le thread attend pour acquérir le verrou.</li>
+<li>Si l'optionDeBlocage est défini sur 0, le thread retourne immédiatement.</li>
+<li>Si le verrou ne peut pas être acquis la fonction retourne une valeur 0.</li>
+<li>Si le verrou a été acquis, la fonction retourne une valeur 0.</li>
+<li>Si l'optionDeBlocage est défini sur 1, le thread se bloque et attend que le verrou soit libéré.</li></ul>
+<ul><li>La méthode <b>release()</b> du nouvel objet lock est utilisée pour libérer le verrou lorsqu'il n'est plus nécessaire.</li></ul>
+<p>Exemple (thread03.py)&nbsp;:   
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/usr/bin/python</span>
+
+import threading
+import <span class="nb">time</span>
+
+class myThread <span class="o">(</span>threading.Thread<span class="o">)</span>:
+   def __init__<span class="o">(</span>self, threadID, name, counter<span class="o">)</span>:
+      threading.Thread.__init__<span class="o">(</span>self<span class="o">)</span>
+      self.threadID <span class="o">=</span> threadID
+      self.name <span class="o">=</span> name
+      self.counter <span class="o">=</span> counter
+   def run<span class="o">(</span>self<span class="o">)</span>:
+      print <span class="o">(</span><span class="s2">"Starting "</span> + self.name<span class="o">)</span>
+      <span class="c1"># Acquisition du verrou pour synchroniser les threads</span>
+      <span class="c1"># Ce verrou bloque l'exécution des autres threads </span>
+      threadLock.acquire<span class="o">()</span>
+      <span class="c1"># Exécution de la fonction</span>
+      print_time<span class="o">(</span>self.name, self.counter, <span class="m">3</span><span class="o">)</span>
+      <span class="c1"># Libère le verrou pour relancer le prochain thread.</span>
+      threadLock.release<span class="o">()</span>
+
+def print_time<span class="o">(</span>threadName, delay, counter<span class="o">)</span>:
+   <span class="k">while</span> counter:
+      time.sleep<span class="o">(</span>delay<span class="o">)</span>
+      print <span class="o">(</span>threadName,<span class="s2">": "</span>, time.ctime<span class="o">(</span>time.time<span class="o">()))</span>
+      counter -<span class="o">=</span> <span class="m">1</span>
+
+<span class="nv">threadLock</span> <span class="o">=</span> threading.Lock<span class="o">()</span>
+<span class="nv">threads</span> <span class="o">=</span> <span class="o">[]</span>
+
+<span class="c1"># Créer les nouveaux threads.</span>
+<span class="nv">thread1</span> <span class="o">=</span> myThread<span class="o">(</span><span class="m">1</span>, <span class="s2">"Thread-1"</span>, <span class="m">2</span><span class="o">)</span>
+<span class="nv">thread2</span> <span class="o">=</span> myThread<span class="o">(</span><span class="m">2</span>, <span class="s2">"Thread-2"</span>, <span class="m">1</span><span class="o">)</span>
+<span class="nv">thread3</span> <span class="o">=</span> myThread<span class="o">(</span><span class="m">3</span>, <span class="s2">"Thread-3"</span>, <span class="m">2</span><span class="o">)</span>
+
+<span class="c1"># Démarrer les nouveaux threads</span>
+thread1.start<span class="o">()</span>
+thread2.start<span class="o">()</span>
+thread3.start<span class="o">()</span>
+
+<span class="c1"># Ajouter les threads à la liste.</span>
+threads.append<span class="o">(</span>thread1<span class="o">)</span>
+threads.append<span class="o">(</span>thread2<span class="o">)</span>
+threads.append<span class="o">(</span>thread3<span class="o">)</span>
+
+<span class="c1"># Attendre que tous les threads soient terminés.</span>
+<span class="k">for</span> t in threads:
+    t.join<span class="o">()</span>
+print <span class="o">(</span><span class="s2">"Fin du thread principal."</span><span class="o">)</span>
+</pre></div>  
+<h2><span id="File_d'attente_prioritaire_multithread"></span><span class="mw-headline" id="File_d.27attente_prioritaire_multithread">File d'attente prioritaire multithread</span></h2>
+<p>Le module <b>Queue</b> permet de créer une file d'attente pouvant contenir un nombre spécifique d'éléments.
+</p><p>Les méthodes suivantes permettent de contrôler la file d'attente&nbsp;:
+</p>
+<ul><li>get()&nbsp;: supprime et renvoie un élément de la file d'attente.</li>
+<li>put()&nbsp;: ajoute un élément à une file d'attente.</li>
+<li>qsize()&nbsp;: renvoie le nombre d'éléments qui sont actuellement dans la file d'attente.</li>
+<li>empty()&nbsp;: renvoie True si la file d'attente est vide; sinon renvoie False.</li>
+<li>full()&nbsp;: renvoie True si la file d'attente est pleine; sinon renvoie False.</li></ul>
+<p>Exemple (thread04.py)&nbsp;:   
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/usr/bin/python</span>
+
+import queue
+import threading
+import <span class="nb">time</span>
+
+<span class="nv">exitFlag</span> <span class="o">=</span> <span class="m">0</span>
+
+class myThread <span class="o">(</span>threading.Thread<span class="o">)</span>:
+    def __init__<span class="o">(</span>self, threadID, name, q<span class="o">)</span>:
+        threading.Thread.__init__<span class="o">(</span>self<span class="o">)</span>
+        self.threadID <span class="o">=</span> threadID
+        self.name <span class="o">=</span> name
+        self.q <span class="o">=</span> q
+    def run<span class="o">(</span>self<span class="o">)</span>:
+        print <span class="o">(</span><span class="s2">"Starting "</span> + self.name<span class="o">)</span>
+        process_data<span class="o">(</span>self.name, self.q<span class="o">)</span>
+        print <span class="o">(</span><span class="s2">"Exiting "</span> + self.name<span class="o">)</span>
+
+def process_data<span class="o">(</span>threadName, q<span class="o">)</span>:
+    <span class="k">while</span> not exitFlag:
+        queueLock.acquire<span class="o">()</span>
+        <span class="k">if</span> not workQueue.empty<span class="o">()</span>:
+            <span class="nv">data</span> <span class="o">=</span> q.get<span class="o">()</span>
+            queueLock.release<span class="o">()</span>
+            print <span class="o">(</span>threadName , <span class="s2">" processing "</span>, data<span class="o">)</span>
+            time.sleep<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+        <span class="k">else</span>:
+            queueLock.release<span class="o">()</span>
+            time.sleep<span class="o">(</span><span class="m">1</span><span class="o">)</span>
+
+<span class="nv">threadList</span> <span class="o">=</span> <span class="o">[</span><span class="s2">"Thread-1"</span>, <span class="s2">"Thread-2"</span>, <span class="s2">"Thread-3"</span><span class="o">]</span>
+<span class="nv">nameList</span> <span class="o">=</span> <span class="o">[</span><span class="s2">"Un"</span>, <span class="s2">"Deux"</span>, <span class="s2">"Trois"</span>, <span class="s2">"Quatre"</span>, <span class="s2">"Cinq"</span>,<span class="s2">"Six"</span>,<span class="s2">"Sept"</span><span class="o">]</span>
+<span class="c1"># Création du verrou</span>
+<span class="nv">queueLock</span> <span class="o">=</span> threading.Lock<span class="o">()</span>
+<span class="nv">workQueue</span> <span class="o">=</span> queue.Queue<span class="o">(</span><span class="m">10</span><span class="o">)</span>
+<span class="nv">threads</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="nv">threadID</span> <span class="o">=</span> <span class="m">1</span>
+
+<span class="c1"># Create new threads</span>
+<span class="k">for</span> tName in threadList:
+    <span class="nv">thread</span> <span class="o">=</span> myThread<span class="o">(</span>threadID, tName, workQueue<span class="o">)</span>
+    thread.start<span class="o">()</span>
+    threads.append<span class="o">(</span>thread<span class="o">)</span>
+    <span class="nv">threadID</span> <span class="o">+=</span> <span class="m">1</span>
+
+<span class="c1"># Fill the queue</span>
+queueLock.acquire<span class="o">()</span>
+<span class="k">for</span> word in nameList:
+    workQueue.put<span class="o">(</span>word<span class="o">)</span>
+queueLock.release<span class="o">()</span>
+
+<span class="c1"># Wait for queue to empty</span>
+<span class="k">while</span> not workQueue.empty<span class="o">()</span>:
+    pass
+
+<span class="c1"># Notify threads it's time to exit</span>
+<span class="nv">exitFlag</span> <span class="o">=</span> <span class="m">1</span>
+
+<span class="c1"># Wait for all threads to complete</span>
+<span class="k">for</span> t in threads:
+    t.join<span class="o">()</span>
+print <span class="o">(</span><span class="s2">"Exiting Main Thread"</span><span class="o">)</span>
+</pre></div>
+<p><br>
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20200422080319
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.029 seconds
+Real time usage: 0.521 seconds
+Preprocessor visited node count: 60/1000000
+Preprocessor generated node count: 132/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 11690/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key wikidb2:pcache:idhash:2710-0!canonical and timestamp 20200422080318 and revision id 13967
+ -->
+</div>					<div class="printfooter">
+						Récupérée de «&nbsp;<a dir="ltr" href="https://www.audiens.fr/wiki2/index.php?title=Gestion_des_threads_en_python&amp;oldid=13967">https://www.audiens.fr/wiki2/index.php?title=Gestion_des_threads_en_python&amp;oldid=13967</a>&nbsp;»					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Catégories" title="Spécial:Catégories">Catégories</a>&nbsp;: <ul><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Développements" title="Catégorie:Développements">Développements</a></li><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Langages" title="Catégorie:Langages">Langages</a></li><li><a href="https://www.audiens.fr/wiki2/index.php?title=Cat%C3%A9gorie:Python&amp;action=edit&amp;redlink=1" class="new" title="Catégorie:Python (page inexistante)">Python</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navigation</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Outils personnels</h3>
+						<ul>
+							<li id="pt-login"><a href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:Connexion&amp;returnto=Gestion+des+threads+en+python" title="Nous vous encourageons à vous connecter ; ce n’est cependant pas obligatoire [Alt+Maj+o]" accesskey="o">Se connecter</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espaces de noms</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Gestion_des_threads_en_python" title="Voir le contenu de la page [Alt+Maj+c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Discussion:Gestion_des_threads_en_python&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion au sujet de cette page de contenu (page inexistante) [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Affichages</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Gestion_des_threads_en_python">Lire</a></span></li><li id="ca-viewsource" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Gestion_des_threads_en_python&amp;action=edit" title="Cette page est protégée.
+Vous pouvez toutefois en visualiser la source. [Alt+Maj+e]" accesskey="e">Voir le texte source</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Gestion_des_threads_en_python&amp;action=history" title="Historique des versions de cette page [Alt+Maj+h]" accesskey="h">Afficher l’historique</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label" style="">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Plus</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Rechercher</label>
+						</h3>
+						<form action="http://www.audiens.fr/wiki2/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Rechercher dans Audiens" title="Rechercher dans Audiens [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Spécial:Recherche" name="title"><input type="submit" name="go" value="Continuer" title="Accédez à une page du même nom si elle existe" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Visiter la page d’accueil"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil général [Alt+Maj+z]" accesskey="z">Accueil</a></li><li id="n-recentchanges"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Modifications_récentes" title="Liste des modifications récentes sur le wiki [Alt+Maj+r]" accesskey="r">Modifications récentes</a></li><li id="n-randompage"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Page_au_hasard" title="Afficher une page au hasard [Alt+Maj+x]" accesskey="x">Page au hasard</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="Accès à l’aide">Aide</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Outils</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_liées/Gestion_des_threads_en_python" title="Liste des pages liées qui pointent sur celle-ci [Alt+Maj+j]" accesskey="j">Pages liées</a></li><li id="t-recentchangeslinked"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Suivi_des_liens/Gestion_des_threads_en_python" rel="nofollow" title="Liste des modifications récentes des pages appelées par celle-ci [Alt+Maj+k]" accesskey="k">Suivi des pages liées</a></li><li id="t-specialpages"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_spéciales" title="Liste de toutes les pages spéciales [Alt+Maj+q]" accesskey="q">Pages spéciales</a></li><li id="t-print"><a href="https://www.audiens.fr/wiki2/index.php?title=Gestion_des_threads_en_python&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [Alt+Maj+p]" accesskey="p">Version imprimable</a></li><li id="t-permalink"><a href="https://www.audiens.fr/wiki2/index.php?title=Gestion_des_threads_en_python&amp;oldid=13967" title="Adresse permanente de cette version de la page">Lien permanent</a></li><li id="t-info"><a href="https://www.audiens.fr/wiki2/index.php?title=Gestion_des_threads_en_python&amp;action=info" title="Plus d’information sur cette page">Information sur la page</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> La dernière modification de cette page a été faite le 20 avril 2020 à 13:20.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Politique_de_confidentialité" title="Audiens:Politique de confidentialité">Politique de confidentialité</a></li>
+								<li id="footer-places-about"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:À_propos_de" title="Audiens:À propos de">À propos de Audiens</a></li>
+								<li id="footer-places-disclaimer"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Avertissements_généraux" title="Audiens:Avertissements généraux">Avertissements</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="Gestion%20des%20threads%20en%20python%20%e2%80%94%20Audiens_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki2/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki2/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.029","walltime":"0.521","ppvisitednodes":{"value":60,"limit":1000000},"ppgeneratednodes":{"value":132,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":11690,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20200422080319","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":593});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+<!-- Mirrored from www.audiens.fr/download/python/Gestion des threads en python — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:19 GMT -->
+</html>

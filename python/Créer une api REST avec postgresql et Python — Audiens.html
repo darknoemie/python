@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="fr">
+<!-- Mirrored from www.audiens.fr/download/python/Créer une api REST avec postgresql et Python — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:15 GMT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Créer une api REST avec postgresql et Python — Audiens</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Créer_une_api_REST_avec_postgresql_et_Python","wgTitle":"Créer une api REST avec postgresql et Python","wgCurRevisionId":13973,"wgRevisionId":13973,"wgArticleId":2637,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":"Phil","wgUserGroups":["sysop","bureaucrat","*","user","autoconfirmed"],"wgCategories":["Développements","Langages","Python","Atelier"],"wgBreakFrames":false,"wgPageContentLanguage":"fr","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"wgMonthNamesShort":["","janv.","fév.","mars","avr.","mai","juin","juill.","août","sept.","oct.","nov.","déc."],"wgRelevantPageName":"Créer_une_api_REST_avec_postgresql_et_Python","wgRelevantArticleId":2637,"wgRequestId":"72ae0c09ab6524e7f406c89a","wgUserId":1,"wgUserEditCount":14015,"wgUserRegistration":1325332820000,"wgUserNewMsgRevisionId":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0tu0ujd",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"timecorrection":"Offset|0","watchlisttoken":""});
+});mw.loader.implement("user.tokens@1okgkd6",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"48227992030354afae7ed70c3822fb8f5ea2d173+\\","patrolToken":"ca437af4424a4f636cf0c155d4afe2905ea2d173+\\","watchToken":"44837319408d87d7bf8862f9f3a147775ea2d173+\\","csrfToken":"48227992030354afae7ed70c3822fb8f5ea2d173+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","mediawiki.page.watch.ajax","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="Cr%c3%a9er%20une%20api%20REST%20avec%20postgresql%20et%20Python%20%e2%80%94%20Audiens_fichiers/load.css">
+<script async="" src="Cr%c3%a9er%20une%20api%20REST%20avec%20postgresql%20et%20Python%20%e2%80%94%20Audiens_fichiers/load_002.html"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<meta name="generator" content="MediaWiki 1.31.1">
+<link rel="alternate" type="application/x-wiki" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit">
+<link rel="edit" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit">
+<link rel="shortcut icon" href="https://www.audiens.fr/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.audiens.fr/wiki2/opensearch_desc.php" title="Audiens (fr)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.audiens.fr/wiki2/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Audiens" href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<!--[if lt IE 9]><script src="/wiki2/load.php?debug=false&amp;lang=fr&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+<script src="Cr%c3%a9er%20une%20api%20REST%20avec%20postgresql%20et%20Python%20%e2%80%94%20Audiens_fichiers/load.html"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Créer_une_api_REST_avec_postgresql_et_Python rootpage-Créer_une_api_REST_avec_postgresql_et_Python skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="fr">Créer une api REST avec postgresql et Python</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Audiens</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Aller à :					<a href="#mw-head">navigation</a>, 					<a href="#p-search">rechercher</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr"><div class="mw-parser-output"><p>Navigation&nbsp;: <a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil">Accueil</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Python" title="Python">Python</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Utilisation_avancée" title="Utilisation avancée">Utilisation avancée</a> -&gt; <a class="mw-selflink selflink">Créer une api REST avec postgresql et Python</a>
+</p><p>Créer un web service REST en Python avec postgresql
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="fr"><h2>Sommaire</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">masquer</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#L.27objectif"><span class="tocnumber">1</span> <span class="toctext">L'objectif</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Installer_django_REST_framework"><span class="tocnumber">2</span> <span class="toctext">Installer django REST framework</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Cr.C3.A9er_un_projet_RestApi"><span class="tocnumber">3</span> <span class="toctext">Créer un projet RestApi</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Installer_l.27adaptateur_PostgreSQL_pour_Python"><span class="tocnumber">4</span> <span class="toctext">Installer l'adaptateur PostgreSQL pour Python</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Configurer_la_base_de_donn.C3.A9es"><span class="tocnumber">5</span> <span class="toctext">Configurer la base de données</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Cr.C3.A9er_l.27application_client"><span class="tocnumber">6</span> <span class="toctext">Créer l'application client</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Ajoutez_la_r.C3.A9f.C3.A9rence_.C3.A0_Django_REST_framework_au_projet"><span class="tocnumber">7</span> <span class="toctext">Ajoutez la référence à Django REST framework au projet</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Impl.C3.A9menter_l.27api_Django_REST"><span class="tocnumber">8</span> <span class="toctext">Implémenter l'api Django REST</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Le_model"><span class="tocnumber">8.1</span> <span class="toctext">Le model</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Cr.C3.A9er_les_s.C3.A9rialiseurs"><span class="tocnumber">8.2</span> <span class="toctext">Créer les sérialiseurs</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#G.C3.A9n.C3.A9rer_les_migrations"><span class="tocnumber">8.3</span> <span class="toctext">Générer les migrations</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Cr.C3.A9er_les_Views"><span class="tocnumber">8.4</span> <span class="toctext">Créer les Views</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Cr.C3.A9er_les_routes"><span class="tocnumber">8.5</span> <span class="toctext">Créer les routes</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Lancez_le_serveur"><span class="tocnumber">8.6</span> <span class="toctext">Lancez le serveur</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span id="L'objectif"></span><span class="mw-headline" id="L.27objectif">L'objectif</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=1" title="Modifier la section : L'objectif">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>L'api souhaitée est  la suivante&nbsp;:
+</p>
+<ul><li>GET /client/: obtenir tous les clients</li>
+<li>GET /client/[id]: obtenir un client par son id</li>
+<li>POST /client/: ajouter un client</li>
+<li>PUT /client/update/[id]: mettre à jour un client par son id</li>
+<li>DELETE /client/[id]: supprimer un client par son id</li></ul>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Installer_django_REST_framework">Installer django REST framework</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=2" title="Modifier la section : Installer django REST framework">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>pip3 install djangorestframework
+</pre>
+<p>ou
+</p>
+<pre>apt-get -y install python3-djangorestframework
+</pre>
+<p><br>
+</p>
+<h2><span id="Créer_un_projet_RestApi"></span><span class="mw-headline" id="Cr.C3.A9er_un_projet_RestApi">Créer un projet RestApi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=3" title="Modifier la section : Créer un projet RestApi">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>cd ~/workspace
+django-admin startproject comptaRestApi
+
+</pre>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:297px;"><a href="../../wiki2/index.php/Fichier_Python-010.html" class="image"><img alt="" src="Cr%c3%a9er%20une%20api%20REST%20avec%20postgresql%20et%20Python%20%e2%80%94%20Audiens_fichiers/Python-010.png" class="thumbimage" width="295" height="306"></a>  <div class="thumbcaption"><div class="magnify"><a href="../../wiki2/index.php/Fichier_Python-010.html" class="internal" title="Agrandir"></a></div>Génération d'un projet Rest api</div></div></div></div>
+<h2><span id="Installer_l'adaptateur_PostgreSQL_pour_Python"></span><span class="mw-headline" id="Installer_l.27adaptateur_PostgreSQL_pour_Python">Installer l'adaptateur PostgreSQL pour Python</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=4" title="Modifier la section : Installer l'adaptateur PostgreSQL pour Python">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>apt-get -y install python3-psycopg2
+
+</pre>
+<h2><span id="Configurer_la_base_de_données"></span><span class="mw-headline" id="Configurer_la_base_de_donn.C3.A9es">Configurer la base de données</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=5" title="Modifier la section : Configurer la base de données">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>cd ~/workspace/comptaRestApi
+vi comptaRestApi/settings.py
+ 
+</pre>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">DATABASES</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="s1">'default'</span>: <span class="o">{</span>
+        <span class="s1">'ENGINE'</span>: <span class="s1">'django.db.backends.postgresql'</span>,
+        <span class="s1">'NAME'</span>: <span class="s1">'compta'</span>,
+        <span class="s1">'USER'</span>: <span class="s1">'compta'</span>,
+        <span class="s1">'PASSWORD'</span>: <span class="s1">'secret'</span>,
+        <span class="s1">'HOST'</span>: <span class="s1">'127.0.0.1'</span>,
+        <span class="s1">'PORT'</span>: <span class="s1">'5432'</span>,
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h2><span id="Créer_l'application_client"></span><span class="mw-headline" id="Cr.C3.A9er_l.27application_client">Créer l'application client</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=6" title="Modifier la section : Créer l'application client">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>cd ~/workspace/comptaRestApi
+python3 manage.py startapp client
+
+</pre>
+<p>L'aspect du projet après la génération de l'application
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:272px;"><a href="../../wiki2/index.php/Fichier_Python-011.html" class="image"><img alt="" src="Cr%c3%a9er%20une%20api%20REST%20avec%20postgresql%20et%20Python%20%e2%80%94%20Audiens_fichiers/Python-011.png" class="thumbimage" width="270" height="440"></a>  <div class="thumbcaption"><div class="magnify"><a href="../../wiki2/index.php/Fichier_Python-011.html" class="internal" title="Agrandir"></a></div>Génération d'un projet Rest api</div></div></div></div> 
+<p>Si on ouvre le fichier clients/apps.py, nous pouvons voir la classe 
+ClientConfig (sous-classe du fichier django.apps.AppConfig) qui 
+représente notre application Django et sa configuration
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>from django.apps import AppConfig
+
+class ClientConfig<span class="o">(</span>AppConfig<span class="o">)</span>:
+    <span class="nv">name</span> <span class="o">=</span> <span class="s1">'client'</span>
+</pre></div>
+<h2><span id="Ajoutez_la_référence_à_Django_REST_framework_au_projet"></span><span class="mw-headline" id="Ajoutez_la_r.C3.A9f.C3.A9rence_.C3.A0_Django_REST_framework_au_projet">Ajoutez la référence à Django REST framework au projet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=7" title="Modifier la section : Ajoutez la référence à Django REST framework au projet">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>cd ~/workspace/comptaRestApi
+vi comptaRestApi/settings.py
+
+</pre>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">INSTALLED_APPS</span> <span class="o">=</span> <span class="o">[</span>
+    ....
+    ....
+    <span class="s1">'django.contrib.staticfiles'</span>,
+    <span class="c1"># Le framework Django Rest</span>
+    <span class="s1">'rest_framework'</span>,
+    <span class="c1"># L'application client</span>
+    <span class="s1">'client.apps.ClientConfig'</span>,
+<span class="o">]</span>
+</pre></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:552px;"><a href="../../wiki2/index.php/Fichier_Python-012.html" class="image"><img alt="" src="Cr%c3%a9er%20une%20api%20REST%20avec%20postgresql%20et%20Python%20%e2%80%94%20Audiens_fichiers/550px-Python-012.png" class="thumbimage" srcset="/wiki2/images/0/02/Python-012.png 1.5x" width="550" height="245"></a>  <div class="thumbcaption"><div class="magnify"><a href="../../wiki2/index.php/Fichier_Python-012.html" class="internal" title="Agrandir"></a></div>Génération d'un projet Rest api</div></div></div></div> 
+<p><br>
+</p>
+<h2><span id="Implémenter_l'api_Django_REST"></span><span class="mw-headline" id="Impl.C3.A9menter_l.27api_Django_REST">Implémenter l'api Django REST</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=8" title="Modifier la section : Implémenter l'api Django REST">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Le_model">Le model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=9" title="Modifier la section : Le model">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Il est possible de générer les tables de la base de données à partir du model.</li>
+<li>Ou de générer le model à partir d'une base de données</li></ul>
+<p>Nous alons choisir la deuxième solution
+</p>
+<pre>cd ~/workspace/comptaRestApi
+python3 manage.py <b>inspectdb</b> &gt;&gt; client/models.py 
+</pre>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:552px;"><a href="../../wiki2/index.php/Fichier_Python-013.html" class="image"><img alt="" src="Cr%c3%a9er%20une%20api%20REST%20avec%20postgresql%20et%20Python%20%e2%80%94%20Audiens_fichiers/550px-Python-013.png" class="thumbimage" srcset="/wiki2/images/thumb/2/27/Python-013.png/825px-Python-013.png 1.5x, /wiki2/images/thumb/2/27/Python-013.png/1100px-Python-013.png 2x" width="550" height="443"></a>  <div class="thumbcaption"><div class="magnify"><a href="../../wiki2/index.php/Fichier_Python-013.html" class="internal" title="Agrandir"></a></div>Génération du model</div></div></div></div> 
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>class Client<span class="o">(</span>models.Model<span class="o">)</span>:
+    <span class="nv">id</span> <span class="o">=</span> models.BigAutoField<span class="o">(</span><span class="nv">primary_key</span><span class="o">=</span>True<span class="o">)</span>
+    <span class="nv">mnemo</span> <span class="o">=</span> models.CharField<span class="o">(</span><span class="nv">max_length</span><span class="o">=</span><span class="m">12</span>, <span class="nv">blank</span><span class="o">=</span>True, <span class="nv">null</span><span class="o">=</span>True<span class="o">)</span>
+    <span class="nv">raison</span> <span class="o">=</span> models.CharField<span class="o">(</span><span class="nv">max_length</span><span class="o">=</span><span class="m">80</span>, <span class="nv">blank</span><span class="o">=</span>True, <span class="nv">null</span><span class="o">=</span>True<span class="o">)</span>
+    <span class="nv">adresse1</span> <span class="o">=</span> models.CharField<span class="o">(</span><span class="nv">max_length</span><span class="o">=</span><span class="m">80</span>, <span class="nv">blank</span><span class="o">=</span>True, <span class="nv">null</span><span class="o">=</span>True<span class="o">)</span>
+    <span class="nv">adresse2</span> <span class="o">=</span> models.CharField<span class="o">(</span><span class="nv">max_length</span><span class="o">=</span><span class="m">80</span>, <span class="nv">blank</span><span class="o">=</span>True, <span class="nv">null</span><span class="o">=</span>True<span class="o">)</span>
+    <span class="nv">codeinsee</span> <span class="o">=</span> models.BigIntegerField<span class="o">(</span><span class="nv">blank</span><span class="o">=</span>True, <span class="nv">null</span><span class="o">=</span>True<span class="o">)</span>
+
+    class Meta:
+        <span class="nv">managed</span> <span class="o">=</span> False
+        <span class="nv">db_table</span> <span class="o">=</span> <span class="s1">'client'</span>
+</pre></div>
+<h3><span id="Créer_les_sérialiseurs"></span><span class="mw-headline" id="Cr.C3.A9er_les_s.C3.A9rialiseurs">Créer les sérialiseurs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=10" title="Modifier la section : Créer les sérialiseurs">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Nous avons besoin d'une classe Serializer pour les instances client 
+afin de gérer la sérialisation vers JSON et la désérialisation à partir 
+de JSON.
+</p><p>- Ce CustomerSerializer héritera de la superclasse 
+rest_framework.serializers.ModelSerializer.
+- La classe ModelSerializer remplit automatiquement un ensemble de 
+champs et de validateurs par défaut, il suffit de spécifier la classe de
+ modèle.
+</p><p><br>
+Créer le fichier serializers.py
+</p>
+<pre>cd ~/workspace/comptaRestApi
+vi client/serializers.py
+</pre>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>from rest_framework import serializers 
+from client.models import Client
+ 
+ 
+class ClientSerializer<span class="o">(</span>serializers.ModelSerializer<span class="o">)</span>:
+ 
+    class Meta:
+        <span class="nv">model</span> <span class="o">=</span> Client
+        <span class="nv">fields</span> <span class="o">=</span> <span class="o">(</span><span class="s1">'id'</span>,
+                  <span class="s1">'mnemo'</span>,
+                  <span class="s1">'raison'</span>,
+                  <span class="s1">'adresse1'</span>,
+                  <span class="s1">'adresse2'</span>,
+                  <span class="s1">'codeinsee'</span><span class="o">)</span>
+</pre></div>
+<ul><li>model&nbsp;: Spécifie le model relatif au sérialiseur</li>
+<li>fields: spécifie un tuple de champs que nous souhaitons inclure dans la sérialisation.</li></ul>
+<h3><span id="Générer_les_migrations"></span><span class="mw-headline" id="G.C3.A9n.C3.A9rer_les_migrations">Générer les migrations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=11" title="Modifier la section : Générer les migrations">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>cd ~/workspace/comptaRestApi
+python3 manage.py migrate
+</pre>
+<h3><span id="Créer_les_Views"></span><span class="mw-headline" id="Cr.C3.A9er_les_Views">Créer les Views</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=12" title="Modifier la section : Créer les Views">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>from django.shortcuts import render
+
+<span class="c1"># Create your views here.</span>
+    
+from django.shortcuts import render 
+from django.http import HttpResponse
+from django.http.response import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.parsers import JSONParser 
+from rest_framework import status
+ 
+from client.models import Client
+from client.serializers import ClientSerializer
+ 
+@csrf_exempt
+def client_list<span class="o">(</span>request<span class="o">)</span>:
+    <span class="k">if</span> request.method <span class="o">==</span> <span class="s1">'GET'</span>:
+        <span class="nv">client</span> <span class="o">=</span> Client.objects.all<span class="o">()</span>
+        <span class="nv">client_serializer</span> <span class="o">=</span> ClientSerializer<span class="o">(</span>client, <span class="nv">many</span><span class="o">=</span>True<span class="o">)</span>
+        <span class="k">return</span> JsonResponse<span class="o">(</span>client_serializer.data, <span class="nv">safe</span><span class="o">=</span>False<span class="o">)</span>
+        <span class="c1"># In order to serialize objects, we must set 'safe=False'</span>
+ 
+    <span class="k">elif</span> request.method <span class="o">==</span> <span class="s1">'POST'</span>:
+        <span class="nv">client_data</span> <span class="o">=</span> JSONParser<span class="o">()</span>.parse<span class="o">(</span>request<span class="o">)</span>
+        <span class="nv">client_serializer</span> <span class="o">=</span> ClientSerializer<span class="o">(</span><span class="nv">data</span><span class="o">=</span>client_data<span class="o">)</span>
+        <span class="k">if</span> client_serializer.is_valid<span class="o">()</span>:
+            client_serializer.save<span class="o">()</span> 
+            <span class="k">return</span> JsonResponse<span class="o">(</span>client_serializer.data, <span class="nv">status</span><span class="o">=</span>status.HTTP_201_CREATED<span class="o">)</span> 
+        <span class="k">return</span> JsonResponse<span class="o">(</span>client_serializer.errors, <span class="nv">status</span><span class="o">=</span>status.HTTP_400_BAD_REQUEST<span class="o">)</span>
+ 
+ 
+@csrf_exempt 
+def client_detail<span class="o">(</span>request, pk<span class="o">)</span>:
+    try: 
+        <span class="nv">client</span> <span class="o">=</span> Client.objects.get<span class="o">(</span><span class="nv">pk</span><span class="o">=</span>pk<span class="o">)</span> 
+    except Client.DoesNotExist: 
+        <span class="k">return</span> HttpResponse<span class="o">(</span><span class="nv">status</span><span class="o">=</span>status.HTTP_404_NOT_FOUND<span class="o">)</span> 
+ 
+    <span class="k">if</span> request.method <span class="o">==</span> <span class="s1">'GET'</span>: 
+        <span class="nv">client_serializer</span> <span class="o">=</span> ClientSerializer<span class="o">(</span>client<span class="o">)</span> 
+        <span class="k">return</span> JsonResponse<span class="o">(</span>client_serializer.data<span class="o">)</span> 
+ 
+    <span class="k">elif</span> request.method <span class="o">==</span> <span class="s1">'PUT'</span>: 
+        <span class="nv">client_data</span> <span class="o">=</span> JSONParser<span class="o">()</span>.parse<span class="o">(</span>request<span class="o">)</span> 
+        <span class="nv">client_serializer</span> <span class="o">=</span> ClientSerializer<span class="o">(</span>client, <span class="nv">data</span><span class="o">=</span>client_data<span class="o">)</span> 
+        <span class="k">if</span> client_serializer.is_valid<span class="o">()</span>: 
+            client_serializer.save<span class="o">()</span> 
+            <span class="k">return</span> JsonResponse<span class="o">(</span>client_serializer.data<span class="o">)</span> 
+        <span class="k">return</span> JsonResponse<span class="o">(</span>client_serializer.errors, <span class="nv">status</span><span class="o">=</span>status.HTTP_400_BAD_REQUEST<span class="o">)</span> 
+ 
+    <span class="k">elif</span> request.method <span class="o">==</span> <span class="s1">'DELETE'</span>: 
+        client.delete<span class="o">()</span> 
+        <span class="k">return</span> HttpResponse<span class="o">(</span><span class="nv">status</span><span class="o">=</span>status.HTTP_204_NO_CONTENT<span class="o">)</span>
+</pre></div>
+<p><br>
+</p>
+<h3><span id="Créer_les_routes"></span><span class="mw-headline" id="Cr.C3.A9er_les_routes">Créer les routes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=13" title="Modifier la section : Créer les routes">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Créez le fichier urls.py pour l'application client
+</p>
+<pre>cd ~/workspace/comptaRestApi
+vi client/urls.py
+</pre>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>from django.conf.urls import url 
+from client import views 
+ 
+<span class="nv">urlpatterns</span> <span class="o">=</span> <span class="o">[</span> 
+    url<span class="o">(</span>r<span class="s1">'^client/$'</span>, views.client_list<span class="o">)</span>,
+    url<span class="o">(</span>r<span class="s1">'^client/(?P&lt;pk&gt;[0-9]+)$'</span>, views.client_detail<span class="o">)</span>,
+<span class="o">]</span>
+</pre></div>
+<p>Inclure le fichier dans le fichier racine des urls.
+</p>
+<pre>cd ~/workspace/comptaRestApi
+vi urls.py
+</pre>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="s2">"""comptaRestApi URL Configuration</span>
+
+<span class="s2">The `urlpatterns` list routes URLs to views. For more information please see:</span>
+<span class="s2">    https://docs.djangoproject.com/en/2.2/topics/http/urls/</span>
+<span class="s2">Examples:</span>
+<span class="s2">Function views</span>
+<span class="s2">    1. Add an import:  from my_app import views</span>
+<span class="s2">    2. Add a URL to urlpatterns:  path('', views.home, name='home')</span>
+<span class="s2">Class-based views</span>
+<span class="s2">    1. Add an import:  from other_app.views import Home</span>
+<span class="s2">    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')</span>
+<span class="s2">Including another URLconf</span>
+<span class="s2">    1. Import the include() function: from django.urls import include, path</span>
+<span class="s2">    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))</span>
+<span class="s2">"""</span>
+from django.contrib import admin
+from django.urls import path
+from django.conf.urls import include, url
+
+<span class="nv">urlpatterns</span> <span class="o">=</span> <span class="o">[</span>
+    path<span class="o">(</span><span class="s1">'admin/'</span>, admin.site.urls<span class="o">)</span>,
+    url<span class="o">(</span>r<span class="s1">'^'</span>, include<span class="o">(</span><span class="s1">'client.urls'</span><span class="o">))</span>, 
+<span class="o">]</span>
+</pre></div>
+<h3><span class="mw-headline" id="Lancez_le_serveur">Lancez le serveur</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;section=14" title="Modifier la section : Lancez le serveur">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>python3 manage.py runserver
+</pre>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:552px;"><a href="../../wiki2/index.php/Fichier_Python-014.html" class="image"><img alt="" src="Cr%c3%a9er%20une%20api%20REST%20avec%20postgresql%20et%20Python%20%e2%80%94%20Audiens_fichiers/550px-Python-014.png" class="thumbimage" srcset="/wiki2/images/1/12/Python-014.png 1.5x" width="550" height="191"></a>  <div class="thumbcaption"><div class="magnify"><a href="../../wiki2/index.php/Fichier_Python-014.html" class="internal" title="Agrandir"></a></div>Lancement du serveur</div></div></div></div> 
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20200424064719
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.052 seconds
+Real time usage: 1.018 seconds
+Preprocessor visited node count: 130/1000000
+Preprocessor generated node count: 240/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 11735/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key wikidb2:pcache:idhash:2637-0!canonical and timestamp 20200424064718 and revision id 13973
+ -->
+</div>					<div class="printfooter">
+						Récupérée de «&nbsp;<a dir="ltr" href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;oldid=13973">https://www.audiens.fr/wiki2/index.php?title=Créer_une_api_REST_avec_postgresql_et_Python&amp;oldid=13973</a>&nbsp;»					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Catégories" title="Spécial:Catégories">Catégories</a>&nbsp;: <ul><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Développements" title="Catégorie:Développements">Développements</a></li><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Langages" title="Catégorie:Langages">Langages</a></li><li><a href="https://www.audiens.fr/wiki2/index.php?title=Cat%C3%A9gorie:Python&amp;action=edit&amp;redlink=1" class="new" title="Catégorie:Python (page inexistante)">Python</a></li><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Atelier" title="Catégorie:Atelier">Atelier</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navigation</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Outils personnels</h3>
+						<ul>
+							<li id="pt-userpage"><a href="https://www.audiens.fr/wiki2/index.php/Utilisateur:Phil" class="new" dir="auto" title="Votre page d’utilisateur (page inexistante) [Alt+Maj+.]" accesskey=".">Phil</a></li><li id="pt-mytalk"><a href="https://www.audiens.fr/wiki2/index.php/Discussion_utilisateur:Phil" class="new" title="Votre page de discussion (page inexistante) [Alt+Maj+n]" accesskey="n">Discussion</a></li><li id="pt-preferences"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Préférences" title="Vos préférences">Préférences</a></li><li id="pt-watchlist"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Liste_de_suivi" title="Une liste des pages dont vous suivez les modifications [Alt+Maj+l]" accesskey="l">Liste de suivi</a></li><li id="pt-mycontris"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Contributions/Phil" title="La liste de vos contributions [Alt+Maj+y]" accesskey="y">Contributions</a></li><li id="pt-logout"><a href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:D%C3%A9connexion&amp;returnto=Cr%C3%A9er+une+api+REST+avec+postgresql+et+Python" title="Se déconnecter">Se déconnecter</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espaces de noms</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Créer_une_api_REST_avec_postgresql_et_Python" title="Voir le contenu de la page [Alt+Maj+c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Discussion:Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion au sujet de cette page de contenu (page inexistante) [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Affichages</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Créer_une_api_REST_avec_postgresql_et_Python">Lire</a></span></li><li id="ca-edit" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=edit" title="Modifier le wikicode [Alt+Maj+e]" accesskey="e">Modifier</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=history" title="Historique des versions de cette page [Alt+Maj+h]" accesskey="h">Afficher l’historique</a></span></li><li id="ca-pdfbook" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=pdfbook&amp;format=single">Imprimer au format PDF</a></span></li><li id="ca-unwatch" class="collapsible icon mw-watchlink"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=unwatch" data-mw="interface" title="Retirer cette page de votre liste de suivi [Alt+Maj+w]" accesskey="w">Ne plus suivre</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Plus</span></h3>
+						<div class="menu">
+							<ul>
+								<li id="ca-delete"><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=delete" title="Supprimer cette page [Alt+Maj+d]" accesskey="d">Supprimer</a></li><li id="ca-move"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Renommer_une_page/Créer_une_api_REST_avec_postgresql_et_Python" title="Renommer cette page [Alt+Maj+m]" accesskey="m">Renommer</a></li><li id="ca-protect"><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=protect" title="Protéger cette page [Alt+Maj+=]" accesskey="=">Protéger</a></li>							</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Rechercher</label>
+						</h3>
+						<form action="http://www.audiens.fr/wiki2/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Rechercher dans Audiens" title="Rechercher dans Audiens [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Spécial:Recherche" name="title"><input type="submit" name="go" value="Continuer" title="Accédez à une page du même nom si elle existe" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Visiter la page d’accueil"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil général [Alt+Maj+z]" accesskey="z">Accueil</a></li><li id="n-recentchanges"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Modifications_récentes" title="Liste des modifications récentes sur le wiki [Alt+Maj+r]" accesskey="r">Modifications récentes</a></li><li id="n-randompage"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Page_au_hasard" title="Afficher une page au hasard [Alt+Maj+x]" accesskey="x">Page au hasard</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="Accès à l’aide">Aide</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Outils</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_liées/Créer_une_api_REST_avec_postgresql_et_Python" title="Liste des pages liées qui pointent sur celle-ci [Alt+Maj+j]" accesskey="j">Pages liées</a></li><li id="t-recentchangeslinked"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Suivi_des_liens/Créer_une_api_REST_avec_postgresql_et_Python" rel="nofollow" title="Liste des modifications récentes des pages appelées par celle-ci [Alt+Maj+k]" accesskey="k">Suivi des pages liées</a></li><li id="t-upload"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Téléverser" title="Téléverser des fichiers [Alt+Maj+u]" accesskey="u">Importer un fichier</a></li><li id="t-specialpages"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_spéciales" title="Liste de toutes les pages spéciales [Alt+Maj+q]" accesskey="q">Pages spéciales</a></li><li id="t-print"><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [Alt+Maj+p]" accesskey="p">Version imprimable</a></li><li id="t-permalink"><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;oldid=13973" title="Adresse permanente de cette version de la page">Lien permanent</a></li><li id="t-info"><a href="https://www.audiens.fr/wiki2/index.php?title=Cr%C3%A9er_une_api_REST_avec_postgresql_et_Python&amp;action=info" title="Plus d’information sur cette page">Information sur la page</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> La dernière modification de cette page a été faite le 20 avril 2020 à 13:24.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Politique_de_confidentialité" title="Audiens:Politique de confidentialité">Politique de confidentialité</a></li>
+								<li id="footer-places-about"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:À_propos_de" title="Audiens:À propos de">À propos de Audiens</a></li>
+								<li id="footer-places-disclaimer"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Avertissements_généraux" title="Audiens:Avertissements généraux">Avertissements</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="Cr%c3%a9er%20une%20api%20REST%20avec%20postgresql%20et%20Python%20%e2%80%94%20Audiens_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki2/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki2/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.052","walltime":"1.018","ppvisitednodes":{"value":130,"limit":1000000},"ppgeneratednodes":{"value":240,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":11735,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20200424064719","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":64});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+<!-- Mirrored from www.audiens.fr/download/python/Créer une api REST avec postgresql et Python — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:16 GMT -->
+</html>

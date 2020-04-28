@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="fr">
+<!-- Mirrored from www.audiens.fr/download/python/Les bases de Python — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:24 GMT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Les bases de Python — Audiens</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Les_bases_de_Python","wgTitle":"Les bases de Python","wgCurRevisionId":13416,"wgRevisionId":13416,"wgArticleId":2537,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Développements","Langages","Python"],"wgBreakFrames":false,"wgPageContentLanguage":"fr","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"wgMonthNamesShort":["","janv.","fév.","mars","avr.","mai","juin","juill.","août","sept.","oct.","nov.","déc."],"wgRelevantPageName":"Les_bases_de_Python","wgRelevantArticleId":2537,"wgRequestId":"89cf7b696246d7e20e95dead","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@1dpodri",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"variant":"fr"});
+});mw.loader.implement("user.tokens@1okgkd6",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="Les%20bases%20de%20Python%20%e2%80%94%20Audiens_fichiers/load.css">
+<script async="" src="Les%20bases%20de%20Python%20%e2%80%94%20Audiens_fichiers/load.html"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<meta name="generator" content="MediaWiki 1.31.1">
+<link rel="shortcut icon" href="https://www.audiens.fr/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.audiens.fr/wiki2/opensearch_desc.php" title="Audiens (fr)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.audiens.fr/wiki2/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Audiens" href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<!--[if lt IE 9]><script src="/wiki2/load.php?debug=false&amp;lang=fr&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+<script src="Les%20bases%20de%20Python%20%e2%80%94%20Audiens_fichiers/load_002.html"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Les_bases_de_Python rootpage-Les_bases_de_Python skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="fr">Les bases de Python</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Audiens</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Aller à :					<a href="#mw-head">navigation</a>, 					<a href="#p-search">rechercher</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr"><div class="mw-parser-output"><p>Navigation&nbsp;: <a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil">Accueil</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Python" title="Python">Python</a> -&gt; <a class="mw-selflink selflink">Les bases de Python</a>
+</p><p><a href="../../wiki2/index.php/Fichier_Logo-python.html" class="image"><img alt="Logo-python.png" src="Les%20bases%20de%20Python%20%e2%80%94%20Audiens_fichiers/65px-Logo-python.png" srcset="/wiki2/images/thumb/0/0d/Logo-python.png/98px-Logo-python.png 1.5x, /wiki2/images/thumb/0/0d/Logo-python.png/130px-Logo-python.png 2x" width="65" height="68"></a>
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="fr"><h2>Sommaire</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">masquer</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Les_commentaires"><span class="tocnumber">1</span> <span class="toctext">Les commentaires</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Les_docstrings"><span class="tocnumber">2</span> <span class="toctext">Les docstrings</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Les_chiffres"><span class="tocnumber">3</span> <span class="toctext">Les chiffres</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Les_chaines_de_caract.C3.A8res"><span class="tocnumber">4</span> <span class="toctext">Les chaines de caractères</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Concat.C3.A9ner_des_cha.C3.AEnes"><span class="tocnumber">4.1</span> <span class="toctext">Concaténer des chaînes</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#D.C3.A9couper_les_cha.C3.AEnes_de_caract.C3.A8res"><span class="tocnumber">4.2</span> <span class="toctext">Découper les chaînes de caractères</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Les_listes"><span class="tocnumber">4.3</span> <span class="toctext">Les listes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Les_instructions_de_contr.C3.B4le_de_flux_.2809.py.29"><span class="tocnumber">5</span> <span class="toctext">Les  instructions de contrôle de flux (09.py)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#if"><span class="tocnumber">5.1</span> <span class="toctext">if</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#La_boucle_for"><span class="tocnumber">5.2</span> <span class="toctext">La boucle for</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#La_boucle_while"><span class="tocnumber">5.3</span> <span class="toctext">La boucle while</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#range"><span class="tocnumber">5.4</span> <span class="toctext">range</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Break_et_continue"><span class="tocnumber">5.5</span> <span class="toctext">Break et continue</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#L.E2.80.99instruction_pass"><span class="tocnumber">5.6</span> <span class="toctext">L’instruction pass</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Les_fonctions"><span class="tocnumber">6</span> <span class="toctext">Les fonctions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Valeur_par_d.C3.A9faut"><span class="tocnumber">6.1</span> <span class="toctext">Valeur par défaut</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Les_arguments_nomm.C3.A9s"><span class="tocnumber">6.2</span> <span class="toctext">Les arguments nommés</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Les_arguments_tableaux_et_dictionnaire_.28hashmap.29"><span class="tocnumber">6.3</span> <span class="toctext">Les arguments tableaux et dictionnaire (hashmap)</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Le_fonctions_lambda"><span class="tocnumber">6.4</span> <span class="toctext">Le fonctions lambda</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#PEP_8"><span class="tocnumber">7</span> <span class="toctext">PEP 8</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Les_tuples"><span class="tocnumber">8</span> <span class="toctext">Les tuples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#It.C3.A9rer_sur_un_tuple"><span class="tocnumber">8.1</span> <span class="toctext">Itérer sur un tuple</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#Les_set_.28ensembles.29"><span class="tocnumber">9</span> <span class="toctext">Les set (ensembles)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="#Trier_un_set"><span class="tocnumber">9.1</span> <span class="toctext">Trier un set</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Les_dictionnaires"><span class="tocnumber">10</span> <span class="toctext">Les dictionnaires</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#cr.C3.A9e_un_dictionnaire_vide"><span class="tocnumber">10.1</span> <span class="toctext">crée un dictionnaire vide</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Les_cl.C3.A9s_d.27un_dictionnaire"><span class="tocnumber">10.2</span> <span class="toctext">Les clés d'un dictionnaire</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#It.C3.A9rer_sur_un_dictionnaire"><span class="tocnumber">10.3</span> <span class="toctext">Itérer sur un dictionnaire</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#Travailler_avec_les_listes"><span class="tocnumber">11</span> <span class="toctext">Travailler avec les listes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="#L.27op.C3.A9rateur_in"><span class="tocnumber">11.1</span> <span class="toctext">L'opérateur in</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Longueur_d.27une_liste"><span class="tocnumber">11.2</span> <span class="toctext">Longueur d'une liste</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Ajouter_des_.C3.A9l.C3.A9ments"><span class="tocnumber">11.3</span> <span class="toctext">Ajouter des éléments</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#Travailler_sur_la_tranche"><span class="tocnumber">11.4</span> <span class="toctext">Travailler sur la tranche</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#La_fonction_range"><span class="tocnumber">11.5</span> <span class="toctext">La fonction range</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#Construire_une_liste_.C3.A0_partir_d.27une_autre"><span class="tocnumber">11.6</span> <span class="toctext">Construire une liste à partir d'une autre</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#Transformer_une_liste_en_string"><span class="tocnumber">11.7</span> <span class="toctext">Transformer une liste en string</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-37"><a href="#Les_modules"><span class="tocnumber">12</span> <span class="toctext">Les modules</span></a>
+<ul>
+<li class="toclevel-2 tocsection-38"><a href="#Ex.C3.A9cuter_un_module"><span class="tocnumber">12.1</span> <span class="toctext">Exécuter un module</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="#Le_chemin_de_recherche"><span class="tocnumber">12.2</span> <span class="toctext">Le chemin de recherche</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="#Compilation_des_modules"><span class="tocnumber">12.3</span> <span class="toctext">Compilation des modules</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="#Les_modules_standards"><span class="tocnumber">12.4</span> <span class="toctext">Les modules standards</span></a>
+<ul>
+<li class="toclevel-3 tocsection-42"><a href="#Le_module_sys"><span class="tocnumber">12.4.1</span> <span class="toctext">Le module sys</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="#Le_module_os"><span class="tocnumber">12.4.2</span> <span class="toctext">Le module os</span></a>
+<ul>
+<li class="toclevel-4 tocsection-44"><a href="#os.environ"><span class="tocnumber">12.4.2.1</span> <span class="toctext">os.environ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-45"><a href="#Les_modules_math_et_cmath"><span class="tocnumber">12.4.3</span> <span class="toctext">Les modules math et cmath</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-46"><a href="#Les_paquets"><span class="tocnumber">13</span> <span class="toctext">Les paquets</span></a></li>
+<li class="toclevel-1 tocsection-47"><a href="#Les_chaines_de_caract.C3.A8res_.2816.py.29"><span class="tocnumber">14</span> <span class="toctext">Les chaines de caractères (16.py)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-48"><a href="#La_fonction_repr.28.29"><span class="tocnumber">14.1</span> <span class="toctext">La fonction repr()</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="#La_fonction_str.28.29"><span class="tocnumber">14.2</span> <span class="toctext">La fonction str()</span></a></li>
+<li class="toclevel-2 tocsection-50"><a href="#Justification_et_padding"><span class="tocnumber">14.3</span> <span class="toctext">Justification et padding</span></a></li>
+<li class="toclevel-2 tocsection-51"><a href="#Les_op.C3.A9rateurs"><span class="tocnumber">14.4</span> <span class="toctext">Les opérateurs</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="#Les_expressions_raw_string"><span class="tocnumber">14.5</span> <span class="toctext">Les expressions raw string</span></a></li>
+<li class="toclevel-2 tocsection-53"><a href="#Formatage_des_cha.C3.AEnes_de_caract.C3.A8res"><span class="tocnumber">14.6</span> <span class="toctext">Formatage des chaînes de caractères</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-54"><a href="#Les_fichiers_.2817.py.29"><span class="tocnumber">15</span> <span class="toctext">Les fichiers (17.py)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-55"><a href="#Ouvrir_un_fichier"><span class="tocnumber">15.1</span> <span class="toctext">Ouvrir un fichier</span></a></li>
+<li class="toclevel-2 tocsection-56"><a href="#Ecrire_dans_un_fichier"><span class="tocnumber">15.2</span> <span class="toctext">Ecrire dans un fichier</span></a></li>
+<li class="toclevel-2 tocsection-57"><a href="#Lire_un_fichier"><span class="tocnumber">15.3</span> <span class="toctext">Lire un fichier</span></a></li>
+<li class="toclevel-2 tocsection-58"><a href="#Ce_d.C3.A9placer_dans_un_fichier"><span class="tocnumber">15.4</span> <span class="toctext">Ce déplacer dans un fichier</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-59"><a href="#Les_exceptions"><span class="tocnumber">16</span> <span class="toctext">Les exceptions</span></a></li>
+<li class="toclevel-1 tocsection-60"><a href="#Port.C3.A9e_des_variables_.2818.py.29"><span class="tocnumber">17</span> <span class="toctext">Portée des variables (18.py)</span></a></li>
+<li class="toclevel-1 tocsection-61"><a href="#Les_fonctions_sp.C3.A9ciales"><span class="tocnumber">18</span> <span class="toctext">Les fonctions spéciales</span></a>
+<ul>
+<li class="toclevel-2 tocsection-62"><a href="#la_m.C3.A9thode_sp.C3.A9ciale_str_.28self.29"><span class="tocnumber">18.1</span> <span class="toctext">la méthode spéciale __str__(self)</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Les_commentaires">Les commentaires</span></h2>
+<p>Les commentaires sont écrits comme ci-dessous
+</p>
+<ul><li>x = 18 # le reste de la ligne est un commentaire</li></ul>
+<p>exemple de programme (01.py)
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># commentaire</span>
+<span class="nv">x</span> <span class="o">=</span> <span class="m">1</span>
+<span class="c1"># commentaire deux </span>
+print<span class="o">(</span><span class="s2">"x="</span>,x<span class="o">)</span>  <span class="c1"># commentaire trois</span>
+</pre></div>
+<h2><span class="mw-headline" id="Les_docstrings">Les docstrings</span></h2>
+<ul><li>Les docstrings permettent d'introduire des commentaires utilisables à l'extérieur du programme.</li>
+<li>Les docstrings  sont écrites entre des <b>triples quotes</b></li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>les <span class="s2">"""docstrings"""</span>
+</pre></div>
+<p>On peut ensuite les extraire avec la commande <b>help(nom de l'objet)</b>
+</p>
+<h2><span class="mw-headline" id="Les_chiffres">Les chiffres</span></h2>
+<p>exemple de programme utilisant les chiffres
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># les chiffres</span>
+<span class="nv">pi</span> <span class="o">=</span> <span class="m">3</span>.14159
+<span class="nv">rayon</span> <span class="o">=</span> <span class="m">5</span>
+<span class="nv">surface</span> <span class="o">=</span> pi * rayon * rayon
+print <span class="o">(</span><span class="s2">"La surface du cercle de rayon"</span>,rayon,<span class="s2">"est"</span>, surface<span class="o">)</span>
+</pre></div>
+<h2><span id="Les_chaines_de_caractères"></span><span class="mw-headline" id="Les_chaines_de_caract.C3.A8res">Les chaines de caractères</span></h2>
+<ul><li>Utilisation des simple quotes, des doubles quotes est semblable au shell bash.</li></ul>
+<p>Le programme suivant (03.py)
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>print<span class="o">(</span><span class="s1">'C:\some\name'</span><span class="o">)</span>  <span class="c1"># ici \n indique un saut de ligne.</span>
+ print<span class="o">(</span>r<span class="s1">'C:\some\name'</span><span class="o">)</span>  <span class="c1"># notez le r avant la quote</span>
+</pre></div>
+<p>affiche le résultat ci-dessous
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> $ python <span class="m">03</span>.py 
+ C:<span class="se">\s</span>ome
+ ame
+ C:<span class="se">\s</span>ome<span class="se">\n</span>ame
+</pre></div>
+<p>Une chaîne de caractères peut s'écrire sur plusieurs lignes
+Le programme 04.py
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> print<span class="o">(</span><span class="s2">"""\</span>
+<span class="s2"> Usage: 04.py [OPTIONS]</span>
+<span class="s2">      -h                        Affiche ce message </span>
+<span class="s2">      -H hostname               Hostname a connecter </span>
+<span class="s2"> """</span><span class="o">)</span>
+</pre></div>
+<p>Multiplier les chaînes 
+le programme ci dessous (05.py)
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> <span class="nv">resultat</span><span class="o">=</span><span class="m">3</span> * <span class="s1">'ABC'</span> <span class="s1">'yz'</span>
+ print resultat
+</pre></div>
+<p>donne le résultat suivant
+</p>
+<pre>ABCyzABCyzABCyz
+</pre>
+<p>et ...
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> <span class="nv">resultat</span><span class="o">=</span><span class="m">3</span> * <span class="s1">'ABC'</span> r<span class="s1">'\nyz'</span>
+ print resultat
+</pre></div>
+<p>donne le résultat suivant
+</p>
+<pre>ABC\nyzABC\nyzABC\nyz
+</pre>
+<h3><span id="Concaténer_des_chaînes"></span><span class="mw-headline" id="Concat.C3.A9ner_des_cha.C3.AEnes">Concaténer des chaînes</span></h3>
+<p>Le programme (06.py)
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">v1</span><span class="o">=</span><span class="s1">'AA'</span>
+<span class="nv">v2</span><span class="o">=</span><span class="s1">'BB'</span>
+
+print v1 + v2
+</pre></div>
+<p>Affiche 
+</p>
+<pre>AABB
+</pre>
+<h3><span id="Découper_les_chaînes_de_caractères"></span><span class="mw-headline" id="D.C3.A9couper_les_cha.C3.AEnes_de_caract.C3.A8res">Découper les chaînes de caractères</span></h3>
+<p>Le programme 07.py
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">texte</span><span class="o">=</span><span class="s1">'Python'</span>
+
+print<span class="o">(</span>texte<span class="o">[</span><span class="m">0</span><span class="o">]</span>,<span class="s2">"= premier caractère"</span><span class="o">)</span>              <span class="c1"># premier caractère</span>
+print<span class="o">(</span>texte<span class="o">[</span><span class="m">3</span><span class="o">]</span>,<span class="s2">"= 4ème caractère"</span><span class="o">)</span>                 <span class="c1"># 4ème caractère</span>
+
+print<span class="o">(</span>texte<span class="o">[</span>:2<span class="o">]</span>,<span class="s2">"= jusqu'à la  position 2"</span><span class="o">)</span>        <span class="c1"># jusqu'à la  position 2 </span>
+print<span class="o">(</span>texte<span class="o">[</span><span class="m">2</span>:<span class="o">]</span>,<span class="s2">"= à partir de la  position 2 "</span><span class="o">)</span>   <span class="c1"># à partir de la  position 2 </span>
+
+print<span class="o">(</span>texte<span class="o">[</span>-1<span class="o">]</span>,<span class="s2">"= dernier caractère"</span><span class="o">)</span>             <span class="c1"># dernier caractère</span>
+print<span class="o">(</span>texte<span class="o">[</span>-2<span class="o">]</span>,<span class="s2">"= avant dernier caractère"</span><span class="o">)</span>       <span class="c1"># avant dernier caractère</span>
+</pre></div>
+<h3><span class="mw-headline" id="Les_listes">Les listes</span></h3>
+<p>Le programme 08.py
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Les listes</span>
+<span class="nv">tab</span> <span class="o">=</span> <span class="o">[</span><span class="m">2</span>,4,8,16,32,64<span class="o">]</span>
+
+<span class="c1"># modifier un élément</span>
+tab<span class="o">[</span><span class="m">2</span><span class="o">]</span> <span class="o">=</span> <span class="m">1</span>
+
+<span class="c1"># Affiche le contenu de la liste</span>
+<span class="k">for</span> x in tab:
+  print <span class="o">(</span>x<span class="o">)</span>
+
+<span class="c1"># La longueur d'une liste</span>
+print<span class="o">(</span><span class="s2">"longueur ="</span>,len<span class="o">(</span>tab<span class="o">))</span>
+
+<span class="c1"># Concaténation de listes</span>
+<span class="nv">tab2</span> <span class="o">=</span> <span class="o">[</span><span class="m">128</span>,256<span class="o">]</span>
+<span class="nv">tab3</span> <span class="o">=</span> tab + tab2<span class="p">;</span>
+print<span class="o">(</span><span class="s1">'Affiche tab3'</span><span class="o">)</span>
+<span class="k">for</span> x in tab3:
+  print<span class="o">(</span>x<span class="o">)</span>
+</pre></div>
+<h2><span id="Les_instructions_de_contrôle_de_flux_(09.py)"></span><span class="mw-headline" id="Les_instructions_de_contr.C3.B4le_de_flux_.2809.py.29">Les  instructions de contrôle de flux (09.py)</span></h2>
+<h3><span class="mw-headline" id="if">if</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">x</span> <span class="o">=</span> int<span class="o">(</span>input<span class="o">(</span><span class="s2">"Entrez un nombre : "</span><span class="o">))</span>
+<span class="k">if</span> x &gt; <span class="m">50</span>:
+  print <span class="o">(</span><span class="s2">"votre nombre est &gt; 50"</span><span class="o">)</span>
+<span class="k">else</span>:
+  print <span class="o">(</span><span class="s2">"votre nombre est &lt;= 50"</span><span class="o">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="La_boucle_for">La boucle for</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>print<span class="o">(</span><span class="s2">"---For()---"</span><span class="o">)</span>
+<span class="nv">tab</span> <span class="o">=</span> <span class="o">[</span><span class="m">2</span>,4,8,16,32,64<span class="o">]</span>
+<span class="k">for</span> x in tab:
+  print <span class="o">(</span>x<span class="o">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="La_boucle_while">La boucle while</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>print<span class="o">(</span><span class="s2">"---While()---"</span><span class="o">)</span>
+<span class="k">while</span> i &lt; <span class="m">9</span>:
+  print<span class="o">(</span>i<span class="o">)</span>
+  <span class="nv">i</span> <span class="o">+=</span> <span class="m">1</span>
+</pre></div>
+<h3><span class="mw-headline" id="range">range</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>print<span class="o">(</span><span class="s2">"---Range()---"</span><span class="o">)</span>
+<span class="k">for</span> i in range<span class="o">(</span><span class="m">5</span><span class="o">)</span>:
+  print <span class="o">(</span>i<span class="o">)</span>
+
+print<span class="o">(</span><span class="s2">"---list(range())---"</span><span class="o">)</span>
+<span class="nv">tab2</span><span class="o">=</span>list<span class="o">(</span>range<span class="o">(</span><span class="m">5</span><span class="o">))</span>
+<span class="k">for</span> x in tab2:
+  print <span class="o">(</span>x<span class="o">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="Break_et_continue">Break et continue</span></h3>
+<ul><li>L'instruction <b>break</b> interrompt l'itération .</li>
+<li>L'instruction <b>continue</b> interrompt l'itération et retourne au test.</li></ul>
+<h3><span id="L’instruction_pass"></span><span class="mw-headline" id="L.E2.80.99instruction_pass">L’instruction pass</span></h3>
+<pre>L’instruction pass est une instruction vide. Elle peut être utilisée lorsqu'aucune action ne doit être faite.
+</pre>
+<h2><span class="mw-headline" id="Les_fonctions">Les fonctions</span></h2>
+<p>Le programme <b>10.py</b>
+</p>
+<ul><li>une fonction est définie par le mot clé <b>def</b>.</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Retourne une liste des nombres premiers de 2 a x</span>
+def cribleEratosthenes<span class="o">(</span>x<span class="o">)</span>:
+    <span class="nv">liste</span> <span class="o">=</span> <span class="o">[</span><span class="m">2</span><span class="o">]</span>
+
+    <span class="c1"># construire une liste avec des nombres impairs apres 2</span>
+    <span class="k">for</span> i in range<span class="o">(</span><span class="m">3</span>, x, <span class="m">2</span><span class="o">)</span>:
+        liste.append<span class="o">(</span>i<span class="o">)</span>
+
+    <span class="c1"># supprimer les nombres non premiers</span>
+    <span class="k">for</span> i in liste:
+     <span class="k">for</span> n in liste:
+        <span class="k">if</span> n % <span class="nv">i</span> <span class="o">==</span> <span class="m">0</span> and i !<span class="o">=</span> n:
+           liste.remove<span class="o">(</span>n<span class="o">)</span>
+
+    <span class="k">return</span> liste
+
+<span class="c1"># Appel de la fonction</span>
+print<span class="o">(</span>cribleEratosthenes<span class="o">(</span><span class="m">20</span><span class="o">))</span>
+</pre></div>
+<p><br>
+</p>
+<h3><span id="Valeur_par_défaut"></span><span class="mw-headline" id="Valeur_par_d.C3.A9faut">Valeur par défaut</span></h3>
+<p>Dans l'exemple ci-dessous la valeur par défaut est 20
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Retourne une liste des nombres premiers de 2 a x</span>
+def cribleEratosthenes<span class="o">(</span><span class="nv">x</span> <span class="o">=</span> <span class="m">20</span><span class="o">)</span>:
+  ...
+<span class="c1"># On peut donc appeler la fonction de la  manière suivante</span>
+cribleEratosthenes<span class="o">()</span>
+</pre></div>
+<h3><span id="Les_arguments_nommés"></span><span class="mw-headline" id="Les_arguments_nomm.C3.A9s">Les arguments nommés</span></h3>
+<p>Vous pouvez déclarer des paramètres nommés et les spécifier dans un ordre différent du prototype de la fonction.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Argument nomme (11.py)</span>
+def createserver<span class="o">(</span>adresseIP, <span class="nv">port</span><span class="o">=</span><span class="m">6565</span>, <span class="nv">user</span><span class="o">=</span><span class="s1">'bob'</span>, <span class="nv">mdp</span><span class="o">=</span><span class="s1">'secret'</span><span class="o">)</span>:
+  print<span class="o">(</span><span class="s2">"create server :\n"</span><span class="o">)</span>
+  print<span class="o">(</span><span class="s2">"  ip = "</span>,adresseIP<span class="o">)</span>
+  print<span class="o">(</span><span class="s2">"  port = "</span>,port<span class="o">)</span>
+  print<span class="o">(</span><span class="s2">"  user = "</span>,user<span class="o">)</span>
+  print<span class="o">(</span><span class="s2">"  mdp = "</span>,mdp<span class="o">)</span>
+
+createserver<span class="o">(</span><span class="s1">'127.0.0.1'</span>,4321<span class="o">)</span>
+createserver<span class="o">(</span><span class="s1">'127.0.0.1'</span>,user<span class="o">=</span><span class="s1">'tom'</span>, <span class="nv">port</span><span class="o">=</span><span class="s1">'4321'</span><span class="o">)</span>
+createserver<span class="o">(</span><span class="s1">'127.0.0.1'</span>,user<span class="o">=</span><span class="s1">'bill'</span>, <span class="nv">mdp</span><span class="o">=</span><span class="s1">'xyzabc'</span>, <span class="nv">port</span><span class="o">=</span><span class="s1">'6688'</span><span class="o">)</span>
+</pre></div>
+<h3><span id="Les_arguments_tableaux_et_dictionnaire_(hashmap)"></span><span class="mw-headline" id="Les_arguments_tableaux_et_dictionnaire_.28hashmap.29">Les arguments tableaux et dictionnaire (hashmap)</span></h3>
+<ul><li>Un argument <b>*p2</b> recoit un tableau de valeurs</li>
+<li>Un argument <b>**tab</b> reçoit une hashmap (dictionnaire)</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Parametres multiples (12.py)</span>
+
+def fonct1<span class="o">(</span>p1, *p2<span class="o">)</span>:
+ print <span class="o">(</span><span class="s2">"fonct1: "</span><span class="o">)</span>
+ print <span class="o">(</span><span class="s2">"* p1 ="</span>+p1<span class="o">)</span>
+ print <span class="o">(</span><span class="s2">"* p2 "</span><span class="o">)</span>
+ <span class="k">for</span> x in p2:
+   print<span class="o">(</span><span class="s2">"  -"</span>+x<span class="o">)</span>
+
+def fonct2<span class="o">(</span>**tab<span class="o">)</span>:
+ <span class="nv">keys</span><span class="o">=</span>sorted<span class="o">(</span>tab.keys<span class="o">())</span>
+ <span class="k">for</span> key in keys:
+   print<span class="o">(</span><span class="s2">"["</span>+key+<span class="s2">"]="</span>+tab<span class="o">[</span>key<span class="o">])</span>
+
+fonct1<span class="o">(</span><span class="s1">'a'</span>,<span class="s1">'b'</span>,<span class="s1">'c'</span><span class="o">)</span>
+
+fonct2<span class="o">(</span><span class="nv">k1</span><span class="o">=</span><span class="s1">'v1'</span>,k2<span class="o">=</span><span class="s1">'v2'</span><span class="o">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="Le_fonctions_lambda">Le fonctions lambda</span></h3>
+<ul><li>La fonction <b>getIncrementeur</b> retourne une fonction anonyme qui effectue l'opération x+n.</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Les fonctions: fonction lambda : (13.py)</span>
+
+<span class="c1"># factory d'incrementeur</span>
+def getIncrementeur<span class="o">(</span>n<span class="o">)</span>:
+  <span class="k">return</span> lambda x: x+n
+
+<span class="nv">inc</span><span class="o">=</span>getIncrementeur<span class="o">(</span><span class="m">27</span><span class="o">)</span>
+
+print<span class="o">(</span>inc<span class="o">(</span><span class="m">0</span><span class="o">))</span>
+
+print<span class="o">(</span>inc<span class="o">(</span><span class="m">1</span><span class="o">))</span>
+</pre></div>
+<h2><span class="mw-headline" id="PEP_8">PEP 8</span></h2>
+<p>La PEP 8 (Python Enhancement Proposals ) définit des règles de présentation du code python <a rel="nofollow" class="external free" href="https://www.python.org/dev/peps/pep-0008/">https://www.python.org/dev/peps/pep-0008/</a>
+</p>
+<ul><li>Utiliser 4 espaces par niveau d'indentation</li>
+<li>Préférez les espaces aux tabluations</li>
+<li>limiter les lignes à 79 caractères</li>
+<li>Insérer deux lignes blaches avant la définition d'une fonction</li>
+<li>Utilisez un encodage UTF8 pour les fichiers sources.</li>
+<li>Ecrire les imports des modules sur des lignes différentes.</li></ul>
+<h2><span class="mw-headline" id="Les_tuples">Les tuples</span></h2>
+<ul><li>Un tuple est une suite de valeurs séparées par des virgules</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&gt;&gt;&gt; <span class="nv">tuple</span><span class="o">=</span><span class="m">1234</span>,5432,<span class="s1">'Hi brother...!'</span>
+&gt;&gt;&gt; tuple<span class="o">[</span><span class="m">1</span><span class="o">]</span>
+<span class="m">5432</span>
+&gt;&gt;&gt; <span class="nv">tupleimbrique</span><span class="o">=</span>tuple,<span class="o">(</span><span class="m">9</span>,8,7,6<span class="o">)</span>
+&gt;&gt;&gt; tupleimbrique
+<span class="o">((</span><span class="m">1234</span>, <span class="m">5432</span>, <span class="s1">'Hi brother...!'</span><span class="o">)</span>, <span class="o">(</span><span class="m">9</span>, <span class="m">8</span>, <span class="m">7</span>, <span class="m">6</span><span class="o">))</span>
+&gt;&gt;&gt;
+</pre></div>
+<p>Les tuples ne sont pas modifiables (immutables)
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&gt;&gt;&gt; tuple<span class="o">[</span><span class="m">1</span><span class="o">]=</span><span class="s1">'coucou'</span>
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"&lt;stdin&gt;"</span>, line <span class="m">1</span>, in &lt;module&gt;
+TypeError: <span class="s1">'tuple'</span> object does not support item assignment
+&gt;&gt;&gt;
+</pre></div>
+<h3><span id="Itérer_sur_un_tuple"></span><span class="mw-headline" id="It.C3.A9rer_sur_un_tuple">Itérer sur un tuple</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&gt;&gt;&gt; <span class="k">for</span> i, v in enumerate<span class="o">(</span>tuple<span class="o">)</span>:
+...   print <span class="o">(</span>i, v<span class="o">)</span>
+... 
+<span class="o">(</span><span class="m">0</span>, -3<span class="o">)</span>
+<span class="o">(</span><span class="m">1</span>, <span class="m">0</span><span class="o">)</span>
+<span class="o">(</span><span class="m">2</span>, <span class="m">11</span><span class="o">)</span>
+<span class="o">(</span><span class="m">3</span>, <span class="m">13</span><span class="o">)</span>
+</pre></div>
+<h2><span id="Les_set_(ensembles)"></span><span class="mw-headline" id="Les_set_.28ensembles.29">Les set (ensembles)</span></h2>
+<p>Un ensemble est une collection non ordonnée  dans laquelle python élimine les doublons
+</p>
+<ul><li>Utilisez la commande <b>set</b> pour créer un ensemble.</li>
+<li>Attention:  <b>a={}</b>  créer un <b>dictionnaire</b>.</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&gt;&gt;&gt; <span class="nv">a</span><span class="o">=</span>set<span class="o">(</span><span class="s1">'aaabbbcccdddeee'</span><span class="o">)</span>
+&gt;&gt;&gt; <span class="nv">b</span><span class="o">=</span>set<span class="o">(</span><span class="s1">'bbdddd'</span><span class="o">)</span>
+&gt;&gt;&gt; a
+set<span class="o">([</span><span class="s1">'a'</span>, <span class="s1">'c'</span>, <span class="s1">'b'</span>, <span class="s1">'e'</span>, <span class="s1">'d'</span><span class="o">])</span>
+&gt;&gt;&gt; b
+set<span class="o">([</span><span class="s1">'b'</span>, <span class="s1">'d'</span><span class="o">])</span>
+&gt;&gt;&gt; a-b
+set<span class="o">([</span><span class="s1">'a'</span>, <span class="s1">'c'</span>, <span class="s1">'e'</span><span class="o">])</span>
+&gt;&gt;&gt; <span class="nv">c</span><span class="o">=</span>set<span class="o">(</span><span class="s1">'bbdddxxzzz'</span><span class="o">)</span>
+<span class="c1"># lettres de a auxquelles python retire les lettres de c</span>
+&gt;&gt;&gt; a-c
+set<span class="o">([</span><span class="s1">'a'</span>, <span class="s1">'c'</span>, <span class="s1">'e'</span><span class="o">])</span>
+<span class="c1"># lettres de a + celles de c</span>
+&gt;&gt;&gt; a<span class="p">|</span>c
+set<span class="o">([</span><span class="s1">'a'</span>, <span class="s1">'c'</span>, <span class="s1">'b'</span>, <span class="s1">'e'</span>, <span class="s1">'d'</span>, <span class="s1">'x'</span>, <span class="s1">'z'</span><span class="o">])</span>
+<span class="c1"># Lettres qui sont dans a et dans c</span>
+&gt;&gt;&gt; a<span class="p">&amp;</span>c
+set<span class="o">([</span><span class="s1">'b'</span>, <span class="s1">'d'</span><span class="o">])</span>
+&gt;&gt;&gt;
+</pre></div>
+<h3><span class="mw-headline" id="Trier_un_set">Trier un set</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">s</span><span class="o">=</span>set<span class="o">([</span><span class="s1">'a'</span>, <span class="s1">'c'</span>, <span class="s1">'b'</span>, <span class="s1">'e'</span>, <span class="s1">'d'</span><span class="o">])</span>
+print <span class="o">(</span>sorted<span class="o">(</span>s<span class="o">))</span>
+</pre></div>
+<h2><span class="mw-headline" id="Les_dictionnaires">Les dictionnaires</span></h2>
+<ul><li>Les dictionnaires sont des structures <b>cle=valeur</b></li>
+<li>Les dictionnaires sont indexés par des clés.</li>
+<li>Dans les autres langages parle de <b>hashmap</b>, <b>tableau associatif</b></li></ul>
+<h3><span id="crée_un_dictionnaire_vide"></span><span class="mw-headline" id="cr.C3.A9e_un_dictionnaire_vide">crée un dictionnaire vide</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">dict</span> <span class="o">=</span> <span class="o">{}</span>
+</pre></div>
+<h3><span id="Les_clés_d'un_dictionnaire"></span><span class="mw-headline" id="Les_cl.C3.A9s_d.27un_dictionnaire">Les clés d'un dictionnaire</span></h3>
+<ul><li>La fonction <b>dict.keys()</b> retourne la liste des clés.</li>
+<li>Les clés sont restituées dans un ordre aléatoire.</li>
+<li>Si vous voulez les trier, utilisez la méthode <b>sorted()</b></li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>sorted<span class="o">(</span>dict.keys<span class="o">())</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Créer un dictionnaire</span>
+&gt;&gt;&gt; <span class="nv">nombre</span> <span class="o">=</span> <span class="o">{</span><span class="m">1</span>: <span class="s1">'un'</span>, <span class="m">2</span>: <span class="s1">'deux'</span>, <span class="m">3</span>:<span class="s1">'trois'</span><span class="o">}</span>
+&gt;&gt;&gt; nombre
+<span class="o">{</span><span class="m">1</span>: <span class="s1">'un'</span>, <span class="m">2</span>: <span class="s1">'deux'</span>, <span class="m">3</span>: <span class="s1">'trois'</span><span class="o">}</span>
+&gt;&gt;&gt; <span class="nv">nombres</span> <span class="o">=</span> <span class="o">{</span><span class="m">1</span>: <span class="s1">'un'</span>, <span class="m">2</span>: <span class="s1">'deux'</span>, <span class="m">3</span>:<span class="s1">'trois'</span><span class="o">}</span>
+&gt;&gt;&gt; nombres
+<span class="o">{</span><span class="m">1</span>: <span class="s1">'un'</span>, <span class="m">2</span>: <span class="s1">'deux'</span>, <span class="m">3</span>: <span class="s1">'trois'</span><span class="o">}</span>
+<span class="c1"># Ajoute dynamiquement un nombre</span>
+&gt;&gt;&gt; nombres<span class="o">[</span><span class="m">4</span><span class="o">]=</span><span class="s1">'quatre'</span><span class="p">;</span>
+&gt;&gt;&gt; nombres
+<span class="o">{</span><span class="m">1</span>: <span class="s1">'un'</span>, <span class="m">2</span>: <span class="s1">'deux'</span>, <span class="m">3</span>: <span class="s1">'trois'</span>, <span class="m">4</span>: <span class="s1">'quatre'</span><span class="o">}</span>
+&gt;&gt;&gt; nombres<span class="o">[</span><span class="s1">'abc'</span><span class="o">]=</span><span class="s1">'ABC'</span>
+&gt;&gt;&gt; nombres
+<span class="o">{</span><span class="m">1</span>: <span class="s1">'un'</span>, <span class="m">2</span>: <span class="s1">'deux'</span>, <span class="m">3</span>: <span class="s1">'trois'</span>, <span class="m">4</span>: <span class="s1">'quatre'</span>, <span class="s1">'abc'</span>: <span class="s1">'ABC'</span><span class="o">}</span>
+<span class="c1"># Supprime un nombre</span>
+&gt;&gt;&gt; del nombres<span class="o">[</span><span class="s1">'abc'</span><span class="o">]</span>
+&gt;&gt;&gt; nombres
+<span class="o">{</span><span class="m">1</span>: <span class="s1">'un'</span>, <span class="m">2</span>: <span class="s1">'deux'</span>, <span class="m">3</span>: <span class="s1">'trois'</span>, <span class="m">4</span>: <span class="s1">'quatre'</span><span class="o">}</span>
+<span class="c1"># Tester la présence d'une clé</span>
+&gt;&gt;&gt; <span class="m">2</span> in nombre
+True
+&gt;&gt;&gt;
+</pre></div>
+<h3><span id="Itérer_sur_un_dictionnaire"></span><span class="mw-headline" id="It.C3.A9rer_sur_un_dictionnaire">Itérer sur un dictionnaire</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&gt;&gt;&gt; <span class="k">for</span> k,v in nombres.items<span class="o">()</span>:
+...   print <span class="o">(</span>k,v<span class="o">)</span>
+... 
+<span class="o">(</span><span class="m">1</span>, <span class="s1">'un'</span><span class="o">)</span>
+<span class="o">(</span><span class="m">2</span>, <span class="s1">'deux'</span><span class="o">)</span>
+<span class="o">(</span><span class="m">3</span>, <span class="s1">'trois'</span><span class="o">)</span>
+<span class="o">(</span><span class="m">4</span>, <span class="s1">'quatre'</span><span class="o">)</span>
+</pre></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+<h2><span class="mw-headline" id="Travailler_avec_les_listes">Travailler avec les listes</span></h2>
+<ul><li><b>list.append(x)</b>&nbsp;: Ajoute un élément à la fin de la liste. Equivalent à a[len(a):] = [x].</li>
+<li><b>list.extend(iterable)</b>&nbsp;: Etend la liste <b>list</b> en ajoutant tous les items de <b>iterable</b>. Equivalent à a[len(a):] = iterable.</li>
+<li><b>list.insert(i, x)</b>&nbsp;: Insère un élément à la position 
+indiquée. Le premier argument est la position de l’élément courant avant
+ lequel l’insertion doit s’effectuer, donc a.insert(0, x) insère 
+l’élément en tête de la liste, et a.insert(len(a), x) est équivalent à 
+a.append(x).</li>
+<li><b>list.remove(x)</b>&nbsp;: Supprime de la liste le premier élément
+ dont la valeur est x. Une exception est levée s’il existe aucun élément
+ avec cette valeur.</li>
+<li><b>list.pop([i])</b>&nbsp;: Enlève de la liste l’élément situé à la position indiquée, et le retourne.</li>
+<li><b>list.clear()</b>&nbsp;: Supprime tous les éléments de la liste, équivalent à del a[:].</li>
+<li><b>list.index(x[, start[, end]])</b>&nbsp;: Retourne l'index du premier élément dont la valeur est x. Déclenche une erreur si la valeur n'existe pas. Les arguments <b>start</b> et <b>end</b> définissent une étendue et limitent la recherche à cet ensemble.</li>
+<li><b>list.count(x)</b>&nbsp;: Retourne le nombre d’éléments ayant la valeur x dans la liste.</li>
+<li><b>list.sort(key=None, reverse=False)</b>&nbsp;: Trie les éléments sur place, (les arguments peuvent personaliser le tri, voir sorted() pour leur explication).</li>
+<li><b>list.reverse()</b>&nbsp;: Inverse l’ordre des éléments de la liste, sur place.</li>
+<li><b>list.copy()</b>&nbsp;: Renvoie une copie superficielle de la liste (. Équivalent à a[:].</li></ul>
+<pre><b>copy.copy (x)</b>  Renvoyez une copie superficielle de x.
+<b>copy.deepcopy (x)</b> Renvoyez une copie complète de x.
+</pre>
+<p>La différence entre la <b>copie superficielle</b> et la <b>copie profonde</b>
+ n'est pertinente que pour les objets composés (objets qui contiennent 
+d'autres objets, comme des listes ou des instances de classe):
+</p>
+<ul><li>Une copie superficielle construit un nouvel objet composé, puis 
+(dans la mesure du possible) y insère des références aux objets trouvés 
+dans l'original.</li>
+<li>Une copie profonde construit un nouvel objet composé, puis insère de
+ manière récursive des copies des objets trouvés dans l'original.</li></ul>
+<p>Exercice&nbsp;: 
+</p>
+<pre>A l'aide d'une liste écrivez une fonction qui prend un entier compris entre 1 et 20 comme argument et qui retourne le chiffre en lettre.
+ 7 -&gt; 'sept'
+18 -&gt; 'dix huit' 
+</pre>
+<h3><span id="L'opérateur_in"></span><span class="mw-headline" id="L.27op.C3.A9rateur_in">L'opérateur in</span></h3>
+<ul><li>L'opérateur <b>in</b> permet d'effectuer une recherche dans une liste.</li></ul>
+<p>Le programme <b>14.py</b>
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Les listes: l'operateur in</span>
+
+def fonct<span class="o">(</span>s<span class="o">)</span>:
+  <span class="nv">stack</span> <span class="o">=</span> <span class="o">[</span><span class="s1">'zero'</span>,<span class="s1">'un'</span>,<span class="s1">'deux'</span>,<span class="s1">'trois'</span><span class="o">]</span>
+
+  <span class="k">if</span> s in stack:
+    print<span class="o">(</span>s+<span class="s1">' is in the box'</span><span class="o">)</span>
+  <span class="k">else</span>:
+    print<span class="o">(</span><span class="s1">'pfff, M\'</span>enfin! <span class="s1">'+s+'</span> is not in the box...!<span class="s1">')</span>
+
+<span class="s1">fonct('</span>un<span class="s1">')</span>
+<span class="s1">fonct('</span>no<span class="err">'</span><span class="o">)</span>
+</pre></div>
+<h3><span id="Longueur_d'une_liste"></span><span class="mw-headline" id="Longueur_d.27une_liste">Longueur d'une liste</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> python 
+Python <span class="m">2</span>.7.16 <span class="o">(</span>default, Apr  <span class="m">6</span> <span class="m">2019</span>, <span class="m">01</span>:42:57<span class="o">)</span> 
+<span class="o">[</span>GCC <span class="m">8</span>.3.0<span class="o">]</span> on linux2
+Type <span class="s2">"help"</span>, <span class="s2">"copyright"</span>, <span class="s2">"credits"</span> or <span class="s2">"license"</span> <span class="k">for</span> more information.
+&gt;&gt;&gt; <span class="s1">'''stack = ['</span>zero<span class="s1">','</span>un<span class="s1">','</span>deux<span class="s1">','</span>trois<span class="s1">']'''</span>
+&gt;&gt;&gt; <span class="s1">'''print len(stack)'''</span>
+<span class="m">4</span>
+&gt;&gt;&gt;
+</pre></div>
+<h3><span id="Ajouter_des_éléments"></span><span class="mw-headline" id="Ajouter_des_.C3.A9l.C3.A9ments">Ajouter des éléments</span></h3>
+<ul><li>Attention de bien ajouter l'élément n°4 avant de modifier sa valeur.</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>$ python 
+&gt;&gt;&gt; <span class="nv">stack</span> <span class="o">=</span> <span class="o">[</span><span class="s1">'zero'</span>,<span class="s1">'un'</span>,<span class="s1">'deux'</span>,<span class="s1">'trois'</span><span class="o">]</span>
+&gt;&gt;&gt; stack.append<span class="o">(</span><span class="s1">'qua'</span><span class="o">)</span>
+&gt;&gt;&gt; stack<span class="o">[</span><span class="m">4</span><span class="o">]=</span><span class="s1">'quatre'</span>
+&gt;&gt;&gt; stack
+<span class="o">[</span><span class="s1">'zero'</span>, <span class="s1">'un'</span>, <span class="s1">'deux'</span>, <span class="s1">'trois'</span>, <span class="s1">'quatre'</span><span class="o">]</span>
+&gt;&gt;&gt;
+</pre></div>
+<h3><span class="mw-headline" id="Travailler_sur_la_tranche">Travailler sur la tranche</span></h3>
+<ul><li>Un slice représente une partie de la liste</li>
+<li>La syntaxe d'un slice est [premier element:dernier element (exclus):le pas]</li>
+<li>Ainsi <b>stack[0:3:1]</b>  retourne les élements d'indice <b>['zero', 'un', 'deux']</b></li>
+<li>et <b>stack[0:3:2]</b> retourne <b>['zero', 'deux']</b></li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&gt;&gt;&gt; stack
+<span class="o">[</span><span class="s1">'zero'</span>, <span class="s1">'un'</span>, <span class="s1">'deux'</span>, <span class="s1">'trois'</span>, <span class="s1">'quatre'</span><span class="o">]</span>
+&gt;&gt;&gt; stack<span class="o">[</span><span class="m">0</span><span class="o">]</span>
+<span class="s1">'zero'</span>
+&gt;&gt;&gt; stack<span class="o">[</span><span class="m">4</span><span class="o">]</span>
+<span class="s1">'quatre'</span>
+&gt;&gt;&gt; stack<span class="o">[</span><span class="m">2</span>:4<span class="o">]</span>
+<span class="o">[</span><span class="s1">'deux'</span>, <span class="s1">'trois'</span><span class="o">]</span>
+&gt;&gt;&gt; stack<span class="o">[</span><span class="m">0</span>:3<span class="o">]</span>
+<span class="o">[</span><span class="s1">'zero'</span>, <span class="s1">'un'</span>, <span class="s1">'deux'</span><span class="o">]</span>
+&gt;&gt;&gt;
+</pre></div>
+<h3><span class="mw-headline" id="La_fonction_range">La fonction range</span></h3>
+<ul><li>La fonction range génère une liste d'éléments.</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&gt;&gt;&gt; range<span class="o">(</span><span class="m">5</span><span class="o">)</span>
+<span class="o">[</span><span class="m">0</span>, <span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span>, <span class="m">4</span><span class="o">]</span>
+</pre></div>
+<h3><span id="Construire_une_liste_à_partir_d'une_autre"></span><span class="mw-headline" id="Construire_une_liste_.C3.A0_partir_d.27une_autre">Construire une liste à partir d'une autre</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">vector</span> <span class="o">=</span> <span class="o">[</span>-3, <span class="m">0</span>, <span class="m">7</span>, <span class="m">11</span>, <span class="m">13</span><span class="o">]</span>
+
+print <span class="o">(</span><span class="s2">"Eleve au carre les element du vecteur"</span><span class="o">)</span>
+print <span class="o">([</span>x*x <span class="k">for</span> x in vector<span class="o">])</span>
+
+print <span class="o">(</span><span class="s2">"Filtre les elements plus grands que zero..."</span><span class="o">)</span>
+print <span class="o">([</span>x*x <span class="k">for</span> x in vector <span class="k">if</span> x &gt; <span class="m">0</span><span class="o">])</span>
+
+print <span class="o">(</span><span class="s2">"Creation de tuple"</span><span class="o">)</span>
+print <span class="o">([(</span>x,x*x<span class="o">)</span> <span class="k">for</span> x in vector<span class="o">])</span>
+</pre></div>
+<h3><span class="mw-headline" id="Transformer_une_liste_en_string">Transformer une liste en string</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">liste</span><span class="o">=[</span><span class="s1">'un'</span>,<span class="s1">'deux'</span><span class="o">]</span>
+print<span class="o">(</span><span class="s1">','</span>.join<span class="o">(</span>liste<span class="o">))</span>
+</pre></div>
+<p>Le résultat est
+</p>
+<pre>un,deux
+</pre>
+<h2><span class="mw-headline" id="Les_modules">Les modules</span></h2>
+<p>Un module python est un fichier contenant des définitions de fonctions.
+</p>
+<ul><li>Il peut être <b>importé</b> dans un autre module ou directement dans l'interpréteur.</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&gt;&gt;&gt; import crible
+&gt;&gt;&gt; crible.cribleEratosthenes<span class="o">(</span><span class="m">30</span><span class="o">)</span>
+<span class="o">[</span><span class="m">2</span>, <span class="m">3</span>, <span class="m">5</span>, <span class="m">7</span>, <span class="m">11</span>, <span class="m">13</span>, <span class="m">17</span>, <span class="m">19</span>, <span class="m">23</span>, <span class="m">29</span><span class="o">]</span>
+&gt;&gt;&gt;
+</pre></div>
+<h3><span id="Exécuter_un_module"></span><span class="mw-headline" id="Ex.C3.A9cuter_un_module">Exécuter un module</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> $ python crible.py
+</pre></div>
+<h3><span class="mw-headline" id="Le_chemin_de_recherche">Le chemin de recherche</span></h3>
+<p>L'interpréteur python recherche les modules&nbsp;:
+</p>
+<ol><li>dans le répertoire courant</li>
+<li>Dans les répertoires spécifiés dans la variable d'environnement <b>PYTHONPATH</b>.</li>
+<li>Dans le répertoire spécifié lors de l'installation.</li></ol>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Compilation_des_modules">Compilation des modules</span></h3>
+<p>Lorsque vous importez un module, python compile ce module dans le dossier <b>___pycache__</b>
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:423px;"><a href="../../wiki2/index.php/Fichier_Python-003.html" class="image"><img alt="" src="Les%20bases%20de%20Python%20%e2%80%94%20Audiens_fichiers/Python-003.png" class="thumbimage" width="421" height="165"></a>  <div class="thumbcaption"><div class="magnify"><a href="../../wiki2/index.php/Fichier_Python-003.html" class="internal" title="Agrandir"></a></div>Compilation des modules</div></div></div></div>
+<h3><span class="mw-headline" id="Les_modules_standards">Les modules standards</span></h3>
+<p>Python propose une librairie de fonctions standards.
+</p><p>Lister le contenu d'un module
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&gt;&gt;&gt; import sys, crible
+<span class="o">[</span><span class="m">2</span>, <span class="m">3</span>, <span class="m">5</span>, <span class="m">7</span>, <span class="m">11</span>, <span class="m">13</span>, <span class="m">17</span>, <span class="m">19</span><span class="o">]</span>
+&gt;&gt;&gt; dir<span class="o">(</span>crible<span class="o">)</span>
+<span class="o">[</span><span class="s1">'__builtins__'</span>, <span class="s1">'__cached__'</span>, <span class="s1">'__doc__'</span>, <span class="s1">'__file__'</span>, <span class="s1">'__loader__'</span>, <span class="s1">'__name__'</span>, <span class="s1">'__package__'</span>, <span class="s1">'__spec__'</span>, <span class="s1">'cribleEratosthenes'</span><span class="o">]</span>
+&gt;&gt;&gt; dir<span class="o">(</span>sys<span class="o">)</span>
+<span class="o">[</span><span class="s1">'__breakpointhook__'</span>, <span class="s1">'__displayhook__'</span>, <span class="s1">'__doc__'</span>, <span class="s1">'__excepthook__'</span>, <span class="s1">'__interactivehook__'</span>, <span class="s1">'__loader__'</span>, <span class="s1">'__name__'</span>, <span class="s1">'__package__'</span>, <span class="s1">'__spec__'</span>, <span class="s1">'__stderr__'</span>, <span class="s1">'__stdin__'</span>, <span class="s1">'__stdout__'</span>, <span class="s1">'_clear_type_cache'</span>, <span class="s1">'_current_frames'</span>, <span class="s1">'_debugmallocstats'</span>, <span class="s1">'_framework'</span>, <span class="s1">'_getframe'</span>, <span class="s1">'_git'</span>, <span class="s1">'_home'</span>, <span class="s1">'_xoptions'</span>, <span class="s1">'abiflags'</span>, <span class="s1">'api_version'</span>, <span class="s1">'argv'</span>, <span class="s1">'base_exec_prefix'</span>, <span class="s1">'base_prefix'</span>, <span class="s1">'breakpointhook'</span>, <span class="s1">'builtin_module_names'</span>, <span class="s1">'byteorder'</span>, <span class="s1">'call_tracing'</span>, <span class="s1">'callstats'</span>, <span class="s1">'copyright'</span>, <span class="s1">'displayhook'</span>, <span class="s1">'dont_write_bytecode'</span>, <span class="s1">'exc_info'</span>, <span class="s1">'excepthook'</span>, <span class="s1">'exec_prefix'</span>, <span class="s1">'executable'</span>, <span class="s1">'exit'</span>, <span class="s1">'flags'</span>, <span class="s1">'float_info'</span>, <span class="s1">'float_repr_style'</span>, <span class="s1">'get_asyncgen_hooks'</span>, <span class="s1">'get_coroutine_origin_tracking_depth'</span>, <span class="s1">'get_coroutine_wrapper'</span>, <span class="s1">'getallocatedblocks'</span>, <span class="s1">'getcheckinterval'</span>, <span class="s1">'getdefaultencoding'</span>, <span class="s1">'getdlopenflags'</span>, <span class="s1">'getfilesystemencodeerrors'</span>, <span class="s1">'getfilesystemencoding'</span>, <span class="s1">'getprofile'</span>, <span class="s1">'getrecursionlimit'</span>, <span class="s1">'getrefcount'</span>, <span class="s1">'getsizeof'</span>, <span class="s1">'getswitchinterval'</span>, <span class="s1">'gettrace'</span>, <span class="s1">'hash_info'</span>, <span class="s1">'hexversion'</span>, <span class="s1">'implementation'</span>, <span class="s1">'int_info'</span>, <span class="s1">'intern'</span>, <span class="s1">'is_finalizing'</span>, <span class="s1">'maxsize'</span>, <span class="s1">'maxunicode'</span>, <span class="s1">'meta_path'</span>, <span class="s1">'modules'</span>, <span class="s1">'path'</span>, <span class="s1">'path_hooks'</span>, <span class="s1">'path_importer_cache'</span>, <span class="s1">'platform'</span>, <span class="s1">'prefix'</span>, <span class="s1">'ps1'</span>, <span class="s1">'ps2'</span>, <span class="s1">'set_asyncgen_hooks'</span>, <span class="s1">'set_coroutine_origin_tracking_depth'</span>, <span class="s1">'set_coroutine_wrapper'</span>, <span class="s1">'setcheckinterval'</span>, <span class="s1">'setdlopenflags'</span>, <span class="s1">'setprofile'</span>, <span class="s1">'setrecursionlimit'</span>, <span class="s1">'setswitchinterval'</span>, <span class="s1">'settrace'</span>, <span class="s1">'stderr'</span>, <span class="s1">'stdin'</span>, <span class="s1">'stdout'</span>, <span class="s1">'thread_info'</span>, <span class="s1">'version'</span>, <span class="s1">'version_info'</span>, <span class="s1">'warnoptions'</span><span class="o">]</span>
+&gt;&gt;&gt;
+</pre></div>
+<p><br>
+</p>
+<h4><span class="mw-headline" id="Le_module_sys">Le module sys</span></h4>
+<p>Ajouter un répertoire au path
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.path.append<span class="o">(</span><span class="s1">'/home/user/workspace/cours'</span><span class="o">)</span>
+</pre></div>
+<p><br>
+</p>
+<h4><span class="mw-headline" id="Le_module_os">Le module os</span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>&gt;&gt;&gt; import os
+&gt;&gt;&gt; dir<span class="o">(</span>os<span class="o">)</span>
+<span class="o">[</span><span class="s1">'CLD_CONTINUED'</span>, <span class="s1">'CLD_DUMPED'</span>, <span class="s1">'CLD_EXITED'</span>, <span class="s1">'CLD_TRAPPED'</span>, <span class="s1">'DirEntry'</span>, <span class="s1">'EX_CANTCREAT'</span>, <span class="s1">'EX_CONFIG'</span>, <span class="s1">'EX_DATAERR'</span>, <span class="s1">'EX_IOERR'</span>, <span class="s1">'EX_NOHOST'</span>, <span class="s1">'EX_NOINPUT'</span>, <span class="s1">'EX_NOPERM'</span>, <span class="s1">'EX_NOUSER'</span>, <span class="s1">'EX_OK'</span>, <span class="s1">'EX_OSERR'</span>, <span class="s1">'EX_OSFILE'</span>, <span class="s1">'EX_PROTOCOL'</span>, <span class="s1">'EX_SOFTWARE'</span>, <span class="s1">'EX_TEMPFAIL'</span>, <span class="s1">'EX_UNAVAILABLE'</span>, <span class="s1">'EX_USAGE'</span>, <span class="s1">'F_LOCK'</span>, <span class="s1">'F_OK'</span>, <span class="s1">'F_TEST'</span>, <span class="s1">'F_TLOCK'</span>, <span class="s1">'F_ULOCK'</span>, <span class="s1">'GRND_NONBLOCK'</span>, <span class="s1">'GRND_RANDOM'</span>, <span class="s1">'MutableMapping'</span>, <span class="s1">'NGROUPS_MAX'</span>, <span class="s1">'O_ACCMODE'</span>, <span class="s1">'O_APPEND'</span>, <span class="s1">'O_ASYNC'</span>, <span class="s1">'O_CLOEXEC'</span>, <span class="s1">'O_CREAT'</span>, <span class="s1">'O_DIRECT'</span>, <span class="s1">'O_DIRECTORY'</span>, <span class="s1">'O_DSYNC'</span>, <span class="s1">'O_EXCL'</span>, <span class="s1">'O_LARGEFILE'</span>, <span class="s1">'O_NDELAY'</span>, <span class="s1">'O_NOATIME'</span>, <span class="s1">'O_NOCTTY'</span>, <span class="s1">'O_NOFOLLOW'</span>, <span class="s1">'O_NONBLOCK'</span>, <span class="s1">'O_PATH'</span>, <span class="s1">'O_RDONLY'</span>, <span class="s1">'O_RDWR'</span>, <span class="s1">'O_RSYNC'</span>, <span class="s1">'O_SYNC'</span>, <span class="s1">'O_TMPFILE'</span>, <span class="s1">'O_TRUNC'</span>, <span class="s1">'O_WRONLY'</span>, <span class="s1">'POSIX_FADV_DONTNEED'</span>, <span class="s1">'POSIX_FADV_NOREUSE'</span>, <span class="s1">'POSIX_FADV_NORMAL'</span>, <span class="s1">'POSIX_FADV_RANDOM'</span>, <span class="s1">'POSIX_FADV_SEQUENTIAL'</span>, <span class="s1">'POSIX_FADV_WILLNEED'</span>, <span class="s1">'PRIO_PGRP'</span>, <span class="s1">'PRIO_PROCESS'</span>, <span class="s1">'PRIO_USER'</span>, <span class="s1">'P_ALL'</span>, <span class="s1">'P_NOWAIT'</span>, <span class="s1">'P_NOWAITO'</span>, <span class="s1">'P_PGID'</span>, <span class="s1">'P_PID'</span>, <span class="s1">'P_WAIT'</span>, <span class="s1">'PathLike'</span>, <span class="s1">'RTLD_DEEPBIND'</span>, <span class="s1">'RTLD_GLOBAL'</span>, <span class="s1">'RTLD_LAZY'</span>, <span class="s1">'RTLD_LOCAL'</span>, <span class="s1">'RTLD_NODELETE'</span>, <span class="s1">'RTLD_NOLOAD'</span>, <span class="s1">'RTLD_NOW'</span>, <span class="s1">'RWF_DSYNC'</span>, <span class="s1">'RWF_HIPRI'</span>, <span class="s1">'RWF_NOWAIT'</span>, <span class="s1">'RWF_SYNC'</span>, <span class="s1">'R_OK'</span>, <span class="s1">'SCHED_BATCH'</span>, <span class="s1">'SCHED_FIFO'</span>, <span class="s1">'SCHED_IDLE'</span>, <span class="s1">'SCHED_OTHER'</span>, <span class="s1">'SCHED_RESET_ON_FORK'</span>, <span class="s1">'SCHED_RR'</span>, <span class="s1">'SEEK_CUR'</span>, <span class="s1">'SEEK_DATA'</span>, <span class="s1">'SEEK_END'</span>, <span class="s1">'SEEK_HOLE'</span>, <span class="s1">'SEEK_SET'</span>, <span class="s1">'ST_APPEND'</span>, <span class="s1">'ST_MANDLOCK'</span>, <span class="s1">'ST_NOATIME'</span>, <span class="s1">'ST_NODEV'</span>, <span class="s1">'ST_NODIRATIME'</span>, <span class="s1">'ST_NOEXEC'</span>, <span class="s1">'ST_NOSUID'</span>, <span class="s1">'ST_RDONLY'</span>, <span class="s1">'ST_RELATIME'</span>, <span class="s1">'ST_SYNCHRONOUS'</span>, <span class="s1">'ST_WRITE'</span>, <span class="s1">'TMP_MAX'</span>, <span class="s1">'WCONTINUED'</span>, <span class="s1">'WCOREDUMP'</span>, <span class="s1">'WEXITED'</span>, <span class="s1">'WEXITSTATUS'</span>, <span class="s1">'WIFCONTINUED'</span>, <span class="s1">'WIFEXITED'</span>, <span class="s1">'WIFSIGNALED'</span>, <span class="s1">'WIFSTOPPED'</span>, <span class="s1">'WNOHANG'</span>, <span class="s1">'WNOWAIT'</span>, <span class="s1">'WSTOPPED'</span>, <span class="s1">'WSTOPSIG'</span>, <span class="s1">'WTERMSIG'</span>, <span class="s1">'WUNTRACED'</span>, <span class="s1">'W_OK'</span>, <span class="s1">'XATTR_CREATE'</span>, <span class="s1">'XATTR_REPLACE'</span>, <span class="s1">'XATTR_SIZE_MAX'</span>, <span class="s1">'X_OK'</span>, <span class="s1">'_Environ'</span>, <span class="s1">'__all__'</span>, <span class="s1">'__builtins__'</span>, <span class="s1">'__cached__'</span>, <span class="s1">'__doc__'</span>, <span class="s1">'__file__'</span>, <span class="s1">'__loader__'</span>, <span class="s1">'__name__'</span>, <span class="s1">'__package__'</span>, <span class="s1">'__spec__'</span>, <span class="s1">'_execvpe'</span>, <span class="s1">'_exists'</span>, <span class="s1">'_exit'</span>, <span class="s1">'_fspath'</span>, <span class="s1">'_fwalk'</span>, <span class="s1">'_get_exports_list'</span>, <span class="s1">'_putenv'</span>, <span class="s1">'_spawnvef'</span>, <span class="s1">'_unsetenv'</span>, <span class="s1">'_wrap_close'</span>, <span class="s1">'abc'</span>, <span class="s1">'abort'</span>, <span class="s1">'access'</span>, <span class="s1">'altsep'</span>, <span class="s1">'chdir'</span>, <span class="s1">'chmod'</span>, <span class="s1">'chown'</span>, <span class="s1">'chroot'</span>, <span class="s1">'close'</span>, <span class="s1">'closerange'</span>, <span class="s1">'confstr'</span>, <span class="s1">'confstr_names'</span>, <span class="s1">'cpu_count'</span>, <span class="s1">'ctermid'</span>, <span class="s1">'curdir'</span>, <span class="s1">'defpath'</span>, <span class="s1">'device_encoding'</span>, <span class="s1">'devnull'</span>, <span class="s1">'dup'</span>, <span class="s1">'dup2'</span>, <span class="s1">'environ'</span>, <span class="s1">'environb'</span>, <span class="s1">'error'</span>, <span class="s1">'execl'</span>, <span class="s1">'execle'</span>, <span class="s1">'execlp'</span>, <span class="s1">'execlpe'</span>, <span class="s1">'execv'</span>, <span class="s1">'execve'</span>, <span class="s1">'execvp'</span>, <span class="s1">'execvpe'</span>, <span class="s1">'extsep'</span>, <span class="s1">'fchdir'</span>, <span class="s1">'fchmod'</span>, <span class="s1">'fchown'</span>, <span class="s1">'fdatasync'</span>, <span class="s1">'fdopen'</span>, <span class="s1">'fork'</span>, <span class="s1">'forkpty'</span>, <span class="s1">'fpathconf'</span>, <span class="s1">'fsdecode'</span>, <span class="s1">'fsencode'</span>, <span class="s1">'fspath'</span>, <span class="s1">'fstat'</span>, <span class="s1">'fstatvfs'</span>, <span class="s1">'fsync'</span>, <span class="s1">'ftruncate'</span>, <span class="s1">'fwalk'</span>, <span class="s1">'get_blocking'</span>, <span class="s1">'get_exec_path'</span>, <span class="s1">'get_inheritable'</span>, <span class="s1">'get_terminal_size'</span>, <span class="s1">'getcwd'</span>, <span class="s1">'getcwdb'</span>, <span class="s1">'getegid'</span>, <span class="s1">'getenv'</span>, <span class="s1">'getenvb'</span>, <span class="s1">'geteuid'</span>, <span class="s1">'getgid'</span>, <span class="s1">'getgrouplist'</span>, <span class="s1">'getgroups'</span>, <span class="s1">'getloadavg'</span>, <span class="s1">'getlogin'</span>, <span class="s1">'getpgid'</span>, <span class="s1">'getpgrp'</span>, <span class="s1">'getpid'</span>, <span class="s1">'getppid'</span>, <span class="s1">'getpriority'</span>, <span class="s1">'getrandom'</span>, <span class="s1">'getresgid'</span>, <span class="s1">'getresuid'</span>, <span class="s1">'getsid'</span>, <span class="s1">'getuid'</span>, <span class="s1">'getxattr'</span>, <span class="s1">'initgroups'</span>, <span class="s1">'isatty'</span>, <span class="s1">'kill'</span>, <span class="s1">'killpg'</span>, <span class="s1">'lchown'</span>, <span class="s1">'linesep'</span>, <span class="s1">'link'</span>, <span class="s1">'listdir'</span>, <span class="s1">'listxattr'</span>, <span class="s1">'lockf'</span>, <span class="s1">'lseek'</span>, <span class="s1">'lstat'</span>, <span class="s1">'major'</span>, <span class="s1">'makedev'</span>, <span class="s1">'makedirs'</span>, <span class="s1">'minor'</span>, <span class="s1">'mkdir'</span>, <span class="s1">'mkfifo'</span>, <span class="s1">'mknod'</span>, <span class="s1">'name'</span>, <span class="s1">'nice'</span>, <span class="s1">'open'</span>, <span class="s1">'openpty'</span>, <span class="s1">'pardir'</span>, <span class="s1">'path'</span>, <span class="s1">'pathconf'</span>, <span class="s1">'pathconf_names'</span>, <span class="s1">'pathsep'</span>, <span class="s1">'pipe'</span>, <span class="s1">'pipe2'</span>, <span class="s1">'popen'</span>, <span class="s1">'posix_fadvise'</span>, <span class="s1">'posix_fallocate'</span>, <span class="s1">'pread'</span>, <span class="s1">'preadv'</span>, <span class="s1">'putenv'</span>, <span class="s1">'pwrite'</span>, <span class="s1">'pwritev'</span>, <span class="s1">'read'</span>, <span class="s1">'readlink'</span>, <span class="s1">'readv'</span>, <span class="s1">'register_at_fork'</span>, <span class="s1">'remove'</span>, <span class="s1">'removedirs'</span>, <span class="s1">'removexattr'</span>, <span class="s1">'rename'</span>, <span class="s1">'renames'</span>, <span class="s1">'replace'</span>, <span class="s1">'rmdir'</span>, <span class="s1">'scandir'</span>, <span class="s1">'sched_get_priority_max'</span>, <span class="s1">'sched_get_priority_min'</span>, <span class="s1">'sched_getaffinity'</span>, <span class="s1">'sched_getparam'</span>, <span class="s1">'sched_getscheduler'</span>, <span class="s1">'sched_param'</span>, <span class="s1">'sched_rr_get_interval'</span>, <span class="s1">'sched_setaffinity'</span>, <span class="s1">'sched_setparam'</span>, <span class="s1">'sched_setscheduler'</span>, <span class="s1">'sched_yield'</span>, <span class="s1">'sendfile'</span>, <span class="s1">'sep'</span>, <span class="s1">'set_blocking'</span>, <span class="s1">'set_inheritable'</span>, <span class="s1">'setegid'</span>, <span class="s1">'seteuid'</span>, <span class="s1">'setgid'</span>, <span class="s1">'setgroups'</span>, <span class="s1">'setpgid'</span>, <span class="s1">'setpgrp'</span>, <span class="s1">'setpriority'</span>, <span class="s1">'setregid'</span>, <span class="s1">'setresgid'</span>, <span class="s1">'setresuid'</span>, <span class="s1">'setreuid'</span>, <span class="s1">'setsid'</span>, <span class="s1">'setuid'</span>, <span class="s1">'setxattr'</span>, <span class="s1">'spawnl'</span>, <span class="s1">'spawnle'</span>, <span class="s1">'spawnlp'</span>, <span class="s1">'spawnlpe'</span>, <span class="s1">'spawnv'</span>, <span class="s1">'spawnve'</span>, <span class="s1">'spawnvp'</span>, <span class="s1">'spawnvpe'</span>, <span class="s1">'st'</span>, <span class="s1">'stat'</span>, <span class="s1">'stat_result'</span>, <span class="s1">'statvfs'</span>, <span class="s1">'statvfs_result'</span>, <span class="s1">'strerror'</span>, <span class="s1">'supports_bytes_environ'</span>, <span class="s1">'supports_dir_fd'</span>, <span class="s1">'supports_effective_ids'</span>, <span class="s1">'supports_fd'</span>, <span class="s1">'supports_follow_symlinks'</span>, <span class="s1">'symlink'</span>, <span class="s1">'sync'</span>, <span class="s1">'sys'</span>, <span class="s1">'sysconf'</span>, <span class="s1">'sysconf_names'</span>, <span class="s1">'system'</span>, <span class="s1">'tcgetpgrp'</span>, <span class="s1">'tcsetpgrp'</span>, <span class="s1">'terminal_size'</span>, <span class="s1">'times'</span>, <span class="s1">'times_result'</span>, <span class="s1">'truncate'</span>, <span class="s1">'ttyname'</span>, <span class="s1">'umask'</span>, <span class="s1">'uname'</span>, <span class="s1">'uname_result'</span>, <span class="s1">'unlink'</span>, <span class="s1">'unsetenv'</span>, <span class="s1">'urandom'</span>, <span class="s1">'utime'</span>, <span class="s1">'wait'</span>, <span class="s1">'wait3'</span>, <span class="s1">'wait4'</span>, <span class="s1">'waitid'</span>, <span class="s1">'waitid_result'</span>, <span class="s1">'waitpid'</span>, <span class="s1">'walk'</span>, <span class="s1">'write'</span>, <span class="s1">'writev'</span><span class="o">]</span>
+&gt;&gt;&gt; os.getlogin<span class="o">()</span>
+<span class="s1">'user'</span>
+&gt;&gt;&gt; os.listdir<span class="o">()</span>
+<span class="o">[</span><span class="s1">'15.py'</span>, <span class="s1">'01.py'</span>, <span class="s1">'nombres.py'</span>, <span class="s1">'07.py'</span>, <span class="s1">'09.py'</span>, <span class="s1">'11.py'</span>, <span class="s1">'12.py'</span>, <span class="s1">'05.py'</span>, <span class="s1">'02.py'</span>, <span class="s1">'crible.py'</span>, <span class="s1">'04.py'</span>, <span class="s1">'__pycache__'</span>, <span class="s1">'03.py'</span>, <span class="s1">'08.py'</span>, <span class="s1">'13.py'</span>, <span class="s1">'10.py'</span>, <span class="s1">'14.py'</span>, <span class="s1">'06.py'</span><span class="o">]</span>
+&gt;&gt;&gt;
+</pre></div>
+<h5><span class="mw-headline" id="os.environ">os.environ</span></h5>
+<p>os.environ est un dictionnaire contenant les variables  d'environnement.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+<h4><span class="mw-headline" id="Les_modules_math_et_cmath">Les modules math et cmath</span></h4>
+<p>Les modules math et cmath sont associés aux flottants et aux nombres complexes.
+</p>
+<h2><span class="mw-headline" id="Les_paquets">Les paquets</span></h2>
+<ul><li>Un paquet est un regroupement de modules.</li>
+<li>On importe les paquets de la même façon que des modules.</li>
+<li>On accède à un module ou à un élément en particulier en utilisant la syntaxe <b>&lt;nom-du-paquet&gt;.&lt;nom-du-module&gt;.&lt;nom-de-l-element&gt;</b>.</li></ul>
+<h2><span id="Les_chaines_de_caractères_(16.py)"></span><span class="mw-headline" id="Les_chaines_de_caract.C3.A8res_.2816.py.29">Les chaines de caractères (16.py)</span></h2>
+<h3><span id="La_fonction_repr()"></span><span class="mw-headline" id="La_fonction_repr.28.29">La fonction repr()</span></h3>
+<p>Affiche une représentation d'un objet sous forme d'une chaine de caractères.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># La commande repr()</span>
+print<span class="o">(</span><span class="s1">'PI='</span>+repr<span class="o">(</span><span class="m">22</span>/7<span class="o">))</span>
+<span class="c1"># print('PI='+(22/7)) --&gt; erreur</span>
+<span class="nv">a</span><span class="o">=</span><span class="m">3</span>
+<span class="nv">b</span><span class="o">=</span><span class="m">1</span>.17
+<span class="nv">x</span><span class="o">=</span>a*b
+<span class="c1"># s='x='+x  --&gt; erreur</span>
+<span class="c1"># repr permet d'afficher x</span>
+<span class="nv">s</span><span class="o">=</span><span class="s1">'x='</span>+repr<span class="o">(</span>x<span class="o">)</span>
+print<span class="o">(</span>s<span class="o">)</span>
+</pre></div>
+<h3><span id="La_fonction_str()"></span><span class="mw-headline" id="La_fonction_str.28.29">La fonction str()</span></h3>
+<p>Transforme un objet en string.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># La commande str()</span>
+print<span class="o">(</span><span class="s1">'PI='</span>+str<span class="o">(</span><span class="m">22</span>/7<span class="o">))</span>
+<span class="c1"># print('PI='+(22/7)) --&gt; erreur</span>
+<span class="nv">a</span><span class="o">=</span><span class="m">3</span>
+<span class="nv">b</span><span class="o">=</span><span class="m">1</span>.17
+<span class="nv">x</span><span class="o">=</span>a*b
+<span class="c1"># s='x='+x  --&gt; erreur</span>
+<span class="c1"># str permet d'afficher x</span>
+<span class="nv">s</span><span class="o">=</span><span class="s1">'x='</span>+str<span class="o">(</span>x<span class="o">)</span>
+print<span class="o">(</span>s<span class="o">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="Justification_et_padding">Justification et padding</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Justification a droite et padding avec des #</span>
+<span class="nv">str</span><span class="o">=</span><span class="s1">'abcde'</span>
+print<span class="o">(</span>str.rjust<span class="o">(</span><span class="m">10</span>,<span class="s1">'#'</span><span class="o">))</span>
+
+<span class="c1"># Justification a gauche et padding avec des #</span>
+print<span class="o">(</span>str.ljust<span class="o">(</span><span class="m">10</span>,<span class="s1">'#'</span><span class="o">))</span>
+</pre></div>
+<h3><span id="Les_opérateurs"></span><span class="mw-headline" id="Les_op.C3.A9rateurs">Les opérateurs</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Les operateurs sur les chaines de caracteres</span>
+<span class="nv">s1</span><span class="o">=</span><span class="s1">'Abcde'</span>
+<span class="nv">s2</span><span class="o">=</span><span class="s1">'Xyz'</span>
+<span class="c1"># + -&gt; concatenation</span>
+print <span class="o">(</span>s1+s2<span class="o">)</span>  <span class="c1"># -&gt; AbcdeXyz</span>
+<span class="c1"># * -&gt; multiplication</span>
+print <span class="o">(</span>s1*3<span class="o">)</span>   <span class="c1"># -&gt; AbcdeAbcdeAbcde</span>
+<span class="c1"># extraire slice</span>
+<span class="c1"># Acceder a une partie de la chaine de caracteres [] et [:]</span>
+print <span class="o">(</span><span class="s2">"str[1]: "</span>, str<span class="o">[</span><span class="m">1</span><span class="o">])</span>
+print <span class="o">(</span><span class="s2">"str[1:4]: "</span>, str<span class="o">[</span><span class="m">1</span>:4<span class="o">])</span>
+<span class="c1"># Recherche de caracteres</span>
+sys.stdout.write <span class="o">(</span><span class="s1">'l\'</span>expression <span class="s2">"bc in s1"</span> <span class="k">done</span> <span class="s1">')</span>
+<span class="s1">if '</span>bc<span class="s1">' in s1:</span>
+<span class="s1">  sys.stdout.write ('</span>TRUE<span class="se">\n</span><span class="s1">')</span>
+<span class="s1">else:</span>
+<span class="s1">  sys.stdout.write ('</span>FALSE<span class="se">\n</span><span class="err">'</span><span class="o">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="Les_expressions_raw_string">Les expressions raw string</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Raw String</span>
+<span class="c1"># l'expression r supprime le sens des caracteres spéciaux \n et autres ....</span>
+print <span class="o">(</span>r<span class="s1">'abc\n'</span><span class="o">)</span>
+</pre></div>
+<p><br>
+</p>
+<h3><span id="Formatage_des_chaînes_de_caractères"></span><span class="mw-headline" id="Formatage_des_cha.C3.AEnes_de_caract.C3.A8res">Formatage des chaînes de caractères</span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Formatage des donnees (ancienne syntaxe)</span>
+print <span class="o">(</span><span class="s2">"hello my name is %s i am %d years old"</span> % <span class="o">(</span><span class="s1">'paul'</span>, <span class="m">11</span><span class="o">))</span>
+<span class="c1"># Formatage des donnees (nouvelle syntaxe)</span>
+print <span class="o">(</span><span class="s2">"hello my name is {0} i am {1} years old"</span>.format <span class="o">(</span><span class="s1">'paul'</span>, <span class="m">11</span>, <span class="s1">'blabla'</span><span class="o">))</span>
+<span class="c1"># Formatage des donnees (nouvelle syntaxe)</span>
+print <span class="o">(</span><span class="s2">"hello my name is {0:10} i am {1:10} years old"</span>.format <span class="o">(</span><span class="s1">'paul'</span>, <span class="m">11</span>, <span class="s1">'blabla'</span><span class="o">))</span>
+<span class="c1"># Formatage des donnees avec parametre non positionnel</span>
+print <span class="o">(</span><span class="s2">"hello my name is {0:10} i am {1:10} years old, reste={reste}"</span>.format <span class="o">(</span><span class="s1">'paul'</span>, <span class="m">11</span>, <span class="nv">reste</span><span class="o">=</span><span class="s1">'blabla'</span><span class="o">))</span>
+<span class="c1"># Formatage des nombres reels</span>
+<span class="nv">PI</span><span class="o">=</span><span class="m">22</span>/7
+print <span class="o">(</span><span class="s2">"PI.3f={0:.3f},PI.5f={1:.5f}"</span>.format<span class="o">(</span>PI,PI<span class="o">))</span>
+</pre></div>
+<h2><span id="Les_fichiers_(17.py)"></span><span class="mw-headline" id="Les_fichiers_.2817.py.29">Les fichiers (17.py)</span></h2>
+<h3><span class="mw-headline" id="Ouvrir_un_fichier">Ouvrir un fichier</span></h3>
+<p>La fonction open permet d'ouvrir un fichier et d'obtenir un descripteur.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">f</span> <span class="o">=</span> open<span class="o">(</span><span class="s1">'textfile'</span>, <span class="s1">'w'</span><span class="o">)</span>
+</pre></div>
+<p>ou en mode texte
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">f</span> <span class="o">=</span> open<span class="o">(</span><span class="s1">'textfile'</span>, <span class="s1">'wt'</span><span class="o">)</span>
+</pre></div>
+<p><br>
+Le mode d'ouverture permet de contrôler l'ouverture du fichier
+</p>
+<ul><li>"r" - Lecture - Valeur par défaut. Ouvre un fichier en lecture, génère uneerreur si le fichier n'existe pas</li>
+<li>"a" - Append - Ouvre un fichier en ajoute, crée le fichier s'il n'existe pas</li>
+<li>"w" - Write - Ouvre un fichier en écriture, crée le fichier s'il n'existe pas</li>
+<li>"x" - Create - Crée le fichier spécifié et renvoie une erreur si le fichier existe.</li></ul>
+<h3><span class="mw-headline" id="Ecrire_dans_un_fichier">Ecrire dans un fichier</span></h3>
+<p>Lire tout le contenu du fichier
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import sys
+
+<span class="c1"># Ouvrir un fichier en écriture</span>
+<span class="nv">f</span> <span class="o">=</span> open<span class="o">(</span><span class="s1">'/tmp/textfile'</span>, <span class="s1">'w'</span><span class="o">)</span>
+
+<span class="c1"># Ecrire dans le fichier</span>
+<span class="nv">stack</span> <span class="o">=</span> <span class="o">[</span><span class="s1">'zero'</span>,<span class="s1">'un'</span>,<span class="s1">'deux'</span>,<span class="s1">'trois'</span>,<span class="s1">'quatre'</span>,<span class="s1">'cinq'</span><span class="o">]</span>
+<span class="k">for</span> str in stack:
+  f.write<span class="o">(</span>str+<span class="s1">'\n'</span><span class="o">)</span>
+
+f.close<span class="o">()</span>
+</pre></div>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Lire_un_fichier">Lire un fichier</span></h3>
+<p>Lire tout le contenu du fichier
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>import sys
+<span class="c1"># Lire un fichier ligne a ligne</span>
+print<span class="o">(</span><span class="s2">"--- Premiere lecture ---"</span><span class="o">)</span>
+<span class="nv">input</span><span class="o">=</span>open<span class="o">(</span><span class="s1">'/tmp/textfile'</span><span class="o">)</span>
+<span class="k">for</span> x in input:
+  sys.stdout.write<span class="o">(</span>x<span class="o">)</span>
+
+input.close<span class="o">()</span>
+
+
+<span class="c1"># Autre lecture</span>
+print<span class="o">(</span><span class="s2">"--- Deuxieme lecture ---"</span><span class="o">)</span>
+<span class="nv">file1</span><span class="o">=</span>open<span class="o">(</span><span class="s1">'/tmp/textfile'</span><span class="o">)</span>
+<span class="k">while</span> True:
+    <span class="nv">line</span> <span class="o">=</span> file1.readline<span class="o">()</span>.strip<span class="o">()</span>
+    <span class="k">if</span> <span class="nv">line</span> <span class="o">==</span> <span class="s1">''</span>:
+        <span class="c1"># Soit une fin de fichier ou une ligne vide</span>
+        <span class="nb">break</span>
+    print <span class="o">(</span>line<span class="o">)</span>
+</pre></div>
+<p><br>
+</p>
+<h3><span id="Ce_déplacer_dans_un_fichier"></span><span class="mw-headline" id="Ce_d.C3.A9placer_dans_un_fichier">Ce déplacer dans un fichier</span></h3>
+<p>La commande seek permet de déplacer le curseur dans un fichier
+</p><p>Syntaxe:
+</p>
+<pre>fileObject.seek(offset[, whence])
+</pre>
+<ul><li>offset&nbsp;: déplacement</li>
+<li>whence&nbsp;: à partir d'où&nbsp;? (0 par défaut).</li></ul>
+<p>whence peut prendre les valeurs suivantes
+</p>
+<ul><li>0&nbsp;: depuis le début du fichier</li>
+<li>1&nbsp;: depuis la position actuelle</li>
+<li>2&nbsp;: depuis la fin du fichier</li></ul>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># revenir au début du fichier</span>
+file.seek<span class="o">(</span><span class="m">0</span>, <span class="m">0</span><span class="o">)</span>
+<span class="c1"># ..identique à</span>
+file.seek<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+<span class="c1"># avancer le curseur de 12 caractères</span>
+file.seek<span class="o">(</span><span class="m">12</span>,1<span class="o">)</span>
+<span class="c1"># Positionner le curseur 3 caractères avant la fin du fichier</span>
+file.seek<span class="o">(</span>-3,2<span class="o">)</span>
+</pre></div>
+<h2><span class="mw-headline" id="Les_exceptions">Les exceptions</span></h2>
+<h2><span id="Portée_des_variables_(18.py)"></span><span class="mw-headline" id="Port.C3.A9e_des_variables_.2818.py.29">Portée des variables (18.py)</span></h2>
+<ul><li>Sans précision, une variable est locale</li>
+<li>Une variable déclarée avec <b>nonlocal</b> est reliée à une variable de même nom dans une portée supérieure</li>
+<li>Un variable <b>global</b> est visible de tout le programme.</li></ul>
+<p>Un exemple de code python pour illustrer la portée des différentes portées des variables.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Portee des variables</span>
+def scope_test<span class="o">()</span>:
+    <span class="nv">stuff</span> <span class="o">=</span> <span class="s2">"test stuff"</span>
+    def do_local<span class="o">()</span>:
+        <span class="c1"># Sans precision, la variable est locale</span>
+        <span class="nv">stuff</span> <span class="o">=</span> <span class="s2">"local stuff"</span>
+
+    def do_nonlocal<span class="o">()</span>:
+        <span class="c1"># nonlocal relie la variable locale a une variable de portee superieure</span>
+        nonlocal stuff
+        <span class="nv">stuff</span> <span class="o">=</span> <span class="s2">"nonlocal stuff"</span>
+
+    def do_global<span class="o">()</span>:
+        <span class="c1"># global indique que la variable est globale</span>
+        global stuff
+        <span class="nv">stuff</span> <span class="o">=</span> <span class="s2">"global stuff"</span>
+
+    do_local<span class="o">()</span>
+    print<span class="o">(</span><span class="s2">"Apres do_local(): stuff="</span>+ stuff<span class="o">)</span> 
+    do_nonlocal<span class="o">()</span>
+    print<span class="o">(</span><span class="s2">"Apres do_nonlocal(): stuff="</span>+ stuff<span class="o">)</span> 
+    do_global<span class="o">()</span>
+    print<span class="o">(</span><span class="s2">"Apres do_global(): stuff="</span>+ stuff<span class="o">)</span> 
+
+scope_test<span class="o">()</span>
+print <span class="o">(</span><span class="s2">"Dans le scope global:"</span>, stuff<span class="o">)</span>
+</pre></div>
+<h2><span id="Les_fonctions_spéciales"></span><span class="mw-headline" id="Les_fonctions_sp.C3.A9ciales">Les fonctions spéciales</span></h2>
+<h3><span id="la_méthode_spéciale_str_(self)"></span><span class="mw-headline" id="la_m.C3.A9thode_sp.C3.A9ciale_str_.28self.29">la méthode spéciale __str__(self)</span></h3>
+<p>La méthode spéciale est appellée automatiquement.
+L'instruction <b>print(figure)</b> ci dessous
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">figure</span> <span class="o">=</span> Figure.Figure<span class="o">(</span><span class="s1">'figure1'</span><span class="o">)</span>
+
+<span class="c1"># Utiliser la fonction speciale __str__ de figure</span>
+print<span class="o">(</span>figure<span class="o">)</span>
+</pre></div>
+<p>donne 
+</p>
+<pre>&lt;Figure.Figure object at 0x7f926dbdc550&gt;
+</pre>
+<p>Si on ajoute la définition de la méthode spéciale __str__ dans la classe Figure
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>    def __str__<span class="o">(</span>self<span class="o">)</span>:
+        <span class="k">return</span> <span class="s2">"Figure: nom="</span>+self.nom+<span class="s2">",couleur="</span>+self.couleur
+</pre></div>
+<p>On obtient
+</p>
+<pre>Figure: nom=figure1,couleur=rouge
+</pre>
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20200422070654
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.224 seconds
+Real time usage: 6.918 seconds
+Preprocessor visited node count: 766/1000000
+Preprocessor generated node count: 1512/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 65557/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key wikidb2:pcache:idhash:2537-0!canonical and timestamp 20200422070647 and revision id 13416
+ -->
+</div>					<div class="printfooter">
+						Récupérée de «&nbsp;<a dir="ltr" href="https://www.audiens.fr/wiki2/index.php?title=Les_bases_de_Python&amp;oldid=13416">https://www.audiens.fr/wiki2/index.php?title=Les_bases_de_Python&amp;oldid=13416</a>&nbsp;»					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Catégories" title="Spécial:Catégories">Catégories</a>&nbsp;: <ul><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Développements" title="Catégorie:Développements">Développements</a></li><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Langages" title="Catégorie:Langages">Langages</a></li><li><a href="https://www.audiens.fr/wiki2/index.php?title=Cat%C3%A9gorie:Python&amp;action=edit&amp;redlink=1" class="new" title="Catégorie:Python (page inexistante)">Python</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navigation</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Outils personnels</h3>
+						<ul>
+							<li id="pt-login"><a href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:Connexion&amp;returnto=Les+bases+de+Python" title="Nous vous encourageons à vous connecter ; ce n’est cependant pas obligatoire [Alt+Maj+o]" accesskey="o">Se connecter</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espaces de noms</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Les_bases_de_Python" title="Voir le contenu de la page [Alt+Maj+c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Discussion:Les_bases_de_Python&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion au sujet de cette page de contenu (page inexistante) [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Affichages</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Les_bases_de_Python">Lire</a></span></li><li id="ca-viewsource" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Les_bases_de_Python&amp;action=edit" title="Cette page est protégée.
+Vous pouvez toutefois en visualiser la source. [Alt+Maj+e]" accesskey="e">Voir le texte source</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Les_bases_de_Python&amp;action=history" title="Historique des versions de cette page [Alt+Maj+h]" accesskey="h">Afficher l’historique</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label" style="">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Plus</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Rechercher</label>
+						</h3>
+						<form action="http://www.audiens.fr/wiki2/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Rechercher dans Audiens" title="Rechercher dans Audiens [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Spécial:Recherche" name="title"><input type="submit" name="go" value="Continuer" title="Accédez à une page du même nom si elle existe" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Visiter la page d’accueil"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil général [Alt+Maj+z]" accesskey="z">Accueil</a></li><li id="n-recentchanges"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Modifications_récentes" title="Liste des modifications récentes sur le wiki [Alt+Maj+r]" accesskey="r">Modifications récentes</a></li><li id="n-randompage"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Page_au_hasard" title="Afficher une page au hasard [Alt+Maj+x]" accesskey="x">Page au hasard</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="Accès à l’aide">Aide</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Outils</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_liées/Les_bases_de_Python" title="Liste des pages liées qui pointent sur celle-ci [Alt+Maj+j]" accesskey="j">Pages liées</a></li><li id="t-recentchangeslinked"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Suivi_des_liens/Les_bases_de_Python" rel="nofollow" title="Liste des modifications récentes des pages appelées par celle-ci [Alt+Maj+k]" accesskey="k">Suivi des pages liées</a></li><li id="t-specialpages"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_spéciales" title="Liste de toutes les pages spéciales [Alt+Maj+q]" accesskey="q">Pages spéciales</a></li><li id="t-print"><a href="https://www.audiens.fr/wiki2/index.php?title=Les_bases_de_Python&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [Alt+Maj+p]" accesskey="p">Version imprimable</a></li><li id="t-permalink"><a href="https://www.audiens.fr/wiki2/index.php?title=Les_bases_de_Python&amp;oldid=13416" title="Adresse permanente de cette version de la page">Lien permanent</a></li><li id="t-info"><a href="https://www.audiens.fr/wiki2/index.php?title=Les_bases_de_Python&amp;action=info" title="Plus d’information sur cette page">Information sur la page</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> La dernière modification de cette page a été faite le 4 février 2020 à 08:17.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Politique_de_confidentialité" title="Audiens:Politique de confidentialité">Politique de confidentialité</a></li>
+								<li id="footer-places-about"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:À_propos_de" title="Audiens:À propos de">À propos de Audiens</a></li>
+								<li id="footer-places-disclaimer"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Avertissements_généraux" title="Audiens:Avertissements généraux">Avertissements</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="Les%20bases%20de%20Python%20%e2%80%94%20Audiens_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki2/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki2/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.224","walltime":"6.918","ppvisitednodes":{"value":766,"limit":1000000},"ppgeneratednodes":{"value":1512,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":65557,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20200422070654","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":7002});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+<!-- Mirrored from www.audiens.fr/download/python/Les bases de Python — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:25 GMT -->
+</html>

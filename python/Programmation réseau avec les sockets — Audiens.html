@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="fr">
+<!-- Mirrored from www.audiens.fr/download/python/Programmation réseau avec les sockets — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:25 GMT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Programmation réseau avec les sockets — Audiens</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Programmation_réseau_avec_les_sockets","wgTitle":"Programmation réseau avec les sockets","wgCurRevisionId":14005,"wgRevisionId":14005,"wgArticleId":2712,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":"Phil","wgUserGroups":["sysop","bureaucrat","*","user","autoconfirmed"],"wgCategories":["Développements","Langages","Python"],"wgBreakFrames":false,"wgPageContentLanguage":"fr","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"wgMonthNamesShort":["","janv.","fév.","mars","avr.","mai","juin","juill.","août","sept.","oct.","nov.","déc."],"wgRelevantPageName":"Programmation_réseau_avec_les_sockets","wgRelevantArticleId":2712,"wgRequestId":"14e86e9273ecdd129c4762f0","wgUserId":1,"wgUserEditCount":13971,"wgUserRegistration":1325332820000,"wgUserNewMsgRevisionId":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0tu0ujd",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"timecorrection":"Offset|0","watchlisttoken":""});
+});mw.loader.implement("user.tokens@1okgkd6",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"a82f6b3b12dcd037bf3900dcedff04e25ea010f8+\\","patrolToken":"f8a14c828edb1afe86f2d8fec80657fc5ea010f8+\\","watchToken":"46b9f762aa92b9c4b2d3596fcbb0c83d5ea010f8+\\","csrfToken":"a82f6b3b12dcd037bf3900dcedff04e25ea010f8+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","mediawiki.page.watch.ajax","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="Programmation%20r%c3%a9seau%20avec%20les%20sockets%20%e2%80%94%20Audiens_fichiers/load.css">
+<script async="" src="Programmation%20r%c3%a9seau%20avec%20les%20sockets%20%e2%80%94%20Audiens_fichiers/load.html"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<meta name="generator" content="MediaWiki 1.31.1">
+<link rel="alternate" type="application/x-wiki" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit">
+<link rel="edit" title="Modifier" href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit">
+<link rel="shortcut icon" href="https://www.audiens.fr/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.audiens.fr/wiki2/opensearch_desc.php" title="Audiens (fr)">
+<link rel="EditURI" type="application/rsd+xml" href="https://www.audiens.fr/wiki2/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Audiens" href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<!--[if lt IE 9]><script src="/wiki2/load.php?debug=false&amp;lang=fr&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+<script src="Programmation%20r%c3%a9seau%20avec%20les%20sockets%20%e2%80%94%20Audiens_fichiers/load_002.html"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Programmation_réseau_avec_les_sockets rootpage-Programmation_réseau_avec_les_sockets skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="fr">Programmation réseau avec les sockets</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Audiens</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Aller à :					<a href="#mw-head">navigation</a>, 					<a href="#p-search">rechercher</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr"><div class="mw-parser-output"><p>Navigation&nbsp;: <a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil">Accueil</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Python" title="Python">Python</a> -&gt; <a href="https://www.audiens.fr/wiki2/index.php/Utilisation_avancée" title="Utilisation avancée">Utilisation avancée</a> -&gt; <a class="mw-selflink selflink">Programmation réseau avec les sockets</a>
+</p><p>Programmation réseau avec les sockets
+</p>
+<div id="toc" class="toc"><div class="toctitle" dir="ltr" lang="fr"><h2>Sommaire</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">masquer</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Rappels_sur_TCP.2FIP_et_concepts_de_base_de_l.27API_socket"><span class="tocnumber">1</span> <span class="toctext">Rappels sur TCP/IP et concepts de base de l'API socket</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Rappels_sur_les_protocoles_TCP.2C_IP.2C_UDP"><span class="tocnumber">1.1</span> <span class="toctext">Rappels sur les protocoles TCP, IP, UDP</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Principes_de_la_programmation_des_sockets_STREAM"><span class="tocnumber">1.2</span> <span class="toctext">Principes de la programmation des sockets STREAM</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#socket.28.29"><span class="tocnumber">1.2.1</span> <span class="toctext">socket()</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#bind.28.29"><span class="tocnumber">1.2.2</span> <span class="toctext">bind()</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#listen.28.29"><span class="tocnumber">1.2.3</span> <span class="toctext">listen()</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#accept.28.29"><span class="tocnumber">1.2.4</span> <span class="toctext">accept()</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#send.28.29"><span class="tocnumber">1.2.5</span> <span class="toctext">send()</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#recv.28.29"><span class="tocnumber">1.2.6</span> <span class="toctext">recv()</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Utilisation_du_module_socket"><span class="tocnumber">2</span> <span class="toctext">Utilisation du module socket</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#le_module_socket"><span class="tocnumber">2.1</span> <span class="toctext">le module socket</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Les_familles_de_socket"><span class="tocnumber">2.1.1</span> <span class="toctext">Les familles de socket</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Les_exemples"><span class="tocnumber">2.2</span> <span class="toctext">Les exemples</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Exemple_ipv4"><span class="tocnumber">2.2.1</span> <span class="toctext">Exemple ipv4</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Exemple_ipv6"><span class="tocnumber">2.2.2</span> <span class="toctext">Exemple ipv6</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Socket_en_mode_connect.C3.A9_:_TCP_ou_stream"><span class="tocnumber">3</span> <span class="toctext">Socket en mode connecté&nbsp;: TCP ou stream</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Socket_en_mode_non_connect.C3.A9_:_UDP_ou_datagram"><span class="tocnumber">4</span> <span class="toctext">Socket en mode non connecté&nbsp;: UDP ou datagram</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#UDP"><span class="tocnumber">4.1</span> <span class="toctext">UDP</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#Propri.C3.A9t.C3.A9s_de_UDP"><span class="tocnumber">4.1.1</span> <span class="toctext">Propriétés de UDP</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#int.C3.A9grit.C3.A9_des_donn.C3.A9es"><span class="tocnumber">4.1.2</span> <span class="toctext">intégrité des données</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="#Les_exemples_2"><span class="tocnumber">4.2</span> <span class="toctext">Les exemples</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="#Le_serveur_UDP"><span class="tocnumber">4.2.1</span> <span class="toctext">Le serveur UDP</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Le_client_UDP"><span class="tocnumber">4.2.2</span> <span class="toctext">Le client UDP</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#Les_sockets_et_la_Programmation_Orient.C3.A9e_Objets"><span class="tocnumber">5</span> <span class="toctext">Les sockets et la Programmation Orientée Objets</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#Le_module_python_SocketServer"><span class="tocnumber">5.1</span> <span class="toctext">Le module python SocketServer</span></a>
+<ul>
+<li class="toclevel-3 tocsection-26"><a href="#Cr.C3.A9ation_d.27un_serveur"><span class="tocnumber">5.1.1</span> <span class="toctext">Création d'un serveur</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-27"><a href="#Les_exemples_3"><span class="tocnumber">5.2</span> <span class="toctext">Les exemples</span></a>
+<ul>
+<li class="toclevel-3 tocsection-28"><a href="#Le_fichier_tcpHandler.py_.28serveur.29"><span class="tocnumber">5.2.1</span> <span class="toctext">Le fichier tcpHandler.py (serveur)</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#Le_fichier_tcpHandlerClient.py"><span class="tocnumber">5.2.2</span> <span class="toctext">Le fichier tcpHandlerClient.py</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-30"><a href="#Combinaison_des_sockets_et_des_threads"><span class="tocnumber">6</span> <span class="toctext">Combinaison des sockets et des threads</span></a>
+<ul>
+<li class="toclevel-2 tocsection-31"><a href="#Le_serveur_multithread"><span class="tocnumber">6.1</span> <span class="toctext">Le serveur multithread</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Le_client_multithread"><span class="tocnumber">6.2</span> <span class="toctext">Le client multithread</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span id="Rappels_sur_TCP/IP_et_concepts_de_base_de_l'API_socket"></span><span class="mw-headline" id="Rappels_sur_TCP.2FIP_et_concepts_de_base_de_l.27API_socket">Rappels sur TCP/IP et concepts de base de l'API socket</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=1" title="Modifier la section : Rappels sur TCP/IP et concepts de base de l'API socket">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="Rappels_sur_les_protocoles_TCP,_IP,_UDP"></span><span class="mw-headline" id="Rappels_sur_les_protocoles_TCP.2C_IP.2C_UDP">Rappels sur les protocoles TCP, IP, UDP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=2" title="Modifier la section : Rappels sur les protocoles TCP, IP, UDP">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="https://www.audiens.fr/wiki2/index.php/Filtrage_de_paquets#Rappels_r.C3.A9seau" title="Filtrage de paquets">Page sur les rappels réseau.</a>
+</p>
+<h3><span class="mw-headline" id="Principes_de_la_programmation_des_sockets_STREAM">Principes de la programmation des sockets STREAM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=3" title="Modifier la section : Principes de la programmation des sockets STREAM">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>un socket est un point de terminaison d'un communication réseau.</li></ul>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:752px;"><a href="../../wiki2/index.php/Fichier_Programmation-des-sockets.html" class="image"><img alt="" src="Programmation%20r%c3%a9seau%20avec%20les%20sockets%20%e2%80%94%20Audiens_fichiers/750px-Programmation-des-sockets.png" class="thumbimage" srcset="/wiki2/images/e/e5/Programmation-des-sockets.png 1.5x" width="750" height="680"></a>  <div class="thumbcaption"><div class="magnify"><a href="../../wiki2/index.php/Fichier_Programmation-des-sockets.html" class="internal" title="Agrandir"></a></div>Programmation des sockets</div></div></div></div>
+<h4><span id="socket()"></span><span class="mw-headline" id="socket.28.29">socket()</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=4" title="Modifier la section : socket()">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> <span class="kt">int</span> <span class="nf">socket</span><span class="p">(</span><span class="kt">int</span> <span class="n">domain</span><span class="p">,</span> <span class="kt">int</span> <span class="n">type</span><span class="p">,</span> <span class="kt">int</span> <span class="n">protocol</span><span class="p">);</span>
+</pre></div>
+<ul><li>domain&nbsp;: AF_INET|AF_INET6
+<ul><li>AF_INET&nbsp;: IPv4 Internet protocols ip</li>
+<li>AF_INET6&nbsp;: IPv6 Internet protocols ip</li></ul></li>
+<li>type&nbsp;: SOCK_STREAM|SOCK_DGRAM
+<ul><li>SOCK_STREAM Fournit des flux d'octets séquentiels, fiables, 
+bidirectionnels et basés sur la connexion. Un transfert de données 
+out-of-band (circuit virtuel).</li>
+<li>SOCK_DGRAM Prend en charge les datagrammes (messages sans connexion, non fiables d'une longueur maximale fixe).</li></ul></li>
+<li>protocol&nbsp;: SOCK_STREAM (flux full duplex).</li></ul>
+<h4><span id="bind()"></span><span class="mw-headline" id="bind.28.29">bind()</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=5" title="Modifier la section : bind()">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>bind sert à lier un nom à une socket.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span> <span class="kt">int</span> <span class="nf">bind</span><span class="p">(</span><span class="kt">int</span> <span class="n">sockfd</span><span class="p">,</span> <span class="k">const</span> <span class="k">struct</span> <span class="n">sockaddr</span> <span class="o">*</span><span class="n">addr</span><span class="p">,</span><span class="kt">socklen_t</span> <span class="n">addrlen</span><span class="p">);</span>
+</pre></div>
+<ul><li>Lorsqu'un socket est créé avec la primitive <b>socket()</b>, il existe dans un espace de noms (famille d'adresses) mais aucune adresse ne lui est affectée.</li>
+<li><b>bind()</b> assigne l'adresse spécifiée par <b>addr</b> au socket référencé par le descripteur de fichier <b>sockfd</b>.</li>
+<li><b>addrlen</b> spécifie la taille, en octets, de la structure d'adresse pointée par addr.</li>
+<li>Traditionnellement, cette opération est appelé «attribuer un nom à une socket».</li>
+<li>Il est normalement nécessaire d'attribuer une adresse locale à l'aide de <b>bind()</b> avant qu'une socket SOCK_STREAM puisse recevoir une connexion avec la primitive <b>accept()</b>.</li></ul>
+<p>Détail de la structure sockaddr_in
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/* Structure describing an Internet socket address.  */</span>
+<span class="k">struct</span> <span class="n">sockaddr_in</span>
+  <span class="p">{</span>
+    <span class="n">__SOCKADDR_COMMON</span> <span class="p">(</span><span class="n">sin_</span><span class="p">);</span>
+    <span class="n">in_port_t</span> <span class="n">sin_port</span><span class="p">;</span>                 <span class="cm">/* Port number.  */</span>
+    <span class="k">struct</span> <span class="n">in_addr</span> <span class="n">sin_addr</span><span class="p">;</span>            <span class="cm">/* Internet address.  */</span>
+
+    <span class="cm">/* Pad to size of `struct sockaddr'.  */</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">sin_zero</span><span class="p">[</span><span class="k">sizeof</span> <span class="p">(</span><span class="k">struct</span> <span class="n">sockaddr</span><span class="p">)</span> <span class="o">-</span>
+                           <span class="n">__SOCKADDR_COMMON_SIZE</span> <span class="o">-</span>
+                           <span class="k">sizeof</span> <span class="p">(</span><span class="n">in_port_t</span><span class="p">)</span> <span class="o">-</span>
+                           <span class="k">sizeof</span> <span class="p">(</span><span class="k">struct</span> <span class="n">in_addr</span><span class="p">)];</span>
+  <span class="p">};</span>
+</pre></div>
+<h4><span id="listen()"></span><span class="mw-headline" id="listen.28.29">listen()</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=6" title="Modifier la section : listen()">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>int listen<span class="o">(</span>int sockfd, int backlog<span class="o">)</span><span class="p">;</span>
+</pre></div>
+<p>La primitive <b>listen()</b> marque le socket désigné par <b>sockfd</b>
+ comme un socket passif, c'est-à-dire comme un socket qui sera utilisé 
+pour accepter les demandes de connexion entrantes en utilisant accept().
+</p><p>L'argument <b>sockfd</b> est un descripteur de fichier qui fait référence à un socket de type <b>SOCK_STREAM</b> ou <b>SOCK_SEQPACKET</b>.
+</p><p>L'argument <b>backlog</b> définit la longueur maximale de la file d'attente des connexions en attente pour <b>sockfd</b>. 
+</p>
+<ul><li>Si une demande de connexion arrive lorsque la file d'attente est pleine, le client peut recevoir une erreur avec une indication <b>ECONNREFUSED</b>
+ ou, si le protocole sous-jacent prend en charge la retransmission, la 
+demande peut être ignorée afin qu'une nouvelle tentative de connexion 
+ultérieure réussisse.</li></ul>
+<h4><span id="accept()"></span><span class="mw-headline" id="accept.28.29">accept()</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=7" title="Modifier la section : accept()">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="nf">accept</span><span class="p">(</span><span class="kt">int</span> <span class="n">sockfd</span><span class="p">,</span> <span class="k">struct</span> <span class="n">sockaddr</span> <span class="o">*</span><span class="n">addr</span><span class="p">,</span> <span class="kt">socklen_t</span> <span class="o">*</span><span class="n">addrlen</span><span class="p">);</span>
+</pre></div>
+<p>L'appel système accept () est utilisé avec les types de socket basés 
+sur la connexion (SOCK_STREAM, SOCK_SEQPACKET). Il extrait la première 
+demande de connexion dans la file d'attente des connexions en attente 
+pour le socket d'écoute, sockfd, crée un nouveau socket connecté et 
+renvoie un nouveau descripteur de fichier faisant référence à ce socket.
+ Le socket nouvellement créé n'est pas à l'état d'écoute. Le socket 
+d'origine sockfd n'est pas affecté par cet appel.
+</p><p>L'argument sockfd est un socket qui a été créé avec socket (2), 
+lié à une adresse locale avec bind (2) et qui écoute les connexions 
+après un listen (2).
+</p>
+<h4><span id="send()"></span><span class="mw-headline" id="send.28.29">send()</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=8" title="Modifier la section : send()">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">ssize_t</span> <span class="nf">send</span><span class="p">(</span><span class="kt">int</span> <span class="n">sockfd</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">);</span>
+</pre></div>
+<ul><li>sockfd&nbsp;: descripteur du socket.</li>
+<li>buf: adresse du buffer.</li>
+<li>len&nbsp;: longueur du buffer.</li></ul>
+<p>L'appel système send() est utilisés pour transmettre un message à une autre socket.
+</p>
+<ul><li>L'appel send() ne peut être utilisé que lorsque le socket est dans un état <b>connecté</b> (afin que le destinataire prévu soit connu).</li></ul>
+<h4><span id="recv()"></span><span class="mw-headline" id="recv.28.29">recv()</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=9" title="Modifier la section : recv()">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">ssize_t</span> <span class="nf">recv</span><span class="p">(</span><span class="kt">int</span> <span class="n">sockfd</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">);</span>
+</pre></div>
+<p>La primitive <b>recv()</b> est utilisée uniquement sur une socket connectée.
+</p><p>Si aucun message n'est disponible sur le socket, les appels de 
+réception attendent l'arrivée d'un message, sauf si le socket n'est pas 
+bloquant (voir <b>fcntl()</b>, auquel cas la valeur -1 est renvoyée et la variable externe errno est définie sur EAGAIN ou EWOULDBLOCK. 
+</p>
+<ul><li>Les appels reçus renvoient normalement toutes les données 
+disponibles, jusqu'à concurrence du montant demandé, plutôt que 
+d'attendre la réception du montant total demandé.</li></ul>
+<h2><span class="mw-headline" id="Utilisation_du_module_socket">Utilisation du module socket</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=10" title="Modifier la section : Utilisation du module socket">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="le_module_socket">le module socket</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=11" title="Modifier la section : le module socket">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Ce module permet d'accéder à l'interface de socket BSD. 
+</p>
+<ul><li>Il est disponible sur tous les systèmes Unix modernes, Windows, MacOS et probablement des plates-formes supplémentaires.</li></ul>
+<p>Remarque&nbsp;: Certains comportements peuvent dépendre de la 
+plate-forme, car des appels sont effectués vers les API de socket du 
+système d'exploitation.
+</p><p>L’interface Python est une adaptation simple de l’appel système 
+Unix et de l’interface de bibliothèque pour les sockets vers le style 
+orienté objet de Python: 
+</p>
+<ul><li>la fonction socket () renvoie un objet socket dont les méthodes implémentent les différents appels système socket.</li>
+<li>Les types de paramètres sont un peu plus évolués que dans 
+l'interface C, comme pour les opérations read () et write () sur les 
+fichiers Python.</li>
+<li>L'allocation de tampon sur les opérations de réception est 
+automatique et la longueur du tampon est implicite sur les opérations 
+d'envoi.</li></ul>
+<h4><span class="mw-headline" id="Les_familles_de_socket">Les familles de socket</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=12" title="Modifier la section : Les familles de socket">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Plusieurs type de socket sont supportés par ce module&nbsp;:
+</p>
+<ul><li>AF_UNIX&nbsp;: socket mappé sur nom de fichier unix.</li>
+<li>AF_INET&nbsp;: le socket est identifé par une paire (adresse, n° de port).</li>
+<li>AF_INET6&nbsp;: le socket est identifé par les arguments (host, port, flowinfo, scopeid).
+<ul><li>flowinfo&nbsp;: Le champ <b>sin6_flowinfo</b> est nouveau dans 
+Linux 2.4. Il est utilisé de manière transparente par le noyau lorsque 
+la longueur d'adresse passée le contient. Certains programmes qui 
+passent un tampon d'adresse plus long, puis vérifient la longueur de 
+l'adresse sortante peuvent s'arrêter.</li>
+<li>scopeid&nbsp;: <b>scopeid</b> est nécessaire pour déterminer de 
+manière unique quel est le périphérique qui doit gérer le trafic, car il
+ peut y avoir plusieurs interfaces, avec la même IP.</li></ul></li></ul>
+<p>Il existe de nombreux autres types:
+</p>
+<ul><li>AF_NETLINK</li>
+<li>AF_BLUETOOTH</li>
+<li>AF_CAN</li>
+<li>AF_ALG</li>
+<li>AF_PACKET</li></ul>
+<p>Pour plus d'informationis, consultez  [<a rel="nofollow" class="external text" href="https://docs.python.org/3/library/socket.html">la documentation python</a>]
+</p>
+<h3><span class="mw-headline" id="Les_exemples">Les exemples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=13" title="Modifier la section : Les exemples">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Exemple_ipv4">Exemple ipv4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=14" title="Modifier la section : Exemple ipv4">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Voici un exemple simple qui illustre le fonctionnement des sockets 
+</p><p>Le programme helloServer.py
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="sd">''' Echo serveur</span>
+<span class="sd">    Ce programme créer un socket..socket() </span>
+<span class="sd">    affecte un nom au socket......bind() </span>
+<span class="sd">    écoute sur le port ...........listen()</span>
+<span class="sd">    accepte la connexion .........accept()</span>
+<span class="sd">    reçoit un message ............recv()</span>
+<span class="sd">    re envoie le message .........sendall()</span>
+<span class="sd">    puis s'arrête.</span>
+<span class="sd">'''</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="s1">''</span>                <span class="c1"># vide = toutes les interfaces réseau.</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">3000</span>              <span class="c1"># Un port non privilégié</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">"En attente de connexion sur le port "</span><span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="n">PORT</span><span class="p">))</span>
+<span class="n">s</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">conn</span><span class="p">,</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">"Connecté sur le socket {0}:{1} "</span><span class="o">.</span><span class="n">format</span> <span class="p">(</span><span class="n">addr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">addr</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span> <span class="k">break</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+<p>Le programme helloClient.py
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="sd">''' Echo client</span>
+<span class="sd">    Ce programme créer un socket..socket() </span>
+<span class="sd">    ouvre une connexion ..........connect()</span>
+<span class="sd">    envoie des données ...........sendall()</span>
+<span class="sd">    relit les données envoyées ...recv()</span>
+<span class="sd">    affiche les données ..........print()</span>
+<span class="sd">    et s'arrête. </span>
+<span class="sd">'''</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="s1">'localhost'</span>    <span class="c1"># l'hote distant (ou pas ...)</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">3000</span>           <span class="c1"># Le meme port que le serveur</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
+<span class="n">s</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="s2">"Hello, world"</span><span class="p">,</span><span class="s1">'UTF-8'</span><span class="p">))</span>
+
+<span class="sd">''' Les données reçues sont au format byte</span>
+<span class="sd">    il faut les transormer en string avec la fonction decode.</span>
+<span class="sd">'''</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">"Données reçues:{"</span><span class="o">+</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="o">+</span><span class="s2">"}"</span><span class="p">)</span>
+</pre></div>
+<h4><span class="mw-headline" id="Exemple_ipv6">Exemple ipv6</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=15" title="Modifier la section : Exemple ipv6">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Le programme helloServer6.py
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Echo server</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="bp">None</span>              <span class="c1"># vide = toutes les interfaces réseau.</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">3000</span>              <span class="c1"># Un port non privilégié</span>
+<span class="n">s</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">AF_UNSPEC</span><span class="p">,</span>
+                              <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">AI_PASSIVE</span><span class="p">):</span>
+    <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">continue</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span>
+        <span class="k">print</span> <span class="p">(</span><span class="s2">"En attente de connexion sur le port "</span><span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="n">PORT</span><span class="p">))</span>
+        <span class="sd">''' listen(1) : 1 = nombre de connexions non acceptées que le système autorisera </span>
+<span class="sd">            avant de refuser de nouvelles connexions</span>
+<span class="sd">        '''</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">continue</span>
+    <span class="k">break</span>
+<span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s2">"Impossible d'ouvrir le socket"</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">conn</span><span class="p">,</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+<span class="c1">#print 'Connected by', addr</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">"Connecté sur le socket {0}:{1} "</span><span class="o">.</span><span class="n">format</span> <span class="p">(</span><span class="n">addr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">addr</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span> <span class="k">break</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+<p>Le programme helloClient6.py
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Echo client </span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="s1">'localhost'</span>    <span class="c1"># l'hote distant (ou pas ...)</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">3000</span>           <span class="c1"># Le meme port que le serveur</span>
+<span class="n">s</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">AF_UNSPEC</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">):</span>
+    <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">continue</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">continue</span>
+    <span class="k">break</span>
+<span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s2">"Impossible d'ouvrir le socket"</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="s2">"Hello, world"</span><span class="p">,</span><span class="s1">'UTF-8'</span><span class="p">))</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">"Données reçues:{"</span><span class="o">+</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="o">+</span><span class="s2">"}"</span><span class="p">)</span>
+</pre></div>
+<h2><span id="Socket_en_mode_connecté_:_TCP_ou_stream"></span><span class="mw-headline" id="Socket_en_mode_connect.C3.A9_:_TCP_ou_stream">Socket en mode connecté&nbsp;: TCP ou stream</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=16" title="Modifier la section : Socket en mode connecté&nbsp;: TCP ou stream">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Socket_en_mode_non_connecté_:_UDP_ou_datagram"></span><span class="mw-headline" id="Socket_en_mode_non_connect.C3.A9_:_UDP_ou_datagram">Socket en mode non connecté&nbsp;: UDP ou datagram</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=17" title="Modifier la section : Socket en mode non connecté&nbsp;: UDP ou datagram">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="UDP">UDP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=18" title="Modifier la section : UDP">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>UDP&nbsp;: <b>User Datagramme Protocole</b>
+</p>
+<ul><li>UDP est utile pour transmettre rapidement de petites quantités de données, depuis un serveur vers de nombreux clients.</li>
+<li>pas de détection d'erreur</li>
+<li>Adapté aux aux applications requête/réponse (DNS, NFS, voix sur IP , jeu en ligne ...)</li></ul>
+<h4><span id="Propriétés_de_UDP"></span><span class="mw-headline" id="Propri.C3.A9t.C3.A9s_de_UDP">Propriétés de UDP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=19" title="Modifier la section : Propriétés de UDP">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li>L'<b>UDP</b> ne garantit pas la livraison des paquets de messages.</li>
+<li>Si pour un problème dans un réseau, si un paquet est perdu, il pourrait être perdu pour toujours.</li>
+<li>Puisqu'il n'y a aucune garantie de livraison assurée des messages, UDP est considéré comme un <i>protocole peu fiable</i>.</li>
+<li>Les mécanismes sous-jacents qui implémentent UDP n'impliquent aucune communication basée sur la connexion.</li>
+<li>Il n'y a <b>pas de streaming</b> de données entre un serveur UDP ou et un client UDP.</li>
+<li>Un client <b>UDP</b> peut envoyer plusieurs paquets distincts à un 
+serveur UDP et il peut également recevoir plusieurs paquets distincts 
+comme réponses du serveur UDP.</li>
+<li>Comme <b>UDP</b> est un protocole sans connexion, la <b>surcharge</b> impliquée dans UDP est <b>moindre</b> par rapport à un protocole basé sur une connexion comme TCP.</li></ul>
+<p><b>Attention</b>: Le terme <b>non fiable</b> ne veut pas dire que le <i>réseau</i>
+ n'est pas fiable. Il veut dire simplement que UDP ne gère pas le 
+contrôle de flux à son niveau. Donc si on veut fiabiliser une liaison 
+via UDP , il faut gérer le contrôle de flux au niveau de l'application.
+</p>
+<h4><span id="intégrité_des_données"></span><span class="mw-headline" id="int.C3.A9grit.C3.A9_des_donn.C3.A9es">intégrité des données</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=20" title="Modifier la section : intégrité des données">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>L'intégrité des données est assurée par une somme de contrôle sur l'en-tête. 
+</p>
+<ul><li>L'utilisation de cette somme est cependant facultative en IPv4 mais obligatoire avec IPv6.</li>
+<li>Si un hôte n'a pas calculé la somme de contrôle d'un datagramme émis, la valeur de celle-ci est fixée à zéro.</li>
+<li>La somme de contrôle inclut également les adresses IP de la source et de la destination.</li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Les_exemples_2">Les exemples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=21" title="Modifier la section : Les exemples">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Le_serveur_UDP">Le serveur UDP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=22" title="Modifier la section : Le serveur UDP">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>le fichier <b>udpServer.py</b>
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">localIP</span>     <span class="o">=</span> <span class="s2">"127.0.0.1"</span>
+<span class="n">localPort</span>   <span class="o">=</span> <span class="mi">3000</span>
+<span class="n">bufferSize</span>  <span class="o">=</span> <span class="mi">1024</span>
+
+<span class="n">msgFromServer</span>       <span class="o">=</span> <span class="s2">"Hello cher client UDP"</span>
+<span class="n">bytesToSend</span>         <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">msgFromServer</span><span class="p">)</span>
+
+<span class="c1"># Création d'un socket datagramme</span>
+<span class="n">UDPServerSocket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
+<span class="c1"># Affectation d'un nom au socket (affectation d'une adresse)</span>
+<span class="n">UDPServerSocket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">localIP</span><span class="p">,</span> <span class="n">localPort</span><span class="p">))</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="s2">"Le serveur UDP écoute sur le port {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">localPort</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="c1"># Le socket est en attente de messages entrant. </span>
+<span class="k">while</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+    <span class="n">bytesAddressPair</span> <span class="o">=</span> <span class="n">UDPServerSocket</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="n">bufferSize</span><span class="p">)</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">bytesAddressPair</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">address</span> <span class="o">=</span> <span class="n">bytesAddressPair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">clientMsg</span> <span class="o">=</span> <span class="s2">"Message reçu depuis le client:{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="n">clientIP</span>  <span class="o">=</span> <span class="s2">"Addresse IP du client:{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">clientMsg</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">clientIP</span><span class="p">)</span>
+    <span class="c1"># Envoie de la réponse au client.</span>
+    <span class="n">UDPServerSocket</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="n">bytesToSend</span><span class="p">,</span> <span class="n">address</span><span class="p">)</span>
+</pre></div>
+<h4><span class="mw-headline" id="Le_client_UDP">Le client UDP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=23" title="Modifier la section : Le client UDP">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>le fichier <b>udpClient.py</b>
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">msgFromClient</span>       <span class="o">=</span> <span class="s2">"Hello UDP Server"</span>
+<span class="n">bytesToSend</span>         <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">msgFromClient</span><span class="p">)</span>
+<span class="n">serverAddressPort</span>   <span class="o">=</span> <span class="p">(</span><span class="s2">"127.0.0.1"</span><span class="p">,</span> <span class="mi">3000</span><span class="p">)</span>
+<span class="n">bufferSize</span>          <span class="o">=</span> <span class="mi">1024</span>
+
+<span class="c1"># Création d'un socket UDP coté client.</span>
+<span class="n">UDPClientSocket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
+
+<span class="c1"># Envoie un message au serveur via la socket UDP.</span>
+<span class="n">UDPClientSocket</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="n">bytesToSend</span><span class="p">,</span> <span class="n">serverAddressPort</span><span class="p">)</span>
+<span class="n">msgFromServer</span> <span class="o">=</span> <span class="n">UDPClientSocket</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="n">bufferSize</span><span class="p">)</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="s2">"Message reçu du serveur {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">msgFromServer</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+<h2><span id="Les_sockets_et_la_Programmation_Orientée_Objets"></span><span class="mw-headline" id="Les_sockets_et_la_Programmation_Orient.C3.A9e_Objets">Les sockets et la Programmation Orientée Objets</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=24" title="Modifier la section : Les sockets et la Programmation Orientée Objets">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Le_module_python_SocketServer">Le module python SocketServer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=25" title="Modifier la section : Le module python SocketServer">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Le module <b>socketserver</b> simplifie la tâche d'écriture des serveurs réseau.
+</p><p>Il existe quatre classes de base:
+</p><p>classe <b>SocketServer.TCPServer</b> (adresse_serveur, RequestHandlerClass, bind_and_activate = True)
+</p>
+<pre>Celui-ci utilise le protocole Internet TCP, qui fournit des flux de données continus entre le client et le serveur. Si bind_and_activate est vrai, le constructeur tente automatiquement d'appeler server_bind () et server_activate (). Les autres paramètres sont passés à la classe de base BaseServer.
+</pre>
+<p>classe <b>SocketServer.UDPServer</b> (adresse_serveur, RequestHandlerClass, bind_and_activate = True)
+</p>
+<pre>Cela utilise des datagrammes, qui sont des paquets discrets d'informations qui peuvent arriver dans le désordre ou être perdus pendant le transport. Les paramètres sont les mêmes que pour TCPServer.
+</pre>
+<p>classe <b>SocketServer.UnixStreamServer</b> (adresse_serveur, RequestHandlerClass, bind_and_activate = True)
+classe <b>SocketServer.UnixDatagramServer</b> (adresse_serveur, RequestHandlerClass, bind_and_activate = True)
+</p>
+<pre>Ces classes plus rarement utilisées sont similaires aux classes TCP et UDP, mais utilisent des sockets de domaine Unix; ils ne sont pas disponibles sur les plates-formes non Unix. Les paramètres sont les mêmes que pour TCPServer.
+</pre>
+<p>Ces quatre classes traitent les demandes de manière <b>synchrone</b>.
+</p>
+<ul><li>Chaque demande doit être terminée avant que la prochaine demande puisse être lancée.</li>
+<li>Cela ne convient pas si chaque demande prend beaucoup de temps, car 
+elle nécessite beaucoup de calculs ou parce qu'elle renvoie beaucoup de 
+données que le client est lent à traiter.</li>
+<li>La solution consiste à créer un processus ou un thread distinct pour gérer chaque demande.</li>
+<li>Les classes mixtes <b>ForkingMixIn</b> et <b>ThreadingMixIn</b> peuvent être utilisées pour prendre en charge un comportement <b>asynchrone</b>.</li></ul>
+<h4><span id="Création_d'un_serveur"></span><span class="mw-headline" id="Cr.C3.A9ation_d.27un_serveur">Création d'un serveur</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=26" title="Modifier la section : Création d'un serveur">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>La création d'un serveur nécessite plusieurs étapes. 
+</p>
+<ul><li>Tout d'abord, vous devez créer une classe de gestionnaire de demandes en sous-classant la classe <b>BaseRequestHandler</b> et en remplaçant sa méthode <b>handle()</b>.</li>
+<li>Cette méthode traitera les demandes entrantes.</li>
+<li>Deuxièmement, vous devez instancier l'une des classes de serveur, en
+ lui passant l'adresse du serveur et la classe de gestionnaire de 
+requêtes.</li>
+<li>Appelez ensuite la méthode <b>handle_request()<i> ou </i></b><i>serve_forever()'</i> de l'objet serveur pour traiter une ou plusieurs requêtes.</li>
+<li>Enfin, appelez <b>server_close()</b> pour fermer le socket.</li></ul>
+<p>Lorsque vous héritez de <b>ThreadingMixIn</b> pour le comportement de
+ connexion par thread, vous devez déclarer explicitement comment vous 
+souhaitez que vos threads se comportent lors d'un arrêt brutal. 
+</p>
+<ul><li>La classe <b>ThreadingMixIn</b> définit un attribut <b>daemon_threads</b>, qui indique si le serveur doit ou non attendre la fin du thread.</li>
+<li>Vous devez définir le flag explicitement si vous souhaitez que les threads se comportent de manière autonome.</li>
+<li>La valeur par défaut est <b>False</b>, ce qui signifie que Python ne se fermera pas tant que tous les threads créés par <b>ThreadingMixIn</b> ne seront pas terminés.</li></ul>
+<h3><span class="mw-headline" id="Les_exemples_3">Les exemples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=27" title="Modifier la section : Les exemples">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id="Le_fichier_tcpHandler.py_(serveur)"></span><span class="mw-headline" id="Le_fichier_tcpHandler.py_.28serveur.29">Le fichier tcpHandler.py (serveur)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=28" title="Modifier la section : Le fichier tcpHandler.py (serveur)">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">import</span> <span class="nn">socketserver</span>
+
+<span class="k">class</span> <span class="nc">TCPHandler</span><span class="p">(</span><span class="n">socketserver</span><span class="o">.</span><span class="n">BaseRequestHandler</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Démonstration d'une classe Server TCP.</span>
+
+<span class="sd">    Il faut implémenter la méthode handle() pour</span>
+<span class="sd">    échanger des données avec le client.</span>
+
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># self.request -  socket TCP connecté au client</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">"{} sent:"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_address</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="c1"># Envoie un accusé de réception lors de  l'arrivée des données. </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="s2">"ACK from TCP Server"</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span> <span class="o">=</span> <span class="s2">"localhost"</span><span class="p">,</span> <span class="mi">3000</span>
+
+    <span class="c1"># Initialise l'objet TCPServer et effectue la liaison avec le port 3000</span>
+    <span class="n">tcp_server</span> <span class="o">=</span> <span class="n">socketserver</span><span class="o">.</span><span class="n">TCPServer</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">),</span> <span class="n">TCPHandler</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"Le serveur écoute sur le port {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">PORT</span><span class="p">))</span>
+    <span class="c1"># Active le serveur TCP.</span>
+    <span class="c1"># Pour interrompre le serveur appuyez sur Ctrl-C.</span>
+    <span class="n">tcp_server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+</pre></div>
+<h4><span class="mw-headline" id="Le_fichier_tcpHandlerClient.py">Le fichier tcpHandlerClient.py</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=29" title="Modifier la section : Le fichier tcpHandlerClient.py">modifier</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">host_ip</span><span class="p">,</span> <span class="n">server_port</span> <span class="o">=</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span> <span class="mi">3000</span>
+<span class="n">data</span> <span class="o">=</span> <span class="s2">" Hello wild world... best regards ..!</span><span class="se">\n</span><span class="s2">"</span>
+
+<span class="c1"># Initialise le client TCP avec SOCK_STREAM </span>
+<span class="n">tcp_client</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Etablit la connexion avec le serveur TCP</span>
+    <span class="n">tcp_client</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">host_ip</span><span class="p">,</span> <span class="n">server_port</span><span class="p">))</span>
+    <span class="c1"># Envoie des données au serveur</span>
+    <span class="n">tcp_client</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+
+    <span class="c1"># Lit les données du serveur et ferme la connexion.</span>
+    <span class="n">received</span> <span class="o">=</span> <span class="n">tcp_client</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">tcp_client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s2">"Bytes Sent:     {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">"Bytes Received: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">received</span><span class="o">.</span><span class="n">decode</span><span class="p">()))</span>
+</pre></div>
+<h2><span class="mw-headline" id="Combinaison_des_sockets_et_des_threads">Combinaison des sockets et des threads</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=30" title="Modifier la section : Combinaison des sockets et des threads">modifier</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Les deux programmes suivants illustrent le fonctionnement d'un serveur multithread.
+</p>
+<ul><li>Il met en oeuvre un <b>pool de thread</b> pour gérer les sockets ( un socket pour chaque client )</li>
+<li>Il utilise une <b>classe</b> qui implémente le code du thread serveur.</li></ul>
+<h3><span class="mw-headline" id="Le_serveur_multithread">Le serveur multithread</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=31" title="Modifier la section : Le serveur multithread">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span> 
+<span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span> 
+
+<span class="sd">''' Serveur Python multithread:</span>
+<span class="sd">    Créer un pool de thread pour gérer des socket serveur.</span>
+<span class="sd">'''</span>
+<span class="k">class</span> <span class="nc">ClientThread</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span> 
+ 
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">ip</span><span class="p">,</span><span class="n">port</span><span class="p">):</span> 
+        <span class="n">Thread</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span> 
+        <span class="k">print</span> <span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">[+] Nouveau client "</span> <span class="o">+</span> <span class="n">ip</span> <span class="o">+</span> <span class="s2">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">port</span><span class="p">)</span> <span class="p">)</span>
+ 
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+        <span class="k">while</span> <span class="bp">True</span> <span class="p">:</span> 
+            <span class="n">data</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2048</span><span class="p">)</span> 
+            <span class="k">print</span> <span class="p">(</span><span class="s2">"Serveur à reçu :{"</span><span class="o">+</span> <span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="o">+</span><span class="s2">"}"</span><span class="p">)</span>
+            <span class="n">MESSAGE</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Serveur : Entrez une reponse depuis le serveur (exit=fin) :"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">MESSAGE</span> <span class="o">==</span> <span class="s1">'exit'</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Fin du thread "</span><span class="o">+</span> <span class="n">ip</span> <span class="o">+</span> <span class="s2">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">port</span><span class="p">))</span>
+                <span class="k">break</span>
+            <span class="k">print</span> <span class="p">(</span><span class="s2">"Le serveur envoie {0} au client {1}:{2}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">MESSAGE</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">ip</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">))</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">MESSAGE</span><span class="p">,</span><span class="s1">'UTF-8'</span><span class="p">))</span>  <span class="c1"># echo </span>
+
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="s1">'0.0.0.0'</span> 
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">3000</span> 
+<span class="n">BUFFER_SIZE</span> <span class="o">=</span> <span class="mi">20</span>  
+
+<span class="n">tcpServer</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span> 
+<span class="n">tcpServer</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> 
+<span class="n">tcpServer</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span> 
+<span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span> 
+ 
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span> 
+    <span class="n">tcpServer</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> 
+    <span class="k">print</span> <span class="p">(</span><span class="s2">"Serveur multithread : En attente de connexion..."</span> <span class="p">)</span>
+    <span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="p">(</span><span class="n">ip</span><span class="p">,</span><span class="n">port</span><span class="p">))</span> <span class="o">=</span> <span class="n">tcpServer</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span> 
+    <span class="n">newthread</span> <span class="o">=</span> <span class="n">ClientThread</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span><span class="n">port</span><span class="p">)</span> 
+    <span class="n">newthread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span> 
+    <span class="n">threads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newthread</span><span class="p">)</span> 
+ 
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span> 
+    <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</pre></div>
+<h3><span class="mw-headline" id="Le_client_multithread">Le client multithread</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;section=32" title="Modifier la section : Le client multithread">modifier</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Python TCP Client A</span>
+<span class="kn">import</span> <span class="nn">socket</span> 
+
+<span class="n">host</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostname</span><span class="p">()</span> 
+<span class="n">port</span> <span class="o">=</span> <span class="mi">3000</span>
+<span class="n">BUFFER_SIZE</span> <span class="o">=</span> <span class="mi">2000</span> 
+<span class="n">MESSAGE</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"tcpClient: Entrez un message (exit=fin):"</span><span class="p">)</span> 
+ 
+<span class="n">tcpClient</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span> 
+<span class="n">tcpClient</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">))</span>
+
+<span class="k">while</span> <span class="n">MESSAGE</span> <span class="o">!=</span> <span class="s1">'exit'</span><span class="p">:</span>
+    <span class="n">tcpClient</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">MESSAGE</span><span class="p">,</span><span class="s1">'UTF-8'</span><span class="p">))</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">tcpClient</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="n">BUFFER_SIZE</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s2">" Client a reçu:"</span><span class="o">+</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span>
+    <span class="n">MESSAGE</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"tcpClient: Entrez un message pour continuer (exit=fin):"</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">" Fin du programme client."</span><span class="p">)</span>
+<span class="n">tcpClient</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20200422094008
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.103 seconds
+Real time usage: 2.318 seconds
+Preprocessor visited node count: 274/1000000
+Preprocessor generated node count: 472/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 42914/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key wikidb2:pcache:idhash:2712-0!canonical and timestamp 20200422094006 and revision id 14005
+ -->
+</div>					<div class="printfooter">
+						Récupérée de «&nbsp;<a dir="ltr" href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;oldid=14005">https://www.audiens.fr/wiki2/index.php?title=Programmation_réseau_avec_les_sockets&amp;oldid=14005</a>&nbsp;»					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Catégories" title="Spécial:Catégories">Catégories</a>&nbsp;: <ul><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Développements" title="Catégorie:Développements">Développements</a></li><li><a href="https://www.audiens.fr/wiki2/index.php/Catégorie:Langages" title="Catégorie:Langages">Langages</a></li><li><a href="https://www.audiens.fr/wiki2/index.php?title=Cat%C3%A9gorie:Python&amp;action=edit&amp;redlink=1" class="new" title="Catégorie:Python (page inexistante)">Python</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navigation</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Outils personnels</h3>
+						<ul>
+							<li id="pt-userpage"><a href="https://www.audiens.fr/wiki2/index.php/Utilisateur:Phil" class="new" dir="auto" title="Votre page d’utilisateur (page inexistante) [Alt+Maj+.]" accesskey=".">Phil</a></li><li id="pt-mytalk"><a href="https://www.audiens.fr/wiki2/index.php/Discussion_utilisateur:Phil" class="new" title="Votre page de discussion (page inexistante) [Alt+Maj+n]" accesskey="n">Discussion</a></li><li id="pt-preferences"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Préférences" title="Vos préférences">Préférences</a></li><li id="pt-watchlist"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Liste_de_suivi" title="Une liste des pages dont vous suivez les modifications [Alt+Maj+l]" accesskey="l">Liste de suivi</a></li><li id="pt-mycontris"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Contributions/Phil" title="La liste de vos contributions [Alt+Maj+y]" accesskey="y">Contributions</a></li><li id="pt-logout"><a href="https://www.audiens.fr/wiki2/index.php?title=Sp%C3%A9cial:D%C3%A9connexion&amp;returnto=Programmation+r%C3%A9seau+avec+les+sockets" title="Se déconnecter">Se déconnecter</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espaces de noms</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Programmation_réseau_avec_les_sockets" title="Voir le contenu de la page [Alt+Maj+c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Discussion:Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion au sujet de cette page de contenu (page inexistante) [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Affichages</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="https://www.audiens.fr/wiki2/index.php/Programmation_réseau_avec_les_sockets">Lire</a></span></li><li id="ca-edit" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=edit" title="Modifier le wikicode [Alt+Maj+e]" accesskey="e">Modifier</a></span></li><li id="ca-history" class="collapsible"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=history" title="Historique des versions de cette page [Alt+Maj+h]" accesskey="h">Afficher l’historique</a></span></li><span class="placeholder" style="display: none;"></span><span class="placeholder" style="display: none;"></span>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Plus</span></h3>
+						<div class="menu">
+							<ul><li id="ca-pdfbook" class="collapsible" style="display: list-item;"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=pdfbook&amp;format=single">Imprimer au format PDF</a></span></li><li id="ca-unwatch" class="collapsible icon mw-watchlink" style="display: list-item;"><span><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=unwatch" data-mw="interface" title="Retirer cette page de votre liste de suivi [Alt+Maj+w]" accesskey="w">Ne plus suivre</a></span></li>
+								<li id="ca-delete"><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=delete" title="Supprimer cette page [Alt+Maj+d]" accesskey="d">Supprimer</a></li><li id="ca-move"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Renommer_une_page/Programmation_réseau_avec_les_sockets" title="Renommer cette page [Alt+Maj+m]" accesskey="m">Renommer</a></li><li id="ca-protect"><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=protect" title="Protéger cette page [Alt+Maj+=]" accesskey="=">Protéger</a></li>							</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Rechercher</label>
+						</h3>
+						<form action="http://www.audiens.fr/wiki2/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Rechercher dans Audiens" title="Rechercher dans Audiens [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Spécial:Recherche" name="title"><input type="submit" name="go" value="Continuer" title="Accédez à une page du même nom si elle existe" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Visiter la page d’accueil"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="https://www.audiens.fr/wiki2/index.php/Accueil" title="Accueil général [Alt+Maj+z]" accesskey="z">Accueil</a></li><li id="n-recentchanges"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Modifications_récentes" title="Liste des modifications récentes sur le wiki [Alt+Maj+r]" accesskey="r">Modifications récentes</a></li><li id="n-randompage"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Page_au_hasard" title="Afficher une page au hasard [Alt+Maj+x]" accesskey="x">Page au hasard</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="Accès à l’aide">Aide</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Outils</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_liées/Programmation_réseau_avec_les_sockets" title="Liste des pages liées qui pointent sur celle-ci [Alt+Maj+j]" accesskey="j">Pages liées</a></li><li id="t-recentchangeslinked"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Suivi_des_liens/Programmation_réseau_avec_les_sockets" rel="nofollow" title="Liste des modifications récentes des pages appelées par celle-ci [Alt+Maj+k]" accesskey="k">Suivi des pages liées</a></li><li id="t-upload"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Téléverser" title="Téléverser des fichiers [Alt+Maj+u]" accesskey="u">Importer un fichier</a></li><li id="t-specialpages"><a href="https://www.audiens.fr/wiki2/index.php/Spécial:Pages_spéciales" title="Liste de toutes les pages spéciales [Alt+Maj+q]" accesskey="q">Pages spéciales</a></li><li id="t-print"><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [Alt+Maj+p]" accesskey="p">Version imprimable</a></li><li id="t-permalink"><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;oldid=14005" title="Adresse permanente de cette version de la page">Lien permanent</a></li><li id="t-info"><a href="https://www.audiens.fr/wiki2/index.php?title=Programmation_r%C3%A9seau_avec_les_sockets&amp;action=info" title="Plus d’information sur cette page">Information sur la page</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> La dernière modification de cette page a été faite le 21 avril 2020 à 13:50.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Politique_de_confidentialité" title="Audiens:Politique de confidentialité">Politique de confidentialité</a></li>
+								<li id="footer-places-about"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:À_propos_de" title="Audiens:À propos de">À propos de Audiens</a></li>
+								<li id="footer-places-disclaimer"><a href="https://www.audiens.fr/wiki2/index.php/Audiens:Avertissements_généraux" title="Audiens:Avertissements généraux">Avertissements</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="Programmation%20r%c3%a9seau%20avec%20les%20sockets%20%e2%80%94%20Audiens_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki2/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki2/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.103","walltime":"2.318","ppvisitednodes":{"value":274,"limit":1000000},"ppgeneratednodes":{"value":472,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":42914,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20200422094008","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":2401});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body>
+<!-- Mirrored from www.audiens.fr/download/python/Programmation réseau avec les sockets — Audiens.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2020 14:29:26 GMT -->
+</html>
